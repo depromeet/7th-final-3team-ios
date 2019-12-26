@@ -14,6 +14,15 @@
 		7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70D23B49C2F0021371D /* Assets.xcassets */; };
 		7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */; };
 		7E68A71C23B49C2F0021371D /* CheckThatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A71B23B49C2F0021371D /* CheckThatTests.swift */; };
+		7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A72623B49E4E0021371D /* SignupViewController.swift */; };
+		7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */; };
+		7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A72D23B4A00B0021371D /* SignupViewModel.swift */; };
+		7E68A73023B4A0B10021371D /* SignupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A72F23B4A0B10021371D /* SignupTests.swift */; };
+		7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73223B4A9880021371D /* Array+Subscript.swift */; };
+		7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73423B4A9A70021371D /* NSObject+Properties.swift */; };
+		7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */; };
+		7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73823B4AA090021371D /* UIView+Nib.swift */; };
+		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		7E68A71723B49C2F0021371D /* CheckThatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckThatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E68A71B23B49C2F0021371D /* CheckThatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckThatTests.swift; sourceTree = "<group>"; };
 		7E68A71D23B49C2F0021371D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E68A72623B49E4E0021371D /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelInjectable.swift; sourceTree = "<group>"; };
+		7E68A72D23B4A00B0021371D /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		7E68A72F23B4A0B10021371D /* SignupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTests.swift; sourceTree = "<group>"; };
+		7E68A73223B4A9880021371D /* Array+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Subscript.swift"; sourceTree = "<group>"; };
+		7E68A73423B4A9A70021371D /* NSObject+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Properties.swift"; sourceTree = "<group>"; };
+		7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initializers.swift"; sourceTree = "<group>"; };
+		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,10 @@
 		7E68A70323B49C2D0021371D /* CheckThat */ = {
 			isa = PBXGroup;
 			children = (
+				7E68A73123B4A97A0021371D /* Extensions */,
+				7E68A72823B49FC90021371D /* Protocol */,
+				7E68A72C23B4A0010021371D /* ViewModel */,
+				7E68A72B23B49FFB0021371D /* ViewController */,
 				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
 				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
 				7E68A70823B49C2D0021371D /* ViewController.swift */,
@@ -95,8 +117,45 @@
 			children = (
 				7E68A71B23B49C2F0021371D /* CheckThatTests.swift */,
 				7E68A71D23B49C2F0021371D /* Info.plist */,
+				7E68A72F23B4A0B10021371D /* SignupTests.swift */,
 			);
 			path = CheckThatTests;
+			sourceTree = "<group>";
+		};
+		7E68A72823B49FC90021371D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		7E68A72B23B49FFB0021371D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A72623B49E4E0021371D /* SignupViewController.swift */,
+				7E68A73A23B4AA890021371D /* SignupViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7E68A72C23B4A0010021371D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A72D23B4A00B0021371D /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7E68A73123B4A97A0021371D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A73223B4A9880021371D /* Array+Subscript.swift */,
+				7E68A73423B4A9A70021371D /* NSObject+Properties.swift */,
+				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
+				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +241,7 @@
 			files = (
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
+				7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */,
 				7E68A70C23B49C2D0021371D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,9 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E68A70923B49C2D0021371D /* ViewController.swift in Sources */,
+				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
+				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
+				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
+				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
+				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
+				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E68A71C23B49C2F0021371D /* CheckThatTests.swift in Sources */,
+				7E68A73023B4A0B10021371D /* SignupTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
