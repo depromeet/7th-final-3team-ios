@@ -16,5 +16,12 @@ class ViewController: UIViewController {
     }
 
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let signupViewModel = SignupViewModel()
+        let signupVC = SignupViewController(viewModel: signupViewModel, nibName: SignupViewController.className)
+        self.navigationController?.pushViewController(signupVC, animated: true)
+    }
 }
 
