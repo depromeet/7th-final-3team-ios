@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import CheckThat
+@testable import WatNi
 
 class StringValidationTests: XCTestCase {
 
