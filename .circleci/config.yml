@@ -1,8 +1,10 @@
-version: 2
-jobs:
-  build-and-test:
-    macos:
+ version: 2
+ jobs:
+   build:
+     macos:
       xcode: "11.3.0"
-    steps:
-      - checkout
-      - run: bundle install
+     docker:
+       - image: circleci/ruby:2.4.1
+     steps:
+       - checkout
+       - run: echo "A first hello"
