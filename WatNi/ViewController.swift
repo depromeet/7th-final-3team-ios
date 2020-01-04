@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -24,4 +23,3 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(signupVC, animated: true)
     }
 }
-
