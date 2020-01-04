@@ -3,3 +3,6 @@ jobs:
   build-and-test:
     macos:
       xcode: "11.3.0"
+    steps:
+      - checkout
+      - run: bundle install
