@@ -13,6 +13,11 @@ class SignupViewController: UIViewController, ViewModelInjectable {
 
     typealias ViewModel = SignupViewModel
 
+    @IBOutlet weak var nameTextfield: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordConfirmTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
 
     let viewModel: SignupViewModel
 
@@ -25,4 +30,7 @@ class SignupViewController: UIViewController, ViewModelInjectable {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
