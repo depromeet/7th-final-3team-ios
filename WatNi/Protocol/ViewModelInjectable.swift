@@ -11,6 +11,6 @@ import UIKit
 
 protocol ViewModelInjectable where Self: UIViewController {
     associatedtype ViewModel
-    var viewModel: ViewModel { get set }
+    var viewModel: ViewModel { get }
     init(viewModel: ViewModel, nibName: String)
 }

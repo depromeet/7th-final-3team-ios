@@ -13,7 +13,8 @@ class SignupViewController: UIViewController, ViewModelInjectable {
 
     typealias ViewModel = SignupViewModel
 
-    var viewModel: SignupViewModel
+
+    let viewModel: SignupViewModel
 
     required init(viewModel: SignupViewModel, nibName: String) {
         self.viewModel = viewModel
