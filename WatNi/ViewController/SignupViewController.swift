@@ -33,4 +33,16 @@ class SignupViewController: UIViewController, ViewModelInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func emailDidChanged(_ sender: UITextField) {
+        viewModel.email = sender.text ?? ""
+    }
+
+    @IBAction func passwordDidChanged(_ sender: UITextField) {
+        viewModel.password = sender.text ?? ""
+    }
+
+    @IBAction func passwordConfirmDidChanged(_ sender: UITextField) {
+        viewModel.passwordConfirm = sender.text ?? ""
+    }
 }

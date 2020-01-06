@@ -34,16 +34,25 @@
                             <rect key="frame" x="0.0" y="53" width="382" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                            <connections>
+                                <action selector="emailDidChanged:" destination="-1" eventType="editingChanged" id="PbY-U1-xXY"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8r-A0-DoQ">
                             <rect key="frame" x="0.0" y="106" width="382" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <action selector="passwordDidChanged:" destination="-1" eventType="editingChanged" id="HGa-rp-g4j"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PgU-qY-UY8">
                             <rect key="frame" x="0.0" y="159" width="382" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <action selector="passwordConfirmDidChanged:" destination="-1" eventType="editingChanged" id="Qh3-pd-hP0"/>
+                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPm-5Q-9gu">
                             <rect key="frame" x="0.0" y="212" width="382" height="20.5"/>
