@@ -25,8 +25,6 @@
 		7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */; };
 		7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73823B4AA090021371D /* UIView+Nib.swift */; };
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
-		7E68A73D23B4AD300021371D /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73C23B4AD300021371D /* String+Validation.swift */; };
-		7E68A73F23B4AD980021371D /* StringValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73E23B4AD980021371D /* StringValidationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +57,6 @@
 		7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initializers.swift"; sourceTree = "<group>"; };
 		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
-		7E68A73C23B4AD300021371D /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
-		7E68A73E23B4AD980021371D /* StringValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +121,6 @@
 			children = (
 				7E68A71D23B49C2F0021371D /* Info.plist */,
 				7E68A72F23B4A0B10021371D /* SignupTests.swift */,
-				7E68A73E23B4AD980021371D /* StringValidationTests.swift */,
 			);
 			path = WatNiTests;
 			sourceTree = "<group>";
@@ -162,7 +157,6 @@
 				7E68A73423B4A9A70021371D /* NSObject+Properties.swift */,
 				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
-				7E68A73C23B4AD300021371D /* String+Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,7 +298,6 @@
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E68A70923B49C2D0021371D /* ViewController.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
-				7E68A73D23B4AD300021371D /* String+Validation.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
@@ -319,7 +312,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E68A73F23B4AD980021371D /* StringValidationTests.swift in Sources */,
 				7E68A73023B4A0B10021371D /* SignupTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
