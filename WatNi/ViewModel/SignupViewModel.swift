@@ -7,11 +7,29 @@
 //
 
 import Foundation
+import Combine
 
-class SignupViewModel {
+class SignupViewModel: ObservableObject {
 
-    var email: String = ""
-    var password: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
+    @Published var passwordConfirm: String = ""
+
+    private var disposable = Set<AnyCancellable>()
+
+    init() {
+        $email.sink {
+            print("email", $0)
+        }.store(in: &disposable)
+
+        $password.sink {
+            print("password", $0)
+        }.store(in: &disposable)
+
+        $passwordConfirm.sink {
+            print("confirm", $0)
+        }.store(in: &disposable)
+    }
 
     /// Validate Email
     /// - Parameter candidate: Email String
