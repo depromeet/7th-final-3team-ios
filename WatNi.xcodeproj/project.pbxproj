@@ -10,6 +10,8 @@
 		7E604FB123C1CEAB00842B72 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* Moya */; };
 		7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* KeychainAccess */; };
 		7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* Kingfisher */; };
+		7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EBF23C393E200C43CFA /* KeychainProvider.swift */; };
+		7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EC123C4EB4200C43CFA /* KeychainTests.swift */; };
 		7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70423B49C2D0021371D /* AppDelegate.swift */; };
 		7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70623B49C2D0021371D /* SceneDelegate.swift */; };
 		7E68A70923B49C2D0021371D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70823B49C2D0021371D /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E651EBF23C393E200C43CFA /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
+		7E651EC123C4EB4200C43CFA /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		7E68A70123B49C2D0021371D /* WatNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E68A70423B49C2D0021371D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E68A70623B49C2D0021371D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E651EBE23C393C200C43CFA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		7E68A6F823B49C2D0021371D = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		7E68A70323B49C2D0021371D /* WatNi */ = {
 			isa = PBXGroup;
 			children = (
+				7E651EBE23C393C200C43CFA /* Module */,
 				7E68A73123B4A97A0021371D /* Extensions */,
 				7E68A72823B49FC90021371D /* Protocol */,
 				7E68A72C23B4A0010021371D /* ViewModel */,
@@ -121,6 +134,7 @@
 			children = (
 				7E68A71D23B49C2F0021371D /* Info.plist */,
 				7E68A72F23B4A0B10021371D /* SignupTests.swift */,
+				7E651EC123C4EB4200C43CFA /* KeychainTests.swift */,
 			);
 			path = WatNiTests;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
+				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
@@ -313,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E68A73023B4A0B10021371D /* SignupTests.swift in Sources */,
+				7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
