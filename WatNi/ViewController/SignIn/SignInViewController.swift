@@ -1,5 +1,5 @@
 //
-//  OnBoardingViewController.swift
+//  SignInViewController.swift
 //  WatNi
 //
 //  Created by 홍창남 on 2020/01/11.
@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-class OnBoardingViewController: UIViewController {
+class SignInViewController: UIViewController {
 
 }
