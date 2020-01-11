@@ -14,8 +14,6 @@
 		7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EC123C4EB4200C43CFA /* KeychainTests.swift */; };
 		7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70423B49C2D0021371D /* AppDelegate.swift */; };
 		7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70623B49C2D0021371D /* SceneDelegate.swift */; };
-		7E68A70923B49C2D0021371D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70823B49C2D0021371D /* ViewController.swift */; };
-		7E68A70C23B49C2D0021371D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70A23B49C2D0021371D /* Main.storyboard */; };
 		7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70D23B49C2F0021371D /* Assets.xcassets */; };
 		7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */; };
 		7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A72623B49E4E0021371D /* SignupViewController.swift */; };
@@ -27,6 +25,8 @@
 		7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */; };
 		7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73823B4AA090021371D /* UIView+Nib.swift */; };
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
+		7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */; };
+		7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,6 @@
 		7E68A70123B49C2D0021371D /* WatNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E68A70423B49C2D0021371D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E68A70623B49C2D0021371D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E68A70823B49C2D0021371D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E68A70B23B49C2D0021371D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E68A70D23B49C2F0021371D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E68A71023B49C2F0021371D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E68A71223B49C2F0021371D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initializers.swift"; sourceTree = "<group>"; };
 		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +120,6 @@
 				7E68A72B23B49FFB0021371D /* ViewController */,
 				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
 				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
-				7E68A70823B49C2D0021371D /* ViewController.swift */,
-				7E68A70A23B49C2D0021371D /* Main.storyboard */,
 				7E68A70D23B49C2F0021371D /* Assets.xcassets */,
 				7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */,
 				7E68A71223B49C2F0021371D /* Info.plist */,
@@ -152,6 +150,8 @@
 			children = (
 				7E68A72623B49E4E0021371D /* SignupViewController.swift */,
 				7E68A73A23B4AA890021371D /* SignupViewController.xib */,
+				7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */,
+				7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -268,9 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
+				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
 				7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */,
-				7E68A70C23B49C2D0021371D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
-				7E68A70923B49C2D0021371D /* ViewController.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
+				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
@@ -343,14 +343,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7E68A70A23B49C2D0021371D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E68A70B23B49C2D0021371D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
