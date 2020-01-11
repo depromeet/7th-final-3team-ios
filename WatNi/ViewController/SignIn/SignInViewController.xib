@@ -16,7 +16,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96a-BX-WFD">
+                    <rect key="frame" x="172.5" y="433" width="69" height="30"/>
+                    <state key="normal" title="로그인 시도"/>
+                    <connections>
+                        <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="kI3-g0-S53"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="96a-BX-WFD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8wk-J1-x7x"/>
+                <constraint firstItem="96a-BX-WFD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fMt-mA-8df"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="112"/>
         </view>

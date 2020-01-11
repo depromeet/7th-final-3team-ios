@@ -17,12 +17,16 @@ class OnBoardingViewController: UIViewController {
     }
 
     @IBAction func signInBtnTapped(_ sender: UIButton) {
-
+        let signinViewModel = SignInViewModel()
+        let signinVC = SignInViewController(viewModel: signinViewModel,
+                                            nibName: SignInViewController.className)
+        navigationController?.pushViewController(signinVC, animated: true)
     }
 
     @IBAction func signUpBtnTapped(_ sender: UIButton) {
         let signupViewModel = SignupViewModel()
-        let signupVC = SignupViewController(viewModel: signupViewModel, nibName: SignupViewController.className)
+        let signupVC = SignupViewController(viewModel: signupViewModel,
+                                            nibName: SignupViewController.className)
         navigationController?.pushViewController(signupVC, animated: true)
     }
 }

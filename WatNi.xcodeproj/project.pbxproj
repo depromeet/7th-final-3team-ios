@@ -29,6 +29,7 @@
 		7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */; };
 		7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */; };
 		7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */; };
+		7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,6 @@
 				7E651EBE23C393C200C43CFA /* Module */,
 				7E68A73123B4A97A0021371D /* Extensions */,
 				7E68A72823B49FC90021371D /* Protocol */,
-				7E68A72C23B4A0010021371D /* ViewModel */,
 				7E68A72B23B49FFB0021371D /* ViewController */,
 				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
 				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
@@ -159,14 +160,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		7E68A72C23B4A0010021371D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7E68A72D23B4A00B0021371D /* SignupViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		7E68A73123B4A97A0021371D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +176,7 @@
 			children = (
 				7E68A72623B49E4E0021371D /* SignupViewController.swift */,
 				7E68A73A23B4AA890021371D /* SignupViewController.xib */,
+				7E68A72D23B4A00B0021371D /* SignupViewModel.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -192,6 +186,7 @@
 			children = (
 				7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */,
 				7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */,
+				7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -352,6 +347,7 @@
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
+				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
