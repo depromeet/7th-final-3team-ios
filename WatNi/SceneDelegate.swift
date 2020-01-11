@@ -14,15 +14,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        if let scene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: scene)
+        guard let scene = scene as? UIWindowScene else { return }
 
-            let onboardingViewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
-            let navigationController = UINavigationController(rootViewController: onboardingViewController)
-            window.rootViewController = navigationController
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+        let window = UIWindow(windowScene: scene)
+
+        let onboardingViewController = OnBoardingViewController(nibName: OnBoardingViewController.className,
+                                                                bundle: nil)
+        let navigationController = UINavigationController(rootViewController: onboardingViewController)
+        window.rootViewController = navigationController
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
