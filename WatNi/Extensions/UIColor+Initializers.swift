@@ -26,23 +26,6 @@ extension UIColor {
         )
     }
 
-    /// Initialize a UIColor with a hex String
-    /// - Parameters:
-    ///   - hexString: #FF0000
-    convenience init(hexString: String, alpha: CGFloat = 1.0) {
-        guard hexString.hasPrefix("#"), hexString.count == 7 else {
-            self.init(white: 0, alpha: 0) // UIColor.clear = 0.0 white, 0.0 alpha
-            return
-        }
-
-        let string = hexString.replacingOccurrences(of: "#", with: "")
-        var hexInt32: UInt32 = 0
-        let scanner = Scanner.init(string: string)
-        scanner.scanLocation = 0
-        scanner.scanHexInt32(&hexInt32)
-        self.init(rgb: Int(hexInt32), alpha: alpha)
-    }
-
     convenience init(decimalRed: Int, green: Int, blue: Int, alpha: CGFloat = 1.0) {
         self.init(
             red: CGFloat(decimalRed) / 255.0,
