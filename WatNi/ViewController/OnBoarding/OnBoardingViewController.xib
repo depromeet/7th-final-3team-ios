@@ -23,10 +23,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4o6-Xw-s8X">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
                             <state key="normal" title="로그인"/>
+                            <connections>
+                                <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="80u-GU-R4S"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yg-h4-RLD">
                             <rect key="frame" x="0.0" y="46" width="52" height="30"/>
                             <state key="normal" title="회원가입"/>
+                            <connections>
+                                <action selector="signUpBtnTapped:" destination="-1" eventType="touchUpInside" id="FuO-ig-Kei"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

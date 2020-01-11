@@ -27,6 +27,8 @@
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
 		7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */; };
 		7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */; };
+		7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */; };
+		7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
+		7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,10 +152,9 @@
 		7E68A72B23B49FFB0021371D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7E68A72623B49E4E0021371D /* SignupViewController.swift */,
-				7E68A73A23B4AA890021371D /* SignupViewController.xib */,
-				7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */,
-				7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */,
+				7EB3C3BC23C9E4C700A2B41C /* OnBoarding */,
+				7EB3C3B723C9E48A00A2B41C /* SignIn */,
+				7EB3C3B623C9E47700A2B41C /* Signup */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +176,33 @@
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7EB3C3B623C9E47700A2B41C /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A72623B49E4E0021371D /* SignupViewController.swift */,
+				7E68A73A23B4AA890021371D /* SignupViewController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		7EB3C3B723C9E48A00A2B41C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7EB3C3B823C9E49700A2B41C /* SignInViewController.swift */,
+				7EB3C3BA23C9E4A100A2B41C /* SignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7EB3C3BC23C9E4C700A2B41C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */,
+				7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
@@ -317,6 +348,7 @@
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
+				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
