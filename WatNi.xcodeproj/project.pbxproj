@@ -100,15 +100,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				7EB3C3BC23C9E4C700A2B41C /* OnBoarding */,
+				7EB3C3B723C9E48A00A2B41C /* SignIn */,
+				7EB3C3B623C9E47700A2B41C /* Signup */,
+			);
+			path = UIWidgets;
+			sourceTree = "<group>";
+		};
+		7E5D4F5923CB4A8B0008D92D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E5D4F5323CB256B0008D92D /* Member.swift */,
+				7E5D4F5523CB2F3F0008D92D /* Token.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E5D4F5A23CB4AA50008D92D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
+				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
+				7E68A71223B49C2F0021371D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E5D4F5B23CB4AB20008D92D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E68A70D23B49C2F0021371D /* Assets.xcassets */,
+				7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7E651EBE23C393C200C43CFA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7E5D4F5923CB4A8B0008D92D /* Model */,
 				7EB3C3C223C9EB7900A2B41C /* APIProvider */,
 				7EB3C3C123C9EB7300A2B41C /* APITarget */,
-				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
 				7E5D4F5123CB22EC0008D92D /* APIConfig.swift */,
-				7E5D4F5323CB256B0008D92D /* Member.swift */,
-				7E5D4F5523CB2F3F0008D92D /* Token.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -134,15 +170,12 @@
 		7E68A70323B49C2D0021371D /* WatNi */ = {
 			isa = PBXGroup;
 			children = (
-				7E651EBE23C393C200C43CFA /* Module */,
 				7E68A73123B4A97A0021371D /* Extensions */,
+				7E651EBE23C393C200C43CFA /* Module */,
 				7E68A72823B49FC90021371D /* Protocol */,
-				7E68A72B23B49FFB0021371D /* ViewController */,
-				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
-				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
-				7E68A70D23B49C2F0021371D /* Assets.xcassets */,
-				7E68A70F23B49C2F0021371D /* LaunchScreen.storyboard */,
-				7E68A71223B49C2F0021371D /* Info.plist */,
+				7E5D4F5823CB4A6C0008D92D /* UIWidgets */,
+				7E5D4F5B23CB4AB20008D92D /* Resources */,
+				7E5D4F5A23CB4AA50008D92D /* Supporting Files */,
 			);
 			path = WatNi;
 			sourceTree = "<group>";
@@ -163,16 +196,6 @@
 				7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		7E68A72B23B49FFB0021371D /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7EB3C3BC23C9E4C700A2B41C /* OnBoarding */,
-				7EB3C3B723C9E48A00A2B41C /* SignIn */,
-				7EB3C3B623C9E47700A2B41C /* Signup */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		7E68A73123B4A97A0021371D /* Extensions */ = {
@@ -226,6 +249,7 @@
 		7EB3C3C223C9EB7900A2B41C /* APIProvider */ = {
 			isa = PBXGroup;
 			children = (
+				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
 				7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */,
 			);
 			path = APIProvider;
@@ -538,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS62Z6WV86;
-				INFOPLIST_FILE = WatNi/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WatNi/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,7 +580,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YS62Z6WV86;
-				INFOPLIST_FILE = WatNi/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WatNi/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
