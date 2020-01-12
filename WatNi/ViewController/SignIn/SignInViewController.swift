@@ -25,5 +25,9 @@ class SignInViewController: UIViewController, ViewModelInjectable {
     }
 
     @IBAction func signInBtnTapped(_ sender: UIButton) {
+
+        AuthProvider.issueToken(userName: "test@naver.com", password: "test") { result in
+            print(result)
+        }
     }
 }
