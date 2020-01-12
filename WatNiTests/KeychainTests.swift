@@ -14,7 +14,19 @@ class KeychainProviderMock: KeychainProvidable {
 
     let keychain = Keychain(service: "com.test.keychainmock")
 
-    func item(for key: KeychainKey) -> Result<String, Error> {
+    func item(for key: KeychainKey) -> String? {
+        let result = self.item(key: key)
+
+        switch result {
+        case .success(let value):
+            return value
+        case .failure(let error):
+            print("[KeychainProvider][\(key.rawValue)] error: \(error.localizedDescription)")
+        }
+        return nil
+    }
+
+    private func item(key: KeychainKey) -> Result<String, Error> {
         do {
             guard let value = try keychain.get(key.rawValue) else {
                 return .failure(KeychainError.valueFromKeyIsNil)
@@ -65,25 +77,21 @@ class KeychainTests: XCTestCase {
     }
 
     func testGetItem() {
-        let emailResult = keychainProvider.item(for: .email)
-
-        switch emailResult {
-        case .success(let email):
-            XCTAssert(email == testEmail, "Strings are different")
-        case .failure(let error):
-            XCTAssert(false, "Error Occured \(error)")
+        guard let email = keychainProvider.item(for: .email) else {
+            XCTAssert(false, "Error Occured")
+            return
         }
+        XCTAssert(email == testEmail, "Strings are different")
     }
 
     func testUpdateItem() {
         keychainProvider.update(testToken, for: .accessToken)
 
-        do {
-            let item = try KeychainProvider.default.item(for: .accessToken).get()
-            XCTAssertTrue(item == testToken, "values are different")
-        } catch {
+        guard let item = keychainProvider.item(for: .accessToken) else {
             XCTAssert(false, "Get Item fails")
+            return
         }
+        XCTAssertTrue(item == testToken, "values are different")
     }
 
     func testRemoveItem() {
@@ -96,16 +104,10 @@ class KeychainTests: XCTestCase {
             XCTAssert(false, "Update failure")
         }
 
-        let passwordResult = keychainProvider.item(for: .password)
-        switch passwordResult {
-        case .success:
-            XCTAssert(false, "Item is not removed")
-        case .failure(let error):
-            if case KeychainError.valueFromKeyIsNil = error {
-                XCTAssert(true)
-                return
-            }
-            XCTAssert(false, "Unexpected Error \(error)")
+        guard keychainProvider.item(for: .password) != nil else {
+            XCTAssert(true, "Unexpected Error is Occured")
+            return
         }
+        XCTAssert(false, "Item is not removed")
     }
 }

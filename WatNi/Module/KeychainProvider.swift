@@ -15,15 +15,17 @@ enum KeychainError: Error {
 
 protocol KeychainProvidable {
     var keychain: Keychain { get }
-    func item(for key: KeychainKey) -> Result<String, Error>
+    func item(for key: KeychainKey) -> String?
     func update(_ item: String, for key: KeychainKey) -> Result<Void, Error>
     func remove(key: KeychainKey)
 }
 
 enum KeychainKey: String {
+    case name
     case email
     case password
     case accessToken
+    case refreshToken
 }
 
 class KeychainProvider: KeychainProvidable {
@@ -32,7 +34,7 @@ class KeychainProvider: KeychainProvidable {
 
     let keychain = Keychain(service: "com.depromeet.watni")
 
-    func item(for key: KeychainKey) -> Result<String, Error> {
+    private func item(key: KeychainKey) -> Result<String, Error> {
         do {
             guard let value = try keychain.get(key.rawValue) else {
                 return .failure(KeychainError.valueFromKeyIsNil)
@@ -41,6 +43,18 @@ class KeychainProvider: KeychainProvidable {
         } catch {
             return .failure(error)
         }
+    }
+
+    func item(for key: KeychainKey) -> String? {
+        let result = self.item(key: key)
+
+        switch result {
+        case .success(let value):
+            return value
+        case .failure(let error):
+            print("[keychain][\(key.rawValue)] error: \(error.localizedDescription)")
+        }
+        return nil
     }
 
     @discardableResult
