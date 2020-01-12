@@ -52,7 +52,7 @@ enum AuthTarget: TargetType {
     }
 }
 
-/// MARK: AccessTokenAuthorizable
+// MARK: AccessTokenAuthorizable
 extension AuthTarget: AccessTokenAuthorizable {
     var authorizationType: AuthorizationType {
         return .basic
