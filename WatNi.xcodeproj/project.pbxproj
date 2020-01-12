@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E604FB123C1CEAB00842B72 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* Moya */; };
 		7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* KeychainAccess */; };
 		7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* Kingfisher */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E651EBF23C393E200C43CFA /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
 		7E651EC123C4EB4200C43CFA /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		7E68A70123B49C2D0021371D /* WatNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
+				7E5D4F5123CB22EC0008D92D /* APIConfig.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
+				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
