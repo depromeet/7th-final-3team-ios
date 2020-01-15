@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */; };
+		7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */; };
+		7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Subscription.swift"; sourceTree = "<group>"; };
+		7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
+		7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -100,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E27771A23CF781500B90F80 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */,
+				7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */,
+				7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +217,7 @@
 		7E68A73123B4A97A0021371D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7E27771A23CF781500B90F80 /* Combine */,
 				7E68A73223B4A9880021371D /* Array+Subscript.swift */,
 				7E68A73423B4A9A70021371D /* NSObject+Properties.swift */,
 				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
@@ -394,17 +411,20 @@
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
+				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
+				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
+				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
 				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
