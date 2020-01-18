@@ -36,9 +36,11 @@ class UnderlineTextFieldView: UIView, HasViewModel {
         if viewModel.inputIsValid {
             underLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)
             underLineHeight.constant = 1
+            textField.tintColor = .black
         } else {
             underLineView.backgroundColor = UIColor(decimalRed: 234, green: 28, blue: 0)
             underLineHeight.constant = 2
+            textField.tintColor = WNColor.primaryRed
         }
         assistantLabel.text = viewModel.assistantLabelStr
     }
