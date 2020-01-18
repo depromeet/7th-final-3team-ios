@@ -15,6 +15,10 @@
 		7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E27772B23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf */; };
 		7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E27772C23D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf */; };
 		7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27773123D2EC1D00B90F80 /* Font+Custom.swift */; };
+		7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27772023CF7A5400B90F80 /* UnderlineTextFieldView.swift */; };
+		7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E27772223CF7A7700B90F80 /* UnderlineTextFieldView.xib */; };
+		7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27772523CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift */; };
+		7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27772723CF7F3000B90F80 /* HasViewModel.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -64,6 +68,10 @@
 		7E27772B23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		7E27772C23D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Thin.ttf"; sourceTree = "<group>"; };
 		7E27773123D2EC1D00B90F80 /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		7E27772023CF7A5400B90F80 /* UnderlineTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldView.swift; sourceTree = "<group>"; };
+		7E27772223CF7A7700B90F80 /* UnderlineTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlineTextFieldView.xib; sourceTree = "<group>"; };
+		7E27772523CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldViewModel.swift; sourceTree = "<group>"; };
+		7E27772723CF7F3000B90F80 /* HasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasViewModel.swift; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -126,9 +134,20 @@
 			path = Combine;
 			sourceTree = "<group>";
 		};
+		7E27771B23CF793900B90F80 /* UnderlineTextField */ = {
+			isa = PBXGroup;
+			children = (
+				7E27772023CF7A5400B90F80 /* UnderlineTextFieldView.swift */,
+				7E27772223CF7A7700B90F80 /* UnderlineTextFieldView.xib */,
+				7E27772523CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift */,
+			);
+			path = UnderlineTextField;
+			sourceTree = "<group>";
+		};
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				7E27771B23CF793900B90F80 /* UnderlineTextField */,
 				7EB3C3BC23C9E4C700A2B41C /* OnBoarding */,
 				7EB3C3B723C9E48A00A2B41C /* SignIn */,
 				7EB3C3B623C9E47700A2B41C /* Signup */,
@@ -224,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */,
+				7E27772723CF7F3000B90F80 /* HasViewModel.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -384,6 +404,7 @@
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
+				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
 				7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */,
@@ -432,11 +453,14 @@
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
+				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
+				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
+				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
