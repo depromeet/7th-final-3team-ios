@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="WatNi" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextFieldView" destination="9Lr-gU-dIa" id="FY5-K2-XWJ"/>
+                <outlet property="passwordTextFieldView" destination="HQK-Nm-feY" id="gDj-BO-7qr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WP8-ex-hHw"/>
             </connections>
         </placeholder>
@@ -17,21 +19,42 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96a-BX-WFD">
-                    <rect key="frame" x="172.5" y="433" width="69" height="30"/>
-                    <state key="normal" title="로그인 시도"/>
-                    <connections>
-                        <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="kI3-g0-S53"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-F1-NBi">
+                    <rect key="frame" x="24" y="237" width="366" height="169"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lr-gU-dIa" customClass="UnderlineTextFieldView" customModule="WatNi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="77"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="bhw-oJ-Qm2"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQK-Nm-feY" customClass="UnderlineTextFieldView" customModule="WatNi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="92" width="366" height="77"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="mhj-D6-M4r"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-7o-HUL">
+                    <rect key="frame" x="137" y="131" width="140" height="54"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="96a-BX-WFD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8wk-J1-x7x"/>
-                <constraint firstItem="96a-BX-WFD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fMt-mA-8df"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uXy-F1-NBi" secondAttribute="trailing" constant="24" id="CK1-oy-vmU"/>
+                <constraint firstItem="uXy-F1-NBi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="NYb-3W-1S8"/>
+                <constraint firstItem="uXy-F1-NBi" firstAttribute="top" secondItem="Md4-7o-HUL" secondAttribute="bottom" constant="52" id="UTo-m9-llM"/>
+                <constraint firstItem="Md4-7o-HUL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hDW-tH-v26"/>
+                <constraint firstItem="Md4-7o-HUL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="87" id="wTg-Mh-wO7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="112"/>
         </view>
     </objects>
+    <resources>
+        <image name="logo" width="140" height="54"/>
+    </resources>
 </document>
