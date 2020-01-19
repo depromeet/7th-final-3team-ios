@@ -22,10 +22,10 @@ class AuthProvider {
 
     static let provider = MoyaProvider<AuthTarget>(plugins: plugins)
 
-    static func issueToken(userName: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
+    static func issueToken(email: String, password: String, completion: @escaping (Result<Token, Error>) -> Void) {
         let body: [String: String] = [
             "grant_type": "password",
-            "username": userName,
+            "username": email,
             "password": password
         ]
 
