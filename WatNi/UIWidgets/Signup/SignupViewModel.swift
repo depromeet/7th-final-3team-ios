@@ -40,6 +40,13 @@ class SignupViewModel: ObservableObject {
         return password == passwordConfirm || passwordConfirm.isEmpty
     }
 
+    var submitAvailable: Bool {
+        guard !name.isEmpty, !email.isEmpty, !password.isEmpty, !passwordConfirm.isEmpty else {
+            return false
+        }
+        return isValidEmail && isValidPassword && passwordIsConfirmed
+    }
+
     /// 각각의 TextField별 setter
     /// - Parameters:
     ///   - inputType: TextField 종류
