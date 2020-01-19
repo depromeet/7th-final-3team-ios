@@ -15,7 +15,7 @@ protocol UnderlineTextFieldViewModelProtocol {
     /// TextField Valid 여부
     var inputIsValid: Bool { get }
     /// TextField Valid 조건 설정
-    var validCondition: (() -> Bool)? { get set }
+    var validCondition: ((_ inputString: String) -> Bool)? { get set }
     /// 상단 설명 문구
     var descLabelStr: String { get }
     /// TextField의 ContentType
@@ -44,13 +44,14 @@ class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
     let keyboardType: UIKeyboardType
 
     var inputStr: String = ""
+    var assistantStr: String = ""
 
     var descLabelStr: String
     var textFieldFontSize: CGFloat = 17
     var textFieldLineHeight: CGFloat = 25
     var descLabelFontSize: CGFloat = 14
     var assistantLabelFontSize: CGFloat = 12
-    var validCondition: (() -> Bool)?
+    var validCondition: ((_ inputString: String) -> Bool)?
 
     init() {
         self.descLabelStr = ""
@@ -74,7 +75,7 @@ class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
         if inputIsValid {
             return ""
         }
-        return "안 괜찮아요"
+        return assistantStr
     }
 
     var isSecureTextEntry: Bool {
@@ -82,6 +83,6 @@ class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
     }
 
     var inputIsValid: Bool {
-        return validCondition?() ?? true
+        return validCondition?(inputStr) ?? true
     }
 }
