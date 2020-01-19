@@ -16,6 +16,7 @@ class SignInViewController: UIViewController, ViewModelInjectable {
 
     @IBOutlet private weak var emailTextFieldView: UnderlineTextFieldView!
     @IBOutlet private weak var passwordTextFieldView: UnderlineTextFieldView!
+    @IBOutlet weak var submitButton: SubmitButton!
 
     let viewModel: SignInViewModel
     private var cancelables = Set<AnyCancellable>()
@@ -35,6 +36,8 @@ class SignInViewController: UIViewController, ViewModelInjectable {
         subscribeTextFieldEditingChanged()
         emailTextFieldView.textField.delegate = self
         passwordTextFieldView.textField.delegate = self
+
+        submitButton.isEnabled = false
     }
 
     private func subscribeTextFieldEditingChanged() {
@@ -56,23 +59,45 @@ class SignInViewController: UIViewController, ViewModelInjectable {
 
         emailPublisher.compactMap {
             ($0 as? UITextField)?.text
-        }.assign(to: \UnderlineTextFieldViewModel.inputStr, on: emailViewModel)
-            .store(in: &cancelables)
+        }.sink { [weak self] (input) in
+            emailViewModel.inputStr = input
+            let passwordInput = self?.passwordTextFieldView.viewModel.inputStr ?? ""
+            self?.submitButton.isEnabled = !input.isEmpty && !passwordInput.isEmpty
+        }.store(in: &cancelables)
 
         passwordPublisher.compactMap {
             ($0 as? UITextField)?.text
-        }.assign(to: \UnderlineTextFieldViewModel.inputStr, on: passwordViewModel)
-            .store(in: &cancelables)
+        }.sink { [weak self] (input) in
+            passwordViewModel.inputStr = input
+            let emailInput = self?.emailTextFieldView.viewModel.inputStr ?? ""
+            self?.submitButton.isEnabled = !input.isEmpty && !emailInput.isEmpty
+        }.store(in: &cancelables)
     }
 
     @IBAction func signInBtnTapped(_ sender: UIButton) {
 
-        AuthProvider.issueToken(userName: "test@naver.com", password: "test") { result in
+        let email = emailTextFieldView.viewModel.inputStr
+        let password = passwordTextFieldView.viewModel.inputStr
+
+        AuthProvider.issueToken(email: email, password: password) { result in
+            // TODO: SignUp 작업 이후 로직 구현
             print(result)
         }
     }
+
+    @IBAction func signUpBtnTapped(_ sender: UIButton) {
+        let signupViewModel = SignupViewModel()
+        let signupVC = SignupViewController(viewModel: signupViewModel,
+                                            nibName: SignupViewController.className)
+        navigationController?.pushViewController(signupVC, animated: true)
+    }
+
+    @IBAction func navigationBackBtnTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
+// MARK: UITextFieldDelegate
 extension SignInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextFieldView.textField {

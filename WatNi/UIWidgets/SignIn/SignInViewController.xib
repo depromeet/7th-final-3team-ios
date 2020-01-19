@@ -6,11 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="WatNi" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextFieldView" destination="9Lr-gU-dIa" id="FY5-K2-XWJ"/>
                 <outlet property="passwordTextFieldView" destination="HQK-Nm-feY" id="gDj-BO-7qr"/>
+                <outlet property="submitButton" destination="PdK-ie-oXe" id="t9h-gs-pCr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WP8-ex-hHw"/>
             </connections>
         </placeholder>
@@ -41,13 +47,76 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Md4-7o-HUL">
                     <rect key="frame" x="137" y="131" width="140" height="54"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdK-ie-oXe" customClass="SubmitButton" customModule="WatNi" customModuleProvider="target">
+                    <rect key="frame" x="24" y="430" width="366" height="48"/>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.10980392160000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="CTa-pF-YUU"/>
+                    </constraints>
+                    <state key="normal" title="로그인"/>
+                    <connections>
+                        <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="FFE-ts-ViE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCc-Df-czR">
+                    <rect key="frame" x="147.5" y="498" width="119" height="30"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="12"/>
+                    <state key="normal" title="비밀번호를 잊으셨나요?">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y9-E7-mu0">
+                    <rect key="frame" x="24" y="565" width="366" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Gcl-GB-k7b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="18"/>
+                    <state key="normal" title="회원가입">
+                        <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="signUpBtnTapped:" destination="-1" eventType="touchUpInside" id="TvY-b7-A9Q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBm-eG-VXb">
+                    <rect key="frame" x="0.0" y="44" width="60" height="78"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="78" id="Mq6-bL-VPw"/>
+                        <constraint firstAttribute="width" constant="60" id="aMF-7T-MFe"/>
+                    </constraints>
+                    <state key="normal" image="naviBack"/>
+                    <connections>
+                        <action selector="navigationBackBtnTapped:" destination="-1" eventType="touchUpInside" id="Tcl-b3-1l7"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PdK-ie-oXe" secondAttribute="trailing" constant="24" id="2ST-Iw-R0U"/>
+                <constraint firstItem="4Y9-E7-mu0" firstAttribute="top" secondItem="XCc-Df-czR" secondAttribute="bottom" constant="37" id="2pn-WN-3CF"/>
+                <constraint firstItem="XCc-Df-czR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6q9-ru-AYY"/>
+                <constraint firstItem="PdK-ie-oXe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="9HE-bU-lsO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uXy-F1-NBi" secondAttribute="trailing" constant="24" id="CK1-oy-vmU"/>
+                <constraint firstItem="XCc-Df-czR" firstAttribute="top" secondItem="PdK-ie-oXe" secondAttribute="bottom" constant="20" id="GCv-jI-Bae"/>
+                <constraint firstItem="4Y9-E7-mu0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="HWI-Hi-gqA"/>
                 <constraint firstItem="uXy-F1-NBi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="NYb-3W-1S8"/>
+                <constraint firstItem="PdK-ie-oXe" firstAttribute="top" secondItem="uXy-F1-NBi" secondAttribute="bottom" constant="24" id="Nxk-ta-NpB"/>
                 <constraint firstItem="uXy-F1-NBi" firstAttribute="top" secondItem="Md4-7o-HUL" secondAttribute="bottom" constant="52" id="UTo-m9-llM"/>
                 <constraint firstItem="Md4-7o-HUL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hDW-tH-v26"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Y9-E7-mu0" secondAttribute="trailing" constant="24" id="hKZ-1A-dyN"/>
+                <constraint firstItem="NBm-eG-VXb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hTc-qp-AaW"/>
+                <constraint firstItem="NBm-eG-VXb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mjo-xL-1VZ"/>
                 <constraint firstItem="Md4-7o-HUL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="87" id="wTg-Mh-wO7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -56,5 +125,6 @@
     </objects>
     <resources>
         <image name="logo" width="140" height="54"/>
+        <image name="naviBack" width="12" height="20"/>
     </resources>
 </document>
