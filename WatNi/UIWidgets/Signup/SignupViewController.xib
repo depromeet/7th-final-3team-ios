@@ -14,6 +14,7 @@
                 <outlet property="passwordConfirmTextFieldView" destination="ub5-ep-Ab7" id="qCy-UK-sPG"/>
                 <outlet property="passwordTextFieldView" destination="CVs-vR-goc" id="suR-JM-9Yq"/>
                 <outlet property="scrollView" destination="447-t5-Q5B" id="v6y-Kx-PiW"/>
+                <outlet property="signUpButton" destination="5JS-LU-eUG" id="fcU-bF-uHX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="VKp-WL-Ww6"/>
             </connections>
         </placeholder>
@@ -64,7 +65,7 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-LU-eUG" customClass="SubmitButton" customModule="WatNi" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-LU-eUG" customClass="SubmitButton" customModule="WatNi" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="535" width="374" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="BoD-w8-tlA"/>

@@ -20,6 +20,8 @@ class SignupViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var passwordTextFieldView: UnderlineTextFieldView!
     @IBOutlet private weak var passwordConfirmTextFieldView: UnderlineTextFieldView!
 
+    @IBOutlet weak var signUpButton: SubmitButton!
+
     let viewModel: SignupViewModel
     private var cancelables = Set<AnyCancellable>()
 
@@ -71,6 +73,7 @@ extension SignupViewController {
         }.sink { [weak self] (input) in
             self?.viewModel.update(.name, newValue: input)
             self?.nameTextFieldView.viewModel.inputStr = input
+            self?.signUpButton.isEnabled = self?.viewModel.submitAvailable ?? false
         }.store(in: &cancelables)
 
         emailPublisher.compactMap {
@@ -78,6 +81,7 @@ extension SignupViewController {
         }.sink { [weak self] (input) in
             self?.viewModel.update(.email, newValue: input)
             self?.emailTextFieldView.viewModel.inputStr = input
+            self?.signUpButton.isEnabled = self?.viewModel.submitAvailable ?? false
         }.store(in: &cancelables)
 
         passwordPublisher.compactMap {
@@ -85,6 +89,7 @@ extension SignupViewController {
         }.sink { [weak self] (input) in
             self?.viewModel.update(.password, newValue: input)
             self?.passwordTextFieldView.viewModel.inputStr = input
+            self?.signUpButton.isEnabled = self?.viewModel.submitAvailable ?? false
         }.store(in: &cancelables)
 
         passwordConfirmPublisher.compactMap {
@@ -92,6 +97,7 @@ extension SignupViewController {
         }.sink { [weak self] (input) in
             self?.viewModel.update(.passwordConfirm, newValue: input)
             self?.passwordConfirmTextFieldView.viewModel.inputStr = input
+            self?.signUpButton.isEnabled = self?.viewModel.submitAvailable ?? false
         }.store(in: &cancelables)
     }
 }
