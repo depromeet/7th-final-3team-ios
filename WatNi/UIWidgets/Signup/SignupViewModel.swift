@@ -15,10 +15,10 @@ class SignupViewModel: ObservableObject {
         case name, email, password, passwordConfirm
     }
 
-    private(set) var name: String = ""
-    private(set) var email: String = ""
-    private(set) var password: String = ""
-    private(set) var passwordConfirm: String = ""
+    private var name: String = ""
+    private var email: String = ""
+    private var password: String = ""
+    private var passwordConfirm: String = ""
 
     private var disposable = Set<AnyCancellable>()
 

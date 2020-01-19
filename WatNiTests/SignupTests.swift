@@ -20,44 +20,44 @@ class SignupTests: XCTestCase {
     // MARK: Email Validation
 
     func testIdentifierValid1() {
-        viewModel.email = "abcded"
+        viewModel.update(.email, newValue: "abcded")
         XCTAssertFalse(viewModel.isValidEmail, "Wrong Email")
     }
 
     func testIdentifierValid2() {
-        viewModel.email = "a1w124@navercom"
+        viewModel.update(.email, newValue: "a1w124@navercom")
         XCTAssertFalse(viewModel.isValidEmail, "Wrong Email")
     }
 
     func testIdentifierValid3() {
-        viewModel.email = "abcded@gmail.com"
+        viewModel.update(.email, newValue: "abcded@gmail.com")
         XCTAssert(viewModel.isValidEmail, "Email should be valid")
     }
 
     func testIdentifierValid4() {
-        viewModel.email = "ab-c123d.ed@naver.com"
+        viewModel.update(.email, newValue: "ab-c123d.ed@naver.com")
         XCTAssert(viewModel.isValidEmail, "Email should be valid")
     }
 
     // MARK: Password Validation
 
     func testPasswordValid1() {
-        viewModel.password = ""
+        viewModel.update(.password, newValue: "abix")
         XCTAssertFalse(viewModel.isValidPassword, "Wrong Password")
     }
 
     func testPasswordValid2() {
-        viewModel.password = "1234567890123"
+        viewModel.update(.password, newValue: "1234567890123")
         XCTAssertFalse(viewModel.isValidPassword, "Wrong Password")
     }
 
     func testPasswordValid3() {
-        viewModel.password = "123456"
+        viewModel.update(.password, newValue: "123456")
         XCTAssert(viewModel.isValidPassword, "Password should be valid")
     }
 
     func testPasswordValid4() {
-        viewModel.password = "123456sd"
+        viewModel.update(.password, newValue: "123456sd")
         XCTAssert(viewModel.isValidPassword, "Password should be valid")
     }
 }
