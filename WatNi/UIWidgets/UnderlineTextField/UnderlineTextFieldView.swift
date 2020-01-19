@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 class UnderlineTextFieldView: UIView, HasViewModel {
 
@@ -16,14 +17,24 @@ class UnderlineTextFieldView: UIView, HasViewModel {
     @IBOutlet weak var underLineView: UIView!
     @IBOutlet weak var underLineHeight: NSLayoutConstraint!
 
+    private var cancelables = Set<AnyCancellable>()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()
+        subscribeEvent()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadNib()
+        subscribeEvent()
+    }
+
+    func subscribeEvent() {
+        textField.publisher(for: .editingChanged).sink { [weak self] _ in
+            self?.inputDidChanged()
+        }.store(in: &cancelables)
     }
 
     var viewModel: UnderlineTextFieldViewModelProtocol = UnderlineTextFieldViewModel() {
@@ -32,7 +43,7 @@ class UnderlineTextFieldView: UIView, HasViewModel {
         }
     }
 
-    func inputDidChanged() {
+    private func inputDidChanged() {
         if viewModel.inputIsValid {
             underLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)
             underLineHeight.constant = 1
