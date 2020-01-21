@@ -27,6 +27,7 @@
 		7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* Kingfisher */; };
 		7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EBF23C393E200C43CFA /* KeychainProvider.swift */; };
 		7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EC123C4EB4200C43CFA /* KeychainTests.swift */; };
+		7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E662F5323D74A9F005A68B7 /* MemberTarget.swift */; };
 		7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70423B49C2D0021371D /* AppDelegate.swift */; };
 		7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A70623B49C2D0021371D /* SceneDelegate.swift */; };
 		7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A70D23B49C2F0021371D /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7E651EBF23C393E200C43CFA /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
 		7E651EC123C4EB4200C43CFA /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
+		7E662F5323D74A9F005A68B7 /* MemberTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTarget.swift; sourceTree = "<group>"; };
 		7E68A70123B49C2D0021371D /* WatNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E68A70423B49C2D0021371D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E68A70623B49C2D0021371D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */,
+				7E662F5323D74A9F005A68B7 /* MemberTarget.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
+				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
