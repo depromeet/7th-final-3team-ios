@@ -20,7 +20,7 @@ class SignupViewModel: ObservableObject {
     private var password: String = ""
     private var passwordConfirm: String = ""
 
-    private var disposable = Set<AnyCancellable>()
+    private var cancelables = Set<AnyCancellable>()
 
     /// 유효한 이메일 여부
     var isValidEmail: Bool {
@@ -116,5 +116,29 @@ class SignupViewModel: ObservableObject {
         case .passwordConfirm:
             return "비밀번호가 일치하지 않습니다."
         }
+    }
+
+    func signUp(completionHandler: @escaping (Result<Void, Error>) -> Void) {
+
+        let body = [
+            "email": email,
+            "password": password,
+            "name": name
+        ]
+
+        let request = URLRequest(target: MemberTarget.signUp(body))
+
+        URLSession.shared.dataTaskPublisher(for: request).sink(receiveCompletion: { completion in
+            DispatchQueue.main.async {
+                if case .failure(let error) = completion {
+                    print("Retrieving data failed with error \(error)")
+                    completionHandler(.failure(error))
+                }
+            }
+          }, receiveValue: { _, _ in
+            DispatchQueue.main.async {
+                completionHandler(.success(()))
+            }
+            }).store(in: &cancelables)
     }
 }

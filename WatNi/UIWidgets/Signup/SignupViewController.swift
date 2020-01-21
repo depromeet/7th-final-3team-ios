@@ -48,6 +48,7 @@ class SignupViewController: UIViewController, ViewModelInjectable {
         passwordConfirmTextFieldView.textField.delegate = self
 
         subscribeTextField()
+        subscribeSignUpButton()
     }
 
     @IBAction func naviBackBtnTapped(_ sender: UIButton) {
@@ -56,6 +57,28 @@ class SignupViewController: UIViewController, ViewModelInjectable {
 }
 
 extension SignupViewController {
+
+    private func subscribeSignUpButton() {
+        signUpButton.publisher(for: .touchUpInside).sink { [weak self] (sender) in
+            sender.isUserInteractionEnabled = false
+            self?.viewModel.signUp(completionHandler: { (result) in
+                defer {
+                    sender.isUserInteractionEnabled = true
+                }
+                switch result {
+                case .failure(let error):
+                    let alertController = UIAlertController(title: "회원 가입 실패",
+                                                            message: error.localizedDescription,
+                                                            preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                    self?.present(alertController, animated: true, completion: nil)
+                case .success:
+                    // TODO: 회원가입 성공 로직 처리
+                    print("success")
+                }
+            })
+        }.store(in: &cancelables)
+    }
 
     private func subscribeTextField() {
         nameTextFieldView.viewModel = viewModel.createUnderlineViewModel(inputType: .name)
