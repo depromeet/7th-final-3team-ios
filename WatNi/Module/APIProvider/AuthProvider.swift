@@ -46,7 +46,7 @@ class AuthProvider {
         }
     }
 
-    static func refreshToken(refreshToken: String, completion: @escaping (Result<Token, Error>) -> Void) {
+    static func refreshToken(refreshToken: String, completion: @escaping (Result<HasAuthToken, Error>) -> Void) {
         let body: [String: String] = [
             "refresh_token": refreshToken,
             "grant_type": "refresh_token"

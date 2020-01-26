@@ -11,6 +11,7 @@
 		7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F707C23DD7FA000EB1C5E /* CoachViewController.swift */; };
 		7E0F707F23DD7FC500EB1C5E /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */; };
 		7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */; };
+		7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708223DDC39100EB1C5E /* WNAuthError.swift */; };
 		7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */; };
 		7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */; };
 		7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */; };
@@ -72,6 +73,7 @@
 		7E0F707C23DD7FA000EB1C5E /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewModel.swift; sourceTree = "<group>"; };
+		7E0F708223DDC39100EB1C5E /* WNAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAuthError.swift; sourceTree = "<group>"; };
 		7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Subscription.swift"; sourceTree = "<group>"; };
 		7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
 		7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = Coach;
 			sourceTree = "<group>";
 		};
+		7E0F708523DDC3CB00EB1C5E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				7E0F708223DDC39100EB1C5E /* WNAuthError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		7E27771A23CF781500B90F80 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +236,7 @@
 		7E651EBE23C393C200C43CFA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7E0F708523DDC3CB00EB1C5E /* Error */,
 				7E5D4F5923CB4A8B0008D92D /* Model */,
 				7EB3C3C223C9EB7900A2B41C /* APIProvider */,
 				7E0F707A23DD716D00EB1C5E /* ModelLayer */,
@@ -523,6 +534,7 @@
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
 				7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */,
 				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
+				7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */,
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,

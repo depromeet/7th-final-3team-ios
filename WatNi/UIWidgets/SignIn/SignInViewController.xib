@@ -16,7 +16,7 @@
             <connections>
                 <outlet property="emailTextFieldView" destination="9Lr-gU-dIa" id="FY5-K2-XWJ"/>
                 <outlet property="passwordTextFieldView" destination="HQK-Nm-feY" id="gDj-BO-7qr"/>
-                <outlet property="submitButton" destination="PdK-ie-oXe" id="t9h-gs-pCr"/>
+                <outlet property="signInButton" destination="PdK-ie-oXe" id="Ch4-Xl-8aK"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WP8-ex-hHw"/>
             </connections>
         </placeholder>
@@ -54,9 +54,6 @@
                         <constraint firstAttribute="height" constant="48" id="CTa-pF-YUU"/>
                     </constraints>
                     <state key="normal" title="로그인"/>
-                    <connections>
-                        <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="FFE-ts-ViE"/>
-                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCc-Df-czR">
                     <rect key="frame" x="147.5" y="498" width="119" height="30"/>
