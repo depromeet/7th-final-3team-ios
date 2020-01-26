@@ -128,17 +128,37 @@ class SignupViewModel: ObservableObject {
 
         let request = URLRequest(target: MemberTarget.signUp(body))
 
-        URLSession.shared.dataTaskPublisher(for: request).sink(receiveCompletion: { completion in
-            DispatchQueue.main.async {
-                if case .failure(let error) = completion {
-                    print("Retrieving data failed with error \(error)")
-                    completionHandler(.failure(error))
-                }
+        let future = Future<HasAuthToken, Error> { [weak self] promise in
+            guard let self = self else { return }
+            AuthProvider.issueToken(email: self.email, password: self.password) { (result) in
+                promise(result)
             }
-          }, receiveValue: { _, _ in
-            DispatchQueue.main.async {
-                completionHandler(.success(()))
+        }
+
+        let completion: (Subscribers.Completion<URLError>) -> Void = { completion in
+            if case .failure(let error) = completion {
+                print("[SignUp][요청] 실패: \(error)")
+                completionHandler(.failure(error))
             }
+        }
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .compactMap { _ in future }
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: completion, receiveValue: { [weak self] (future) in
+                guard let self = self else { return }
+                future.sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        print("[SignUp][Token] 발행 실패: \(error)")
+                        completionHandler(.failure(error))
+                    }
+                }, receiveValue: { token in
+                    let member = Member(name: self.name, email: self.email, password: self.password)
+
+                    MemberAccess.default.update(identity: member)
+                    MemberAccess.default.update(token: token)
+                    completionHandler(.success(()))
+                }).store(in: &self.cancelables)
             }).store(in: &cancelables)
     }
 }

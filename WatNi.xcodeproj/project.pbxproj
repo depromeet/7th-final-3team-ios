@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0F707923DD715A00EB1C5E /* MemberAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F707823DD715A00EB1C5E /* MemberAccess.swift */; };
 		7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */; };
 		7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */; };
 		7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0F707823DD715A00EB1C5E /* MemberAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAccess.swift; sourceTree = "<group>"; };
 		7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Subscription.swift"; sourceTree = "<group>"; };
 		7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
 		7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E0F707A23DD716D00EB1C5E /* ModelLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7E0F707823DD715A00EB1C5E /* MemberAccess.swift */,
+			);
+			path = ModelLayer;
+			sourceTree = "<group>";
+		};
 		7E27771A23CF781500B90F80 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 			children = (
 				7E5D4F5923CB4A8B0008D92D /* Model */,
 				7EB3C3C223C9EB7900A2B41C /* APIProvider */,
+				7E0F707A23DD716D00EB1C5E /* ModelLayer */,
 				7EB3C3C123C9EB7300A2B41C /* APITarget */,
 				7E5D4F5123CB22EC0008D92D /* APIConfig.swift */,
 				7E9F6A8A23D35B8E00E78027 /* WNColor.swift */,
@@ -230,8 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				7E68A73123B4A97A0021371D /* Extensions */,
-				7E651EBE23C393C200C43CFA /* Module */,
 				7E68A72823B49FC90021371D /* Protocol */,
+				7E651EBE23C393C200C43CFA /* Module */,
 				7E5D4F5823CB4A6C0008D92D /* UIWidgets */,
 				7E5D4F5B23CB4AB20008D92D /* Resources */,
 				7E5D4F5A23CB4AA50008D92D /* Supporting Files */,
@@ -490,6 +501,7 @@
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
+				7E0F707923DD715A00EB1C5E /* MemberAccess.swift in Sources */,
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
 				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,

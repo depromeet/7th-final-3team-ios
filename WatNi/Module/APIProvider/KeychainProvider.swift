@@ -13,6 +13,11 @@ enum KeychainError: Error {
     case valueFromKeyIsNil
 }
 
+protocol KeychainDecodable {
+    associatedtype ObjectType
+    static var fromKeychain: ObjectType { get }
+}
+
 protocol KeychainProvidable {
     var keychain: Keychain { get }
     func item(for key: KeychainKey) -> String?
