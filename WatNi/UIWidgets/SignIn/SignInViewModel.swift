@@ -37,7 +37,12 @@ class SignInViewModel {
             return
         }
 
-        AuthProvider.refreshToken(refreshToken: token.refreshToken) { [weak self] (result) in
+        guard !token.refreshToken.isEmpty else {
+            completionHandler(.failure(WNAuthError.tokenNotExist))
+            return
+        }
+
+        AuthProvider.issueToken(email: email, password: password) { [weak self] (result) in
             switch result {
             case .failure(let error):
                 print("[SignIn][요청] 실패: \(error)")

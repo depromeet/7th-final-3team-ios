@@ -32,6 +32,11 @@ class AuthProvider {
         provider.request(.issueToken(body)) { (result) in
             switch result {
             case .success(let response):
+
+                guard (200...399).contains(response.statusCode) else {
+                    completion(.failure(WNAuthError.invalidGrant))
+                    return
+                }
                 do {
                     let token = try response.map(Token.self)
                     completion(.success(token))
