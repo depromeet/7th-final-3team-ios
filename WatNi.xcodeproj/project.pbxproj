@@ -46,6 +46,8 @@
 		7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */; };
 		7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73823B4AA090021371D /* UIView+Nib.swift */; };
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
+		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
+		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
 		7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8A23D35B8E00E78027 /* WNColor.swift */; };
 		7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8C23D360B500E78027 /* UIView+properties.swift */; };
@@ -109,6 +111,8 @@
 		7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initializers.swift"; sourceTree = "<group>"; };
 		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
+		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		7E9F6A8A23D35B8E00E78027 /* WNColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNColor.swift; sourceTree = "<group>"; };
 		7E9F6A8C23D360B500E78027 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 			children = (
 				7EB3C39223C9B9A500A2B41C /* OnBoardingViewController.swift */,
 				7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */,
+				7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */,
+				7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
+				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
@@ -521,6 +528,7 @@
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
+				7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,

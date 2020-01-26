@@ -38,6 +38,8 @@ class CoachViewController: UIViewController, ViewModelInjectable {
 
     private func subscribeLogoutButton() {
         logoutButton.publisher(for: .touchUpInside).sink { [weak self] _ in
+
+            MemberAccess.default.logout()
             let onboardingVC = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
             self?.navigationController?.setViewControllers([onboardingVC], animated: false)
         }.store(in: &cancelables)
