@@ -32,16 +32,6 @@ class SignInViewModel {
 
     func signIn(completionHandler: @escaping (Result<Void, Error>) -> Void) {
 
-        guard let token = MemberAccess.default.token else {
-            completionHandler(.failure(WNAuthError.tokenNotExist))
-            return
-        }
-
-        guard !token.refreshToken.isEmpty else {
-            completionHandler(.failure(WNAuthError.tokenNotExist))
-            return
-        }
-
         AuthProvider.issueToken(email: email, password: password) { [weak self] (result) in
             switch result {
             case .failure(let error):
