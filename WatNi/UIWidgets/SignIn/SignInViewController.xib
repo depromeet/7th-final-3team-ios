@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="WatNi" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextFieldView" destination="9Lr-gU-dIa" id="FY5-K2-XWJ"/>
+                <outlet property="indicatorView" destination="ghn-U2-UCr" id="fM4-zf-sKz"/>
                 <outlet property="passwordTextFieldView" destination="HQK-Nm-feY" id="gDj-BO-7qr"/>
                 <outlet property="signInButton" destination="PdK-ie-oXe" id="Ch4-Xl-8aK"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WP8-ex-hHw"/>
@@ -97,6 +98,9 @@
                         <action selector="navigationBackBtnTapped:" destination="-1" eventType="touchUpInside" id="Tcl-b3-1l7"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-U2-UCr">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -113,6 +117,8 @@
                 <constraint firstItem="Md4-7o-HUL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hDW-tH-v26"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Y9-E7-mu0" secondAttribute="trailing" constant="24" id="hKZ-1A-dyN"/>
                 <constraint firstItem="NBm-eG-VXb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hTc-qp-AaW"/>
+                <constraint firstItem="ghn-U2-UCr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jNc-f2-yn1"/>
+                <constraint firstItem="ghn-U2-UCr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="l3G-3M-Vg8"/>
                 <constraint firstItem="NBm-eG-VXb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mjo-xL-1VZ"/>
                 <constraint firstItem="Md4-7o-HUL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="87" id="wTg-Mh-wO7"/>
             </constraints>

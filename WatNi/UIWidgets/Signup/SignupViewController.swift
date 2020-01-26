@@ -20,6 +20,7 @@ class SignupViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var passwordTextFieldView: UnderlineTextFieldView!
     @IBOutlet private weak var passwordConfirmTextFieldView: UnderlineTextFieldView!
 
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var signUpButton: SubmitButton!
 
     let viewModel: SignupViewModel
@@ -47,6 +48,7 @@ class SignupViewController: UIViewController, ViewModelInjectable {
         passwordTextFieldView.textField.delegate = self
         passwordConfirmTextFieldView.textField.delegate = self
 
+        indicatorView.isHidden = true
         subscribeTextField()
         subscribeSignUpButton()
     }
@@ -61,9 +63,13 @@ extension SignupViewController {
     private func subscribeSignUpButton() {
         signUpButton.publisher(for: .touchUpInside).sink { [weak self] (sender) in
             sender.isUserInteractionEnabled = false
+            self?.indicatorView.isHidden = false
+            self?.indicatorView.startAnimating()
             self?.viewModel.signUp(completionHandler: { (result) in
                 defer {
                     sender.isUserInteractionEnabled = true
+                    self?.indicatorView.isHidden = true
+                    self?.indicatorView.stopAnimating()
                 }
                 switch result {
                 case .failure(let error):

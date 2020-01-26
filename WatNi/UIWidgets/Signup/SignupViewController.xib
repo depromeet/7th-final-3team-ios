@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController" customModule="WatNi" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextFieldView" destination="7te-p1-lj0" id="Hh6-M7-aXh"/>
+                <outlet property="indicatorView" destination="Xrr-m6-fvl" id="V1P-u5-LSX"/>
                 <outlet property="nameTextFieldView" destination="Z0J-Pl-kUD" id="ybL-Sq-jCm"/>
                 <outlet property="passwordConfirmTextFieldView" destination="ub5-ep-Ab7" id="qCy-UK-sPG"/>
                 <outlet property="passwordTextFieldView" destination="CVs-vR-goc" id="suR-JM-9Yq"/>
@@ -123,6 +124,9 @@
                         <constraint firstItem="Ib8-Oc-OAy" firstAttribute="top" secondItem="UvB-4o-fm5" secondAttribute="top" id="uLg-ww-bou"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Xrr-m6-fvl">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -133,6 +137,8 @@
                 <constraint firstItem="UvB-4o-fm5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gon-sK-PQu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="447-t5-Q5B" secondAttribute="trailing" id="nME-lP-0EQ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UvB-4o-fm5" secondAttribute="trailing" id="oRr-O1-RmV"/>
+                <constraint firstItem="Xrr-m6-fvl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uPK-X5-Ogi"/>
+                <constraint firstItem="Xrr-m6-fvl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xKi-fl-Bm2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
