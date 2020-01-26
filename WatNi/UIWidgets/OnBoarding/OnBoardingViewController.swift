@@ -8,25 +8,21 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class OnBoardingViewController: UIViewController {
+
+    @IBOutlet weak var startButton: SubmitButton!
+    private var cancelables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }
-
-    @IBAction func signInBtnTapped(_ sender: UIButton) {
-        let signinViewModel = SignInViewModel()
-        let signinVC = SignInViewController(viewModel: signinViewModel,
-                                            nibName: SignInViewController.className)
-        navigationController?.pushViewController(signinVC, animated: true)
-    }
-
-    @IBAction func signUpBtnTapped(_ sender: UIButton) {
-        let signupViewModel = SignupViewModel()
-        let signupVC = SignupViewController(viewModel: signupViewModel,
-                                            nibName: SignupViewController.className)
-        navigationController?.pushViewController(signupVC, animated: true)
+        startButton.publisher(for: .touchUpInside).sink { [weak self] _ in
+            let signinViewModel = SignInViewModel()
+            let signinVC = SignInViewController(viewModel: signinViewModel,
+                                                nibName: SignInViewController.className)
+            self?.navigationController?.pushViewController(signinVC, animated: true)
+        }.store(in: &cancelables)
     }
 }

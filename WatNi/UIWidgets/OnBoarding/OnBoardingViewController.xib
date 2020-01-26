@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="WatNi" customModuleProvider="target">
             <connections>
+                <outlet property="startButton" destination="gft-bS-fr4" id="77I-eL-BqT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5Xh-qG-d3h"/>
             </connections>
         </placeholder>
@@ -17,30 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-cu-LbK">
-                    <rect key="frame" x="181" y="410" width="52" height="76"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4o6-Xw-s8X">
-                            <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
-                            <state key="normal" title="로그인"/>
-                            <connections>
-                                <action selector="signInBtnTapped:" destination="-1" eventType="touchUpInside" id="80u-GU-R4S"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yg-h4-RLD">
-                            <rect key="frame" x="0.0" y="46" width="52" height="30"/>
-                            <state key="normal" title="회원가입"/>
-                            <connections>
-                                <action selector="signUpBtnTapped:" destination="-1" eventType="touchUpInside" id="FuO-ig-Kei"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gft-bS-fr4" customClass="SubmitButton" customModule="WatNi" customModuleProvider="target">
+                    <rect key="frame" x="16" y="794" width="382" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="ctz-57-L46"/>
+                    </constraints>
+                    <state key="normal" title="시작하기">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="A5d-cu-LbK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="44d-R7-6Qa"/>
-                <constraint firstItem="A5d-cu-LbK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hmt-Y9-5gW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gft-bS-fr4" secondAttribute="trailing" constant="16" id="AhU-bc-BjW"/>
+                <constraint firstItem="gft-bS-fr4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FYY-0j-3EK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gft-bS-fr4" secondAttribute="bottom" constant="20" id="hzf-6a-Icl"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="129"/>
