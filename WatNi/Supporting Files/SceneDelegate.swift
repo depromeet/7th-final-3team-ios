@@ -18,13 +18,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: scene)
 
-        let onboardingViewController = OnBoardingViewController(nibName: OnBoardingViewController.className,
-                                                                bundle: nil)
-        let navigationController = UINavigationController(rootViewController: onboardingViewController)
+        let navigationController = UINavigationController(rootViewController: firstVC)
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
         navigationController.navigationBar.isHidden = true
+    }
+
+    private var firstVC: UIViewController {
+        // TODO: 1. Token 처리에 대한 조건 분기 정리
+        // TODO: 2. 사용자의 모임 정보에 대한 API 반영
+        if MemberAccess.default.member == nil {
+            return OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
+        }
+
+        let viewModel = CoachViewModel()
+        let coachVC = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+        return coachVC
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

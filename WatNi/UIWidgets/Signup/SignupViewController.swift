@@ -73,8 +73,9 @@ extension SignupViewController {
                     alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                     self?.present(alertController, animated: true, completion: nil)
                 case .success:
-                    // TODO: 회원가입 성공 로직 처리
-                    print("success")
+                    let viewModel = CoachViewModel()
+                    let coachVC = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+                    self?.navigationController?.pushViewController(coachVC, animated: true)
                 }
             })
         }.store(in: &cancelables)
