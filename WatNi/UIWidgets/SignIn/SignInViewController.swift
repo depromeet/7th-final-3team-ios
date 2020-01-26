@@ -17,6 +17,7 @@ class SignInViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var emailTextFieldView: UnderlineTextFieldView!
     @IBOutlet private weak var passwordTextFieldView: UnderlineTextFieldView!
     @IBOutlet weak var signInButton: SubmitButton!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
 
     let viewModel: SignInViewModel
     private var cancelables = Set<AnyCancellable>()
@@ -39,6 +40,7 @@ class SignInViewController: UIViewController, ViewModelInjectable {
 
         subscribeSignInButtonTap()
         signInButton.isEnabled = false
+        indicatorView.isHidden = true
     }
 
     private func subscribeTextFieldEditingChanged() {
@@ -82,10 +84,14 @@ class SignInViewController: UIViewController, ViewModelInjectable {
         let password = passwordTextFieldView.viewModel.inputStr
 
         signInButton.publisher(for: .touchUpInside).sink { [weak self] (sender) in
+            self?.indicatorView.isHidden = false
+            self?.indicatorView.startAnimating()
             sender.isUserInteractionEnabled = false
             self?.viewModel.signIn(completionHandler: { result in
                 defer {
                     sender.isUserInteractionEnabled = true
+                    self?.indicatorView.isHidden = true
+                    self?.indicatorView.stopAnimating()
                 }
                 switch result {
                 case .failure(let error):
