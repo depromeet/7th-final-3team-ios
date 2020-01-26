@@ -64,8 +64,8 @@ class SignInViewController: UIViewController, ViewModelInjectable {
             ($0 as? UITextField)?.text
         }.sink { [weak self] (input) in
             emailViewModel.inputStr = input
+            self?.viewModel.update(.email, newValue: input)
             let passwordInput = self?.passwordTextFieldView.viewModel.inputStr ?? ""
-            self?.viewModel.update(.password, newValue: passwordInput)
             self?.signInButton.isEnabled = !input.isEmpty && !passwordInput.isEmpty
         }.store(in: &cancelables)
 
@@ -73,8 +73,8 @@ class SignInViewController: UIViewController, ViewModelInjectable {
             ($0 as? UITextField)?.text
         }.sink { [weak self] (input) in
             passwordViewModel.inputStr = input
+            self?.viewModel.update(.password, newValue: input)
             let emailInput = self?.emailTextFieldView.viewModel.inputStr ?? ""
-            self?.viewModel.update(.email, newValue: emailInput)
             self?.signInButton.isEnabled = !input.isEmpty && !emailInput.isEmpty
         }.store(in: &cancelables)
     }
@@ -96,7 +96,7 @@ class SignInViewController: UIViewController, ViewModelInjectable {
                 switch result {
                 case .failure(let error):
                     let alertController = UIAlertController(title: "로그인 실패",
-                                                            message: error.localizedDescription,
+                                                            message: error.userMessage,
                                                             preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                     self?.present(alertController, animated: true, completion: nil)

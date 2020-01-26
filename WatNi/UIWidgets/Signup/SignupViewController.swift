@@ -74,7 +74,7 @@ extension SignupViewController {
                 switch result {
                 case .failure(let error):
                     let alertController = UIAlertController(title: "회원 가입 실패",
-                                                            message: error.localizedDescription,
+                                                            message: error.userMessage,
                                                             preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                     self?.present(alertController, animated: true, completion: nil)

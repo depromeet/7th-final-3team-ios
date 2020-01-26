@@ -135,17 +135,9 @@ class SignupViewModel: ObservableObject {
             }
         }
 
-        let completion: (Subscribers.Completion<URLError>) -> Void = { completion in
-            if case .failure(let error) = completion {
-                print("[SignUp][요청] 실패: \(error)")
-                completionHandler(.failure(error))
-            }
-        }
-
         URLSession.shared.dataTaskPublisher(for: request)
-            .compactMap { _ in future }
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: completion, receiveValue: { [weak self] (future) in
+            .sink(receiveCompletion: { [weak self] completion in
                 guard let self = self else { return }
                 future.sink(receiveCompletion: { completion in
                     if case .failure(let error) = completion {
@@ -159,6 +151,8 @@ class SignupViewModel: ObservableObject {
                     MemberAccess.default.update(token: token)
                     completionHandler(.success(()))
                 }).store(in: &self.cancelables)
+                }, receiveValue: { output in
+                    print("[SignUp][receiveValue] response: \(output.response)")
             }).store(in: &cancelables)
     }
 }
