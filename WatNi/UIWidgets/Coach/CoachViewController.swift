@@ -8,14 +8,17 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class CoachViewController: UIViewController, ViewModelInjectable {
 
     typealias ViewModel = CoachViewModel
 
-    @IBOutlet weak var loginUserLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var userNameLabel: UILabel!
 
     var viewModel: CoachViewModel
+    private var cancelables = Set<AnyCancellable>()
 
     required init(viewModel: ViewModel, nibName: String) {
         self.viewModel = viewModel
@@ -29,6 +32,14 @@ class CoachViewController: UIViewController, ViewModelInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loginUserLabel.text = viewModel.memberInfo
+        userNameLabel.text = viewModel.memberNameStr
+        subscribeLogoutButton()
+    }
+
+    private func subscribeLogoutButton() {
+        logoutButton.publisher(for: .touchUpInside).sink { [weak self] _ in
+            let onboardingVC = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
+            self?.navigationController?.setViewControllers([onboardingVC], animated: false)
+        }.store(in: &cancelables)
     }
 }

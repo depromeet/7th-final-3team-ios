@@ -10,10 +10,10 @@ import Foundation
 
 class CoachViewModel {
 
-    var memberInfo: String {
+    var memberNameStr: String {
         guard let member = MemberAccess.default.member else {
-            return "멤버 정보 없음"
+            return "익명님!\n반갑습니다."
         }
-        return "현재 접속한 사용자 정보\n\(member.debugDescription)"
+        return "\(member.name)님!\n반갑습니다."
     }
 }
