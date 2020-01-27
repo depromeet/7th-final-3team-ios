@@ -17,6 +17,10 @@ class SignInViewModel {
     private var email: String = ""
     private var password: String = ""
 
+    var textFieldIsEmpty: Bool {
+        return email.isEmpty || password.isEmpty
+    }
+
     /// 각각의 TextField별 setter
     /// - Parameters:
     ///   - inputType: TextField 종류

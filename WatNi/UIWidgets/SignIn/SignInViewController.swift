@@ -47,7 +47,7 @@ class SignInViewController: UIViewController, ViewModelInjectable {
         let emailViewModel = UnderlineTextFieldViewModel(descLabelStr: "이메일",
                                                          inputContentType: .emailAddress,
                                                          returnKeyType: .continue,
-                                                         keyboardType: .asciiCapable)
+                                                         keyboardType: .emailAddress)
 
         let passwordViewModel = UnderlineTextFieldViewModel(descLabelStr: "비밀번호",
                                                             inputContentType: .password,
@@ -124,11 +124,17 @@ class SignInViewController: UIViewController, ViewModelInjectable {
 // MARK: UITextFieldDelegate
 extension SignInViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailTextFieldView.textField {
+        guard textField == passwordTextFieldView.textField else {
             passwordTextFieldView.textField.becomeFirstResponder()
-        } else if textField == passwordTextFieldView.textField {
-            passwordTextFieldView.textField.resignFirstResponder()
+            return true
         }
+        passwordTextFieldView.textField.resignFirstResponder()
+
+        guard !viewModel.textFieldIsEmpty else {
+            return true
+        }
+
+        signInButton.sendActions(for: .touchUpInside)
         return true
     }
 }
