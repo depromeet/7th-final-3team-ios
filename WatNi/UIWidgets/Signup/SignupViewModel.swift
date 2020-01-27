@@ -76,7 +76,7 @@ class SignupViewModel: ObservableObject {
             let emailViewModel = UnderlineTextFieldViewModel(descLabelStr: "이메일",
                                                              inputContentType: .emailAddress,
                                                              returnKeyType: .continue,
-                                                             keyboardType: .asciiCapable)
+                                                             keyboardType: .emailAddress)
             emailViewModel.validCondition = { [weak self] input in
                 self?.isValidEmail ?? false
             }

@@ -142,6 +142,9 @@ extension SignupViewController: UITextFieldDelegate {
             passwordConfirmTextFieldView.textField.becomeFirstResponder()
         } else if textField == passwordConfirmTextFieldView.textField {
             passwordConfirmTextFieldView.textField.resignFirstResponder()
+
+            guard viewModel.submitAvailable else { return true }
+            signUpButton.sendActions(for: .touchUpInside)
         }
         return true
     }
