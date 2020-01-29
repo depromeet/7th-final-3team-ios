@@ -44,4 +44,16 @@ class CoachViewController: UIViewController, ViewModelInjectable {
             self?.navigationController?.setViewControllers([onboardingVC], animated: false)
         }.store(in: &cancelables)
     }
+
+    @IBAction func createGroupTapped(_ sender: UITapGestureRecognizer) {
+        let viewModel = NewbieViewModel(viewType: .createGroup)
+        let newbieVC = NewbieViewController(viewModel: viewModel, nibName: NewbieViewController.className)
+        navigationController?.pushViewController(newbieVC, animated: true)
+    }
+
+    @IBAction func enterGroupTapped(_ sender: UITapGestureRecognizer) {
+        let viewModel = NewbieViewModel(viewType: .putCode)
+        let newbieVC = NewbieViewController(viewModel: viewModel, nibName: NewbieViewController.className)
+        navigationController?.pushViewController(newbieVC, animated: true)
+    }
 }

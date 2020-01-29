@@ -48,6 +48,9 @@
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
 		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
+		7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */; };
+		7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */; };
+		7E7A954123E1E334000DAAE0 /* NewbieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
 		7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8A23D35B8E00E78027 /* WNColor.swift */; };
 		7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8C23D360B500E78027 /* UIView+properties.swift */; };
@@ -113,6 +116,9 @@
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
+		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
+		7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewbieViewController.xib; sourceTree = "<group>"; };
+		7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewModel.swift; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		7E9F6A8A23D35B8E00E78027 /* WNColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNColor.swift; sourceTree = "<group>"; };
 		7E9F6A8C23D360B500E78027 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				7E7A953B23E1E299000DAAE0 /* Newbie */,
 				7E0F707B23DD7EF600EB1C5E /* Coach */,
 				7E9F6A8923D35AEB00E78027 /* SubmitButton */,
 				7E27771B23CF793900B90F80 /* UnderlineTextField */,
@@ -313,6 +320,16 @@
 				7E9F6A8C23D360B500E78027 /* UIView+properties.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E7A953B23E1E299000DAAE0 /* Newbie */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */,
+				7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */,
+				7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */,
+			);
+			path = Newbie;
 			sourceTree = "<group>";
 		};
 		7E9F6A8923D35AEB00E78027 /* SubmitButton */ = {
@@ -470,6 +487,7 @@
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
+				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
@@ -530,11 +548,13 @@
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
 				7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
+				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
+				7E7A954123E1E334000DAAE0 /* NewbieViewModel.swift in Sources */,
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,

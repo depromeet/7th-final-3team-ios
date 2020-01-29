@@ -59,6 +59,7 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="VCQ-gl-SZZ" secondAttribute="trailing" constant="18" id="4qq-e2-ku0"/>
                                 <constraint firstItem="MGd-uK-Fnn" firstAttribute="leading" secondItem="9r7-30-TZy" secondAttribute="trailing" constant="20" id="7Ld-dL-k6N"/>
@@ -80,6 +81,9 @@
                                     <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.13" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="E4c-gr-dlx" appends="YES" id="bBL-k5-5tT"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-9h-UJs">
                             <rect key="frame" x="16" y="165" width="382" height="116"/>
@@ -98,6 +102,7 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="6ty-0S-6hh" secondAttribute="bottom" constant="28" id="96b-js-g7A"/>
                                 <constraint firstAttribute="trailing" secondItem="Xv4-u3-gX7" secondAttribute="trailing" constant="18" id="GNI-2O-suO"/>
@@ -119,6 +124,9 @@
                                     <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.13" colorSpace="custom" customColorSpace="sRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="BT5-Ld-l5O" appends="YES" id="BuX-WB-ora"/>
+                            </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,6 +155,16 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="129"/>
         </view>
+        <tapGestureRecognizer id="E4c-gr-dlx">
+            <connections>
+                <action selector="createGroupTapped:" destination="-1" id="tqM-Cx-EPW"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="BT5-Ld-l5O">
+            <connections>
+                <action selector="enterGroupTapped:" destination="-1" id="Sf5-fD-xy6"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="create_group" width="60" height="60"/>
