@@ -114,6 +114,7 @@
 		7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Initializers.swift"; sourceTree = "<group>"; };
 		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		7E6E183423E33BB000E395DD /* WatNi.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WatNi.xcconfig; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 				7E68A70423B49C2D0021371D /* AppDelegate.swift */,
 				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
 				7E68A71223B49C2F0021371D /* Info.plist */,
+				7E6E183423E33BB000E395DD /* WatNi.xcconfig */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -604,6 +606,7 @@
 /* Begin XCBuildConfiguration section */
 		7E68A71E23B49C2F0021371D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6E183423E33BB000E395DD /* WatNi.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -652,6 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/WatNi/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -664,6 +668,7 @@
 		};
 		7E68A71F23B49C2F0021371D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6E183423E33BB000E395DD /* WatNi.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -706,6 +711,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/WatNi/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
