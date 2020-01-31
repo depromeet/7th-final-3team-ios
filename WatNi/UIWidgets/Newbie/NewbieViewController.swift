@@ -44,6 +44,28 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                                                             attributes: attributes)
         subscribeTextField()
         submitButton.isEnabled = false
+        submitButton.publisher(for: .touchUpInside).sink { [weak self] _ in
+
+            self?.viewModel.submitAction(completionHandler: { (result) in
+                switch result {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .success(let anyDecodable):
+
+                    guard let group = anyDecodable as? WNGroup else {
+                        // TODO: 홈으로 이동
+                        return
+                    }
+
+                    // 초대 코드 생성 화면으로 이동
+                    let createGroupViewModel = CreateGroupCodeViewModel(group: group)
+                    let viewController = NewbieViewController(viewModel: createGroupViewModel,
+                                                              nibName: NewbieViewController.className)
+                    self?.navigationController?.pushViewController(viewController, animated: true)
+                }
+            })
+        }.store(in: &cancelables)
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
