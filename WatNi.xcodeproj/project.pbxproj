@@ -46,11 +46,16 @@
 		7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */; };
 		7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A73823B4AA090021371D /* UIView+Nib.swift */; };
 		7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E68A73A23B4AA890021371D /* SignupViewController.xib */; };
+		7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F123E4672100C97F35 /* GroupTarget.swift */; };
+		7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F423E46FA200C97F35 /* CreateGroupViewModel.swift */; };
+		7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */; };
+		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
+		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
+		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
 		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
 		7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */; };
 		7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */; };
-		7E7A954123E1E334000DAAE0 /* NewbieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
 		7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8A23D35B8E00E78027 /* WNColor.swift */; };
 		7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8C23D360B500E78027 /* UIView+properties.swift */; };
@@ -115,11 +120,15 @@
 		7E68A73823B4AA090021371D /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		7E68A73A23B4AA890021371D /* SignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		7E6E183423E33BB000E395DD /* WatNi.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WatNi.xcconfig; sourceTree = "<group>"; };
+		7E6F80F123E4672100C97F35 /* GroupTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTarget.swift; sourceTree = "<group>"; };
+		7E6F80F423E46FA200C97F35 /* CreateGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewModel.swift; sourceTree = "<group>"; };
+		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
+		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
+		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
 		7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewbieViewController.xib; sourceTree = "<group>"; };
-		7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewModel.swift; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		7E9F6A8A23D35B8E00E78027 /* WNColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNColor.swift; sourceTree = "<group>"; };
 		7E9F6A8C23D360B500E78027 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
@@ -139,6 +148,7 @@
 			files = (
 				7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */,
 				7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */,
+				7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */,
 				7E604FB123C1CEAB00842B72 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,12 +334,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7E6F80F323E46F9800C97F35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F80F423E46FA200C97F35 /* CreateGroupViewModel.swift */,
+				7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */,
+				7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7E7A953B23E1E299000DAAE0 /* Newbie */ = {
 			isa = PBXGroup;
 			children = (
+				7E6F80F323E46F9800C97F35 /* ViewModel */,
 				7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */,
 				7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */,
-				7E7A954023E1E334000DAAE0 /* NewbieViewModel.swift */,
+				7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */,
 			);
 			path = Newbie;
 			sourceTree = "<group>";
@@ -378,6 +399,7 @@
 			children = (
 				7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */,
 				7E662F5323D74A9F005A68B7 /* MemberTarget.swift */,
+				7E6F80F123E4672100C97F35 /* GroupTarget.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -412,6 +434,7 @@
 				7E604FB023C1CEAB00842B72 /* Moya */,
 				7E604FB323C1CF0E00842B72 /* KeychainAccess */,
 				7E604FB623C1CF8A00842B72 /* Kingfisher */,
+				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
 			);
 			productName = CheckThat;
 			productReference = 7E68A70123B49C2D0021371D /* WatNi.app */;
@@ -467,6 +490,7 @@
 				7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */,
 				7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 7E68A70223B49C2D0021371D /* Products */;
 			projectDirPath = "";
@@ -535,11 +559,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
+				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
+				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
+				7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
 				7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */,
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
@@ -548,6 +575,7 @@
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
+				7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */,
 				7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
 				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,
@@ -556,7 +584,6 @@
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
-				7E7A954123E1E334000DAAE0 /* NewbieViewModel.swift in Sources */,
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
@@ -566,6 +593,7 @@
 				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
 				7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */,
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
+				7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
@@ -863,6 +891,14 @@
 				minimumVersion = 5.12.0;
 			};
 		};
+		7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -880,6 +916,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
