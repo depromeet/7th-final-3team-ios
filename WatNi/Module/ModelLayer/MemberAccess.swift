@@ -25,6 +25,14 @@ class MemberAccess {
         self.token = Token.fromKeychain
     }
 
+    /// API header token
+    static var headerToken: String {
+        guard let accessToken = KeychainProvider.default.item(for: .accessToken) else {
+            return ""
+        }
+        return accessToken
+    }
+
     /// 사용자가 로그인되어 있는 상태인지 여부
     var isLogin: Bool {
         return UserDefaults.standard.bool(forKey: MemberAccess.StorageKey.token)
