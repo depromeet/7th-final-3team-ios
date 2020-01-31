@@ -35,5 +35,33 @@ class CreateGroupViewModel: NewbieViewModelProtocol {
     }
 
     func submitAction(completionHandler: @escaping (Result<Decodable, Error>) -> Void) {
+        // TODO: desc 정보 확인
+        let body = [
+            "groupName": inputText,
+            "description": ""
+        ]
+        let request = URLRequest(target: GroupTarget.createGroup(body))
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .print()
+            .map(\.data)
+            .decode(type: WNGroup.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("[Group][생성] 실패: \(error)")
+                    completionHandler(.failure(error))
+                }
+            }, receiveValue: { group in
+                print("[Group][생성] \(group)")
+                completionHandler(.success(group))
+            }).store(in: &cancelables)
     }
+}
+
+struct WNGroup: Decodable {
+    let groupId: Int
+    let name: String
+    let conferences: [String]
+    let accessions: [String]
 }
