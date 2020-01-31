@@ -12,13 +12,13 @@ import Combine
 
 class NewbieViewController: UIViewController, ViewModelInjectable {
 
-    typealias ViewModel = NewbieViewModel
+    typealias ViewModel = NewbieViewModelProtocol
 
     @IBOutlet weak var titleGuideLabel: UILabel!
     @IBOutlet weak var textFieldView: UnderlineTextFieldView!
     @IBOutlet weak var submitButton: SubmitButton!
 
-    let viewModel: NewbieViewModel
+    let viewModel: NewbieViewModelProtocol
     private var cancelables = Set<AnyCancellable>()
 
     required init(viewModel: ViewModel, nibName: String) {
