@@ -1,0 +1,16 @@
+PODS:
+  - AloeStackView (1.2.0)
+
+DEPENDENCIES:
+  - AloeStackView
+
+SPEC REPOS:
+  trunk:
+    - AloeStackView
+
+SPEC CHECKSUMS:
+  AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
+
+PODFILE CHECKSUM: ea3fc55b38d9ae221a81520b1201072315426ea1
+
+COCOAPODS: 1.8.4
