@@ -27,9 +27,9 @@
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
-		7E604FB123C1CEAB00842B72 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* Moya */; };
-		7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* KeychainAccess */; };
-		7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* Kingfisher */; };
+		7E604FB123C1CEAB00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */; };
+		7E604FB423C1CF0E00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */; };
+		7E604FB723C1CF8A00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */; };
 		7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EBF23C393E200C43CFA /* KeychainProvider.swift */; };
 		7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EC123C4EB4200C43CFA /* KeychainTests.swift */; };
 		7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E662F5323D74A9F005A68B7 /* MemberTarget.swift */; };
@@ -50,7 +50,7 @@
 		7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F423E46FA200C97F35 /* CreateGroupViewModel.swift */; };
 		7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */; };
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
-		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
+		7E6F80FE23E47CDC00C97F35 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
 		7E6F810323E58E5600C97F35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F810223E58E5600C97F35 /* HomeViewController.swift */; };
 		7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F810423E58EB800C97F35 /* HomeViewController.xib */; };
@@ -69,6 +69,8 @@
 		7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */; };
 		7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */; };
 		7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */; };
+		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
+		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatNiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B7E877936D60B44A18FBD4 /* Pods-WatNi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNi.release.xcconfig"; path = "Target Support Files/Pods-WatNi/Pods-WatNi.release.xcconfig"; sourceTree = "<group>"; };
+		5AA7AB234B3AF195E37AE145 /* Pods-WatNi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNi.debug.xcconfig"; path = "Target Support Files/Pods-WatNi/Pods-WatNi.debug.xcconfig"; sourceTree = "<group>"; };
+		5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatNi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0F707823DD715A00EB1C5E /* MemberAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAccess.swift; sourceTree = "<group>"; };
 		7E0F707C23DD7FA000EB1C5E /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
@@ -145,6 +151,8 @@
 		7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +160,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */,
-				7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */,
-				7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */,
-				7E604FB123C1CEAB00842B72 /* Moya in Frameworks */,
+				7E604FB723C1CF8A00842B72 /* BuildFile in Frameworks */,
+				7E604FB423C1CF0E00842B72 /* BuildFile in Frameworks */,
+				7E6F80FE23E47CDC00C97F35 /* BuildFile in Frameworks */,
+				7E604FB123C1CEAB00842B72 /* BuildFile in Frameworks */,
+				827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,12 +172,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45473D344BF4EE550D868625 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AA7AB234B3AF195E37AE145 /* Pods-WatNi.debug.xcconfig */,
+				54B7E877936D60B44A18FBD4 /* Pods-WatNi.release.xcconfig */,
+				CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */,
+				87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7E0F707A23DD716D00EB1C5E /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +305,8 @@
 				7E68A70323B49C2D0021371D /* WatNi */,
 				7E68A71A23B49C2F0021371D /* WatNiTests */,
 				7E68A70223B49C2D0021371D /* Products */,
+				45473D344BF4EE550D868625 /* Pods */,
+				8B16E2131FBF0DBE25F4DF11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -430,6 +454,15 @@
 			path = APIProvider;
 			sourceTree = "<group>";
 		};
+		8B16E2131FBF0DBE25F4DF11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */,
+				4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,10 +470,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E68A72023B49C2F0021371D /* Build configuration list for PBXNativeTarget "WatNi" */;
 			buildPhases = (
+				8F938AD44B18534F35F161F6 /* [CP] Check Pods Manifest.lock */,
 				7E68A6FD23B49C2D0021371D /* Sources */,
 				7E68A6FE23B49C2D0021371D /* Frameworks */,
 				7E68A6FF23B49C2D0021371D /* Resources */,
 				7E65E03223C0A4940021B8DD /* SwiftLint Script */,
+				EA14CB51FA52A441C58F3AFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,10 +483,10 @@
 			);
 			name = WatNi;
 			packageProductDependencies = (
-				7E604FB023C1CEAB00842B72 /* Moya */,
-				7E604FB323C1CF0E00842B72 /* KeychainAccess */,
-				7E604FB623C1CF8A00842B72 /* Kingfisher */,
-				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
+				7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */,
+				7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */,
+				7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */,
+				7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */,
 			);
 			productName = CheckThat;
 			productReference = 7E68A70123B49C2D0021371D /* WatNi.app */;
@@ -461,6 +496,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E68A72323B49C2F0021371D /* Build configuration list for PBXNativeTarget "WatNiTests" */;
 			buildPhases = (
+				23EF51C60C1E022979D89775 /* [CP] Check Pods Manifest.lock */,
 				7E68A71323B49C2F0021371D /* Sources */,
 				7E68A71423B49C2F0021371D /* Frameworks */,
 				7E68A71523B49C2F0021371D /* Resources */,
@@ -504,10 +540,10 @@
 			);
 			mainGroup = 7E68A6F823B49C2D0021371D;
 			packageReferences = (
-				7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */,
-				7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */,
+				7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */,
+				7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */,
+				7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 7E68A70223B49C2D0021371D /* Products */;
 			projectDirPath = "";
@@ -551,6 +587,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23EF51C60C1E022979D89775 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatNiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7E65E03223C0A4940021B8DD /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,6 +626,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi  \n";
+		};
+		8F938AD44B18534F35F161F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatNi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA14CB51FA52A441C58F3AFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatNi/Pods-WatNi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatNi/Pods-WatNi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatNi/Pods-WatNi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -772,6 +869,7 @@
 		};
 		7E68A72123B49C2F0021371D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA7AB234B3AF195E37AE145 /* Pods-WatNi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -792,6 +890,7 @@
 		};
 		7E68A72223B49C2F0021371D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54B7E877936D60B44A18FBD4 /* Pods-WatNi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -812,6 +911,7 @@
 		};
 		7E68A72423B49C2F0021371D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -834,6 +934,7 @@
 		};
 		7E68A72523B49C2F0021371D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -887,7 +988,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -895,7 +996,7 @@
 				minimumVersion = 13.0.1;
 			};
 		};
-		7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
@@ -903,7 +1004,7 @@
 				minimumVersion = 4.1.0;
 			};
 		};
-		7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -911,7 +1012,7 @@
 				minimumVersion = 5.12.0;
 			};
 		};
-		7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -922,24 +1023,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7E604FB023C1CEAB00842B72 /* Moya */ = {
+		7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */;
 			productName = Moya;
 		};
-		7E604FB323C1CF0E00842B72 /* KeychainAccess */ = {
+		7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */;
 			productName = KeychainAccess;
 		};
-		7E604FB623C1CF8A00842B72 /* Kingfisher */ = {
+		7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */ = {
+		7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = 7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
