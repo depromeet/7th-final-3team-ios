@@ -43,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fd-ac-XFr">
-                    <rect key="frame" x="0.0" y="182" width="0.0" height="18"/>
+                    <rect key="frame" x="0.0" y="182" width="414" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="uvQ-Dm-n99"/>
                     </constraints>
@@ -58,6 +58,7 @@
                 <constraint firstItem="yzy-jY-GN3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7dn-RI-3fF"/>
                 <constraint firstItem="LOk-kD-fmK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AaU-KW-hLN"/>
                 <constraint firstItem="7fd-ac-XFr" firstAttribute="top" secondItem="LOk-kD-fmK" secondAttribute="bottom" constant="2" id="Hir-Nh-vlM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7fd-ac-XFr" secondAttribute="trailing" id="JUF-BW-w15"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7fd-ac-XFr" secondAttribute="bottom" id="SMd-5M-RNg"/>
                 <constraint firstItem="7fd-ac-XFr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="czv-Z9-cgY"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LOk-kD-fmK" secondAttribute="trailing" id="d4f-3G-Q9z"/>
