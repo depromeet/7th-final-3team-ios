@@ -35,7 +35,6 @@ class CreateGroupViewModel: NewbieViewModelProtocol {
     }
 
     func submitAction(completionHandler: @escaping (Result<Decodable, Error>) -> Void) {
-        // TODO: desc 정보 확인
         let body = [
             "groupName": inputText,
             "description": ""
@@ -44,7 +43,6 @@ class CreateGroupViewModel: NewbieViewModelProtocol {
 
         URLSession.shared.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.main)
-            .print()
             .map(\.data)
             .decode(type: WNGroup.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { completion in

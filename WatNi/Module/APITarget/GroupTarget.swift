@@ -13,6 +13,8 @@ enum GroupTarget: TargetType {
 
     /// 모임 생성
     case createGroup(Encodable)
+    /// 모임 초대코드 생성
+    case createInviteCode(Encodable, groupId: Int)
 
     var baseURL: URL {
         return APIConfig.baseURL
@@ -22,12 +24,14 @@ enum GroupTarget: TargetType {
         switch self {
         case .createGroup:
             return "api/group"
+        case .createInviteCode(_, let groupId):
+            return "api/group/\(groupId)/apply-way"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .createGroup:
+        case .createGroup, .createInviteCode:
             return .post
         }
     }
@@ -40,6 +44,8 @@ enum GroupTarget: TargetType {
         switch self {
         case .createGroup(let body):
             return .requestJSONEncodable(body)
+        case .createInviteCode(let body, _):
+            return .requestJSONEncodable(body)
         }
     }
 
@@ -47,6 +53,9 @@ enum GroupTarget: TargetType {
         switch self {
         case .createGroup:
             return ["Content-Type": "application/json",
+                    "Authorization": "Bearer \(MemberAccess.headerToken)"]
+        case .createInviteCode:
+            return ["Content-Type": "application/json;charset=UTF-8",
                     "Authorization": "Bearer \(MemberAccess.headerToken)"]
         }
     }

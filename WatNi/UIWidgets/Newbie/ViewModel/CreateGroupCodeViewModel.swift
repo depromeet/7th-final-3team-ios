@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import SwiftyJSON
 
 /// 모임 초대코드 생성 ViewModel
 class CreateGroupCodeViewModel: NewbieViewModelProtocol {
@@ -48,7 +49,24 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
     }
 
     func submitAction(completionHandler: @escaping (Result<Decodable, Error>) -> Void) {
+        let body = [
+            "applyType": "CODE",
+            "content": inputText
+        ]
 
+        let request = URLRequest(target: GroupTarget.createInviteCode(body, groupId: group.groupId))
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .tryMap { data, _ in
+                try JSON(data: data, options: .allowFragments)
+        }.sink(receiveCompletion: { completion in
+            if case .failure(let error) = completion {
+                print("[Group][초대 코드 생성] 실패: \(error)")
+                completionHandler(.failure(error))
+            }
+        }, receiveValue: { json in
+            completionHandler(.success(json["code"].intValue))
+        }).store(in: &cancelables)
     }
-
 }
