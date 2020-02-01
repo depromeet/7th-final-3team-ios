@@ -27,9 +27,9 @@
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
-		7E604FB123C1CEAB00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */; };
-		7E604FB423C1CF0E00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */; };
-		7E604FB723C1CF8A00842B72 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */; };
+		7E604FB123C1CEAB00842B72 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB023C1CEAB00842B72 /* Moya */; };
+		7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB323C1CF0E00842B72 /* KeychainAccess */; };
+		7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7E604FB623C1CF8A00842B72 /* Kingfisher */; };
 		7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EBF23C393E200C43CFA /* KeychainProvider.swift */; };
 		7E651EC223C4EB4200C43CFA /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E651EC123C4EB4200C43CFA /* KeychainTests.swift */; };
 		7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E662F5323D74A9F005A68B7 /* MemberTarget.swift */; };
@@ -50,7 +50,7 @@
 		7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F423E46FA200C97F35 /* CreateGroupViewModel.swift */; };
 		7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */; };
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
-		7E6F80FE23E47CDC00C97F35 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */; };
+		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
 		7E6F810323E58E5600C97F35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F810223E58E5600C97F35 /* HomeViewController.swift */; };
 		7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F810423E58EB800C97F35 /* HomeViewController.xib */; };
@@ -59,6 +59,8 @@
 		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
 		7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */; };
 		7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */; };
+		7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */; };
+		7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
 		7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8A23D35B8E00E78027 /* WNColor.swift */; };
 		7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8C23D360B500E78027 /* UIView+properties.swift */; };
@@ -141,6 +143,8 @@
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
 		7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewbieViewController.xib; sourceTree = "<group>"; };
+		7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CharacterSets.swift"; sourceTree = "<group>"; };
+		7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSets+Korean.swift"; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		7E9F6A8A23D35B8E00E78027 /* WNColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNColor.swift; sourceTree = "<group>"; };
 		7E9F6A8C23D360B500E78027 /* UIView+properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+properties.swift"; sourceTree = "<group>"; };
@@ -160,10 +164,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E604FB723C1CF8A00842B72 /* BuildFile in Frameworks */,
-				7E604FB423C1CF0E00842B72 /* BuildFile in Frameworks */,
-				7E6F80FE23E47CDC00C97F35 /* BuildFile in Frameworks */,
-				7E604FB123C1CEAB00842B72 /* BuildFile in Frameworks */,
+				7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */,
+				7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */,
+				7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */,
+				7E604FB123C1CEAB00842B72 /* Moya in Frameworks */,
 				827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,7 +191,6 @@
 				CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */,
 				87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -355,11 +358,13 @@
 			isa = PBXGroup;
 			children = (
 				7E27771A23CF781500B90F80 /* Combine */,
+				7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */,
 				7E68A73223B4A9880021371D /* Array+Subscript.swift */,
+				7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */,
+				7E27773123D2EC1D00B90F80 /* Font+Custom.swift */,
 				7E68A73423B4A9A70021371D /* NSObject+Properties.swift */,
 				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
-				7E27773123D2EC1D00B90F80 /* Font+Custom.swift */,
 				7E9F6A8C23D360B500E78027 /* UIView+properties.swift */,
 			);
 			path = Extensions;
@@ -483,10 +488,10 @@
 			);
 			name = WatNi;
 			packageProductDependencies = (
-				7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */,
-				7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */,
-				7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */,
-				7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */,
+				7E604FB023C1CEAB00842B72 /* Moya */,
+				7E604FB323C1CF0E00842B72 /* KeychainAccess */,
+				7E604FB623C1CF8A00842B72 /* Kingfisher */,
+				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
 			);
 			productName = CheckThat;
 			productReference = 7E68A70123B49C2D0021371D /* WatNi.app */;
@@ -540,10 +545,10 @@
 			);
 			mainGroup = 7E68A6F823B49C2D0021371D;
 			packageReferences = (
-				7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */,
-				7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */,
-				7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */,
-				7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */,
+				7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */,
+				7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 7E68A70223B49C2D0021371D /* Products */;
 			projectDirPath = "";
@@ -673,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */,
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
 				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
@@ -682,6 +688,7 @@
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */,
+				7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
 				7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */,
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
@@ -988,7 +995,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */ = {
+		7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -996,7 +1003,7 @@
 				minimumVersion = 13.0.1;
 			};
 		};
-		7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */ = {
+		7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
 			requirement = {
@@ -1004,7 +1011,7 @@
 				minimumVersion = 4.1.0;
 			};
 		};
-		7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */ = {
+		7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1012,7 +1019,7 @@
 				minimumVersion = 5.12.0;
 			};
 		};
-		7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */ = {
+		7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -1023,24 +1030,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7E604FB023C1CEAB00842B72 /* SwiftPackageProductDependency */ = {
+		7E604FB023C1CEAB00842B72 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FAF23C1CEAB00842B72 /* RemoteSwiftPackageReference */;
+			package = 7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		7E604FB323C1CF0E00842B72 /* SwiftPackageProductDependency */ = {
+		7E604FB323C1CF0E00842B72 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FB223C1CF0E00842B72 /* RemoteSwiftPackageReference */;
+			package = 7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
-		7E604FB623C1CF8A00842B72 /* SwiftPackageProductDependency */ = {
+		7E604FB623C1CF8A00842B72 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E604FB523C1CF8A00842B72 /* RemoteSwiftPackageReference */;
+			package = 7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		7E6F80FD23E47CDC00C97F35 /* SwiftPackageProductDependency */ = {
+		7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7E6F80FC23E47CDC00C97F35 /* RemoteSwiftPackageReference */;
+			package = 7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

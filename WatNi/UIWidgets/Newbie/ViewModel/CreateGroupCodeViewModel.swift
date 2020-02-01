@@ -18,13 +18,19 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
     init(group: WNGroup) {
         self.group = group
     }
-    
+
     var titleGuideText: String {
         return "초대코드를\n생성해주세요."
     }
 
     var submitAvailable: Bool {
-        return true
+        return inviteCodeIsValid()
+    }
+
+    private func inviteCodeIsValid() -> Bool {
+        let charactersets: [CharacterSet] = [.alphanumerics, .decimalDigits, .koreans]
+        let allowedCharSet: CharacterSet = charactersets.formUnions()
+        return inputText.unicodeScalars.allSatisfy { allowedCharSet.contains($0) }
     }
 
     func update(input: String) {
@@ -32,8 +38,13 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
     }
 
     func createUnderlineViewModel() -> UnderlineTextFieldViewModel {
-        // TODO: 초대코드 Validation 룰 반영
-        return UnderlineTextFieldViewModel(descLabelStr: "")
+        let textFieldViewModel = UnderlineTextFieldViewModel(descLabelStr: "")
+
+        textFieldViewModel.validCondition = { [weak self] input in
+            self?.inviteCodeIsValid() ?? false
+        }
+        textFieldViewModel.assistantStr = "초대코드는 12자리 이하로 한글, 영문, 숫자만 사용 가능합니다."
+        return textFieldViewModel
     }
 
     func submitAction(completionHandler: @escaping (Result<Decodable, Error>) -> Void) {
