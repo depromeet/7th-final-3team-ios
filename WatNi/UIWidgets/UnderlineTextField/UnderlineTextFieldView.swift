@@ -43,6 +43,10 @@ class UnderlineTextFieldView: UIView, HasViewModel {
         }
     }
 
+    func reloadTextiFieldView() {
+        configure(viewModel: viewModel)
+    }
+
     private func inputDidChanged() {
         if viewModel.inputIsValid {
             underLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)

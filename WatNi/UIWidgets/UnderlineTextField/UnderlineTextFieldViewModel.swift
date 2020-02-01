@@ -24,6 +24,10 @@ protocol UnderlineTextFieldViewModelProtocol {
     var returnKeyType: UIReturnKeyType { get }
     /// TextField의 KeyboardType
     var keyboardType: UIKeyboardType { get }
+    /// 에러 노출 모드
+    var mode: UnderlineTextFieldViewModel.Mode { get }
+    /// 에러 노출시 문구
+    var responseStr: String { get set }
     /// 하단 가이드 문구
     var assistantLabelStr: String { get }
     /// Input 값에 SecureText 사용 여부
@@ -36,15 +40,25 @@ protocol UnderlineTextFieldViewModelProtocol {
     var descLabelFontSize: CGFloat { get }
     /// FontSize: assistantLabel
     var assistantLabelFontSize: CGFloat { get }
+    func update(_ mode: UnderlineTextFieldViewModel.Mode)
 }
 
 class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
+
+    enum Mode {
+        case input
+        case response
+    }
+
     let inputContentType: UITextContentType
     let returnKeyType: UIReturnKeyType
     let keyboardType: UIKeyboardType
 
     var inputStr: String = ""
     var assistantStr: String = ""
+
+    var mode: Mode = .input
+    var responseStr: String = ""
 
     var descLabelStr: String
     var textFieldFontSize: CGFloat = 17
@@ -72,10 +86,15 @@ class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
     }
 
     var assistantLabelStr: String {
-        if inputIsValid {
-            return ""
+        switch mode {
+        case .input:
+            if inputIsValid {
+                return ""
+            }
+            return assistantStr
+        case .response:
+            return responseStr
         }
-        return assistantStr
     }
 
     var isSecureTextEntry: Bool {
@@ -83,6 +102,15 @@ class UnderlineTextFieldViewModel: UnderlineTextFieldViewModelProtocol {
     }
 
     var inputIsValid: Bool {
-        return validCondition?(inputStr) ?? true
+        switch mode {
+        case .input:
+            return validCondition?(inputStr) ?? true
+        case .response:
+            return responseStr.isEmpty
+        }
+    }
+
+    func update(_ mode: Mode) {
+        self.mode = mode
     }
 }

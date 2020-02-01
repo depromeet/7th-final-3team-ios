@@ -61,6 +61,7 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
         textPublisher.compactMap {
             ($0 as? UITextField)?.text
         }.sink { [weak self] (input) in
+            self?.textFieldView.viewModel.update(.input)
             self?.viewModel.update(input: input)
             self?.textFieldView.viewModel.inputStr = input
             self?.submitButton.isEnabled = self?.viewModel.submitAvailable ?? false
@@ -82,6 +83,9 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)
+                    self?.textFieldView.viewModel.responseStr = error.localizedDescription
+                    self?.textFieldView.viewModel.update(UnderlineTextFieldViewModel.Mode.response)
+                    self?.textFieldView.reloadTextiFieldView()
                 case .success(let anyDecodable):
 
                     guard let group = anyDecodable as? WNGroup else {
