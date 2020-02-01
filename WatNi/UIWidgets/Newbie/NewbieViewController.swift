@@ -53,7 +53,9 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                 case .success(let anyDecodable):
 
                     guard let group = anyDecodable as? WNGroup else {
-                        // TODO: 홈으로 이동
+                        let homeViewModel = HomeViewModel()
+                        let homeVC = HomeViewController(viewModel: homeViewModel, nibName: HomeViewController.className)
+                        self?.navigationController?.setViewControllers([homeVC], animated: false)
                         return
                     }
 
