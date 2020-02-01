@@ -17,6 +17,7 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
     @IBOutlet weak var titleGuideLabel: UILabel!
     @IBOutlet weak var textFieldView: UnderlineTextFieldView!
     @IBOutlet weak var submitButton: SubmitButton!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
 
     let viewModel: NewbieViewModelProtocol
     private var cancelables = Set<AnyCancellable>()
@@ -44,9 +45,40 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                                                             attributes: attributes)
         subscribeTextField()
         submitButton.isEnabled = false
+        indicatorView.isHidden = true
+        subscribeSubmitButton()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        textFieldView.textField.becomeFirstResponder()
+    }
+
+    private func subscribeTextField() {
+        let textPublisher = textFieldView.textField.publisher(for: .editingChanged)
+
+        textPublisher.compactMap {
+            ($0 as? UITextField)?.text
+        }.sink { [weak self] (input) in
+            self?.viewModel.update(input: input)
+            self?.textFieldView.viewModel.inputStr = input
+            self?.submitButton.isEnabled = self?.viewModel.submitAvailable ?? false
+        }.store(in: &cancelables)
+    }
+
+    private func subscribeSubmitButton() {
         submitButton.publisher(for: .touchUpInside).sink { [weak self] _ in
+            self?.submitButton.isUserInteractionEnabled = false
+            self?.indicatorView.isHidden = false
+            self?.indicatorView.startAnimating()
 
             self?.viewModel.submitAction(completionHandler: { (result) in
+                defer {
+                    self?.submitButton.isUserInteractionEnabled = true
+                    self?.indicatorView.isHidden = true
+                    self?.indicatorView.stopAnimating()
+                }
                 switch result {
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -66,25 +98,6 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                     self?.navigationController?.pushViewController(viewController, animated: true)
                 }
             })
-        }.store(in: &cancelables)
-
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        textFieldView.textField.becomeFirstResponder()
-    }
-
-    private func subscribeTextField() {
-        let textPublisher = textFieldView.textField.publisher(for: .editingChanged)
-
-        textPublisher.compactMap {
-            ($0 as? UITextField)?.text
-        }.sink { [weak self] (input) in
-            self?.viewModel.update(input: input)
-            self?.textFieldView.viewModel.inputStr = input
-            self?.submitButton.isEnabled = self?.viewModel.submitAvailable ?? false
         }.store(in: &cancelables)
     }
 
