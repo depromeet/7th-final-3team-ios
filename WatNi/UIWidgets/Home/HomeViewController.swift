@@ -8,12 +8,22 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController, ViewModelInjectable {
+
+    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var tabCollectionView: UICollectionView!
+    @IBOutlet weak var pageContainerView: UIView!
 
     typealias ViewModel = HomeViewModel
 
     let viewModel: HomeViewModel
+
+    lazy var homeTabPageVC: UIPageViewController = {
+        let pageVC = HomeTabPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        return pageVC
+    }()
 
     required init(viewModel: ViewModel, nibName: String) {
         self.viewModel = viewModel
@@ -26,5 +36,11 @@ class HomeViewController: UIViewController, ViewModelInjectable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        addChild(homeTabPageVC)
+        pageContainerView.addSubview(homeTabPageVC.view)
+        homeTabPageVC.view.snp.makeConstraints {
+            $0.leading.trailing.top.bottom.equalToSuperview()
+        }
     }
 }

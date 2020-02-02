@@ -17,7 +17,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7E68A70023B49C2D0021371D"
-            BuildableName = "WatNi.app"
+            BuildableName = "watni.app"
             BlueprintName = "WatNi"
             ReferencedContainer = "container:WatNi.xcodeproj">
          </BuildableReference>

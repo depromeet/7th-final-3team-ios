@@ -23,14 +23,17 @@ class LaunchingTaskViewController: UIViewController {
         super.viewDidLoad()
 
         setupInitialViewController { [weak self] scene in
-            let viewController: UIViewController
-            switch scene {
-            case .onboarding:
-                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
-            case .coach:
-                let viewModel = CoachViewModel()
-                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
-            }
+//            let viewController: UIViewController
+//            switch scene {
+//            case .onboarding:
+//                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
+//            case .coach:
+//                let viewModel = CoachViewModel()
+//                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+//            }
+
+            let viewModel = HomeViewModel()
+            let viewController = HomeViewController(viewModel: viewModel, nibName: HomeViewController.className)
             self?.navigationController?.setViewControllers([viewController], animated: false)
         }
     }
