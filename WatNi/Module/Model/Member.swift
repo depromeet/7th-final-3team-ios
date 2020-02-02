@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol MemeberIdentity {
+protocol MemberIdentity {
     var name: String { get }
     var email: String { get }
     var password: String { get }
 }
 
 /// 왔니 서비스 사용자 정보 저장 모델
-struct Member: Codable, MemeberIdentity {
+struct Member: Codable, MemberIdentity {
     let name: String
     let email: String
     let password: String
