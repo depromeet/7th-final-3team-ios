@@ -51,11 +51,8 @@ enum GroupTarget: TargetType {
 
     var headers: [String: String]? {
         switch self {
-        case .createGroup:
+        case .createGroup, .createInviteCode:
             return ["Content-Type": "application/json",
-                    "Authorization": "Bearer \(MemberAccess.headerToken)"]
-        case .createInviteCode:
-            return ["Content-Type": "application/json;charset=UTF-8",
                     "Authorization": "Bearer \(MemberAccess.headerToken)"]
         }
     }
