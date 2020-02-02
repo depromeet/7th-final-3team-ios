@@ -38,7 +38,7 @@ class MemberAccess {
         return UserDefaults.standard.bool(forKey: MemberAccess.StorageKey.token)
     }
 
-    func update(identity: MemeberIdentity) {
+    func update(identity: MemberIdentity) {
         self.member = Member(name: identity.name, email: identity.email, password: identity.password)
         self.member?.save()
     }

@@ -120,39 +120,22 @@ class SignupViewModel: ObservableObject {
 
     func signUp(completionHandler: @escaping (Result<Void, Error>) -> Void) {
 
-        let body = [
-            "email": email,
-            "password": password,
-            "name": name
-        ]
-
-        let request = URLRequest(target: MemberTarget.signUp(body))
-
-        let future = Future<HasAuthToken, Error> { [weak self] promise in
-            guard let self = self else { return }
-            AuthProvider.issueToken(email: self.email, password: self.password) { (result) in
-                promise(result)
+        MemberProvider.signUp(email: email, password: password, name: name) { (result) in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+            case .success(let memberIdentity):
+                AuthProvider.issueToken(email: memberIdentity.email, password: memberIdentity.password) { (result) in
+                    switch result {
+                    case .failure(let error):
+                        completionHandler(.failure(error))
+                    case .success(let token):
+                        MemberAccess.default.update(identity: memberIdentity)
+                        MemberAccess.default.update(token: token)
+                        completionHandler(.success(()))
+                    }
+                }
             }
         }
-
-        URLSession.shared.dataTaskPublisher(for: request)
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] completion in
-                guard let self = self else { return }
-                future.sink(receiveCompletion: { completion in
-                    if case .failure(let error) = completion {
-                        print("[SignUp][Token] 발행 실패: \(error)")
-                        completionHandler(.failure(error))
-                    }
-                }, receiveValue: { token in
-                    let member = Member(name: self.name, email: self.email, password: self.password)
-
-                    MemberAccess.default.update(identity: member)
-                    MemberAccess.default.update(token: token)
-                    completionHandler(.success(()))
-                }).store(in: &self.cancelables)
-                }, receiveValue: { output in
-                    print("[SignUp][receiveValue] response: \(output.response)")
-            }).store(in: &cancelables)
     }
 }
