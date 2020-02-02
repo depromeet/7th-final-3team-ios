@@ -54,6 +54,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="CTa-pF-YUU"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="18"/>
                     <state key="normal" title="로그인"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCc-Df-czR">
