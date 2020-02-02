@@ -115,7 +115,7 @@
 		7E651EBF23C393E200C43CFA /* KeychainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainProvider.swift; sourceTree = "<group>"; };
 		7E651EC123C4EB4200C43CFA /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
 		7E662F5323D74A9F005A68B7 /* MemberTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTarget.swift; sourceTree = "<group>"; };
-		7E68A70123B49C2D0021371D /* WatNi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatNi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E68A70123B49C2D0021371D /* watni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E68A70423B49C2D0021371D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E68A70623B49C2D0021371D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E68A70D23B49C2F0021371D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		7E68A70223B49C2D0021371D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E68A70123B49C2D0021371D /* WatNi.app */,
+				7E68A70123B49C2D0021371D /* watni.app */,
 				7E68A71723B49C2F0021371D /* WatNiTests.xctest */,
 			);
 			name = Products;
@@ -500,7 +500,7 @@
 				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
 			);
 			productName = CheckThat;
-			productReference = 7E68A70123B49C2D0021371D /* WatNi.app */;
+			productReference = 7E68A70123B49C2D0021371D /* watni.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7E68A71623B49C2F0021371D /* WatNiTests */ = {
@@ -896,7 +896,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.WatNi.iOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = watni;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -917,7 +917,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.WatNi.iOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = watni;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
