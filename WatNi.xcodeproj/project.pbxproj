@@ -498,6 +498,7 @@
 				7E604FB323C1CF0E00842B72 /* KeychainAccess */,
 				7E604FB623C1CF8A00842B72 /* Kingfisher */,
 				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
+				7EBDF21F23E70D2A00CDDF6B /* SnapKit */,
 			);
 			productName = CheckThat;
 			productReference = 7E68A70123B49C2D0021371D /* watni.app */;
@@ -555,6 +556,7 @@
 				7E604FB223C1CF0E00842B72 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				7E604FB523C1CF8A00842B72 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7EBDF21E23E70D2900CDDF6B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 7E68A70223B49C2D0021371D /* Products */;
 			projectDirPath = "";
@@ -1035,6 +1037,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		7EBDF21E23E70D2900CDDF6B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1057,6 +1067,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		7EBDF21F23E70D2A00CDDF6B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EBDF21E23E70D2900CDDF6B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
