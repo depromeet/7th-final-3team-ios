@@ -71,6 +71,8 @@
 		7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */; };
 		7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */; };
 		7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */; };
+		7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF20A23E6CA7E00CDDF6B /* Moya+URLRequest.swift */; };
+		7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */; };
 		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
 		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,8 @@
 		7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTarget.swift; sourceTree = "<group>"; };
 		7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		7EBDF20A23E6CA7E00CDDF6B /* Moya+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+URLRequest.swift"; sourceTree = "<group>"; };
+		7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProvider.swift; sourceTree = "<group>"; };
 		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -362,6 +366,7 @@
 				7E68A73223B4A9880021371D /* Array+Subscript.swift */,
 				7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */,
 				7E27773123D2EC1D00B90F80 /* Font+Custom.swift */,
+				7EBDF20A23E6CA7E00CDDF6B /* Moya+URLRequest.swift */,
 				7E68A73423B4A9A70021371D /* NSObject+Properties.swift */,
 				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
@@ -455,6 +460,7 @@
 			children = (
 				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
 				7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */,
+				7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */,
 			);
 			path = APIProvider;
 			sourceTree = "<group>";
@@ -684,6 +690,7 @@
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
+				7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */,
 				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
@@ -695,6 +702,7 @@
 				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
+				7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
 				7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */,
