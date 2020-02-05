@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Bold.ttf">
+            <string>SpoqaHanSans-Bold</string>
+        </array>
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlanViewController" customModule="watni" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="gBR-95-tyQ" id="roE-30-r6C"/>
+                <outlet property="separatorView" destination="Ern-Lz-AWX" id="oXV-DD-ahA"/>
+                <outlet property="submitButton" destination="Yiv-Pl-4gu" id="QFm-Vs-dsu"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xcV-S8-5jH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBR-95-tyQ">
+                    <rect key="frame" x="0.0" y="64.5" width="62" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="dXD-0y-ZeC"/>
+                    </constraints>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="closeBtnTapped:" destination="-1" eventType="touchUpInside" id="ErY-vZ-pnK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yiv-Pl-4gu">
+                    <rect key="frame" x="332" y="56" width="82" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="uy1-t4-z2p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="18"/>
+                    <color key="tintColor" red="0.91764705882352937" green="0.10980392156862745" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="등록">
+                        <color key="titleColor" red="0.91764705879999997" green="0.10980392160000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="submitBtnTapped:" destination="-1" eventType="touchUpInside" id="OzC-Zg-iB6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-yO-tmZ">
+                    <rect key="frame" x="186" y="58" width="42.5" height="34.5"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSans-Bold" family="SpoqaHanSans" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ern-Lz-AWX">
+                    <rect key="frame" x="0.0" y="102.5" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="bLK-yq-umb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yiv-Pl-4gu" secondAttribute="trailing" id="AEa-lB-awR"/>
+                <constraint firstItem="lcg-yO-tmZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MTj-ZP-cib"/>
+                <constraint firstItem="gBR-95-tyQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OVD-re-EOs"/>
+                <constraint firstItem="Ern-Lz-AWX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kgb-gf-5nx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ern-Lz-AWX" secondAttribute="trailing" id="lQr-3Y-Rmu"/>
+                <constraint firstItem="lcg-yO-tmZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="lyx-c9-8Pl"/>
+                <constraint firstItem="lcg-yO-tmZ" firstAttribute="centerY" secondItem="gBR-95-tyQ" secondAttribute="centerY" id="xJk-06-TKa"/>
+                <constraint firstItem="Ern-Lz-AWX" firstAttribute="top" secondItem="lcg-yO-tmZ" secondAttribute="bottom" constant="10" id="yQI-Gr-9qx"/>
+                <constraint firstItem="Yiv-Pl-4gu" firstAttribute="centerY" secondItem="lcg-yO-tmZ" secondAttribute="centerY" id="zxr-RD-T5u"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="220" y="172"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="14" height="14"/>
+    </resources>
+</document>
