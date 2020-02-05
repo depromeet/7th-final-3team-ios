@@ -59,6 +59,15 @@
 		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
 		7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */; };
 		7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */; };
+		7E7A95BA23EAFC3F0010B44D /* CreatePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95B823EAFC3F0010B44D /* CreatePlanViewController.swift */; };
+		7E7A95BD23EB02D40010B44D /* CreatePlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A95BC23EB02D40010B44D /* CreatePlanViewController.xib */; };
+		7E7A95C023EB084E0010B44D /* UnderlineLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95BF23EB084E0010B44D /* UnderlineLabelView.swift */; };
+		7E7A95C223EB08600010B44D /* UnderlineLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A95C123EB08600010B44D /* UnderlineLabelView.xib */; };
+		7E7A95C423EB22640010B44D /* UnderlineTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A95C323EB22640010B44D /* UnderlineTimeView.xib */; };
+		7E7A95C723EB24E50010B44D /* UnderlineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95C623EB24E50010B44D /* UnderlineTimeView.swift */; };
+		7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A95C923EB2D410010B44D /* NoticeInputView.xib */; };
+		7E7A95CC23EB2E100010B44D /* NoticeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95CB23EB2E100010B44D /* NoticeInputView.swift */; };
+		7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95CE23EB37220010B44D /* CreatePlanViewModel.swift */; };
 		7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */; };
 		7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
@@ -156,6 +165,16 @@
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
 		7E7A953E23E1E31B000DAAE0 /* NewbieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewbieViewController.xib; sourceTree = "<group>"; };
+		7E7A95B823EAFC3F0010B44D /* CreatePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewController.swift; sourceTree = "<group>"; };
+		7E7A95BC23EB02D40010B44D /* CreatePlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePlanViewController.xib; sourceTree = "<group>"; };
+		7E7A95BF23EB084E0010B44D /* UnderlineLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineLabelView.swift; sourceTree = "<group>"; };
+		7E7A95C123EB08600010B44D /* UnderlineLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlineLabelView.xib; sourceTree = "<group>"; };
+		7E7A95C323EB22640010B44D /* UnderlineTimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlineTimeView.xib; sourceTree = "<group>"; };
+		7E7A95C623EB24E50010B44D /* UnderlineTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTimeView.swift; sourceTree = "<group>"; };
+		7E7A95C923EB2D410010B44D /* NoticeInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeInputView.xib; sourceTree = "<group>"; };
+		7E7A95CB23EB2E100010B44D /* NoticeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeInputView.swift; sourceTree = "<group>"; };
+		7E7A95CD23EB36C30010B44D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7E7A95CE23EB37220010B44D /* CreatePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewModel.swift; sourceTree = "<group>"; };
 		7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CharacterSets.swift"; sourceTree = "<group>"; };
 		7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSets+Korean.swift"; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
@@ -269,6 +288,10 @@
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				7E7A95C823EB2D2F0010B44D /* NoticeInputView */,
+				7E7A95C523EB24D10010B44D /* UnderlineTimeView */,
+				7E7A95BE23EB07FB0010B44D /* UnderlineLabel */,
+				7E7A95B723EAFC230010B44D /* CreatePlan */,
 				7E6F810123E58E4900C97F35 /* Home */,
 				7E7A953B23E1E299000DAAE0 /* Newbie */,
 				7E0F707B23DD7EF600EB1C5E /* Coach */,
@@ -433,6 +456,43 @@
 				7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */,
 			);
 			path = Newbie;
+			sourceTree = "<group>";
+		};
+		7E7A95B723EAFC230010B44D /* CreatePlan */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A95B823EAFC3F0010B44D /* CreatePlanViewController.swift */,
+				7E7A95BC23EB02D40010B44D /* CreatePlanViewController.xib */,
+				7E7A95CE23EB37220010B44D /* CreatePlanViewModel.swift */,
+			);
+			path = CreatePlan;
+			sourceTree = "<group>";
+		};
+		7E7A95BE23EB07FB0010B44D /* UnderlineLabel */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A95BF23EB084E0010B44D /* UnderlineLabelView.swift */,
+				7E7A95C123EB08600010B44D /* UnderlineLabelView.xib */,
+			);
+			path = UnderlineLabel;
+			sourceTree = "<group>";
+		};
+		7E7A95C523EB24D10010B44D /* UnderlineTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A95C623EB24E50010B44D /* UnderlineTimeView.swift */,
+				7E7A95C323EB22640010B44D /* UnderlineTimeView.xib */,
+			);
+			path = UnderlineTimeView;
+			sourceTree = "<group>";
+		};
+		7E7A95C823EB2D2F0010B44D /* NoticeInputView */ = {
+			isa = PBXGroup;
+			children = (
+				7E7A95C923EB2D410010B44D /* NoticeInputView.xib */,
+				7E7A95CB23EB2E100010B44D /* NoticeInputView.swift */,
+			);
+			path = NoticeInputView;
 			sourceTree = "<group>";
 		};
 		7E9F6A8923D35AEB00E78027 /* SubmitButton */ = {
@@ -614,21 +674,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */,
+				7E7A95BD23EB02D40010B44D /* CreatePlanViewController.xib in Resources */,
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
 				7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
+				7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */,
 				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
 				7EBDF21D23E70A9500CDDF6B /* HomeHistoryViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
 				7EBDF22C23E7291100CDDF6B /* HomeTabCollectionViewCell.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
+				7E7A95C423EB22640010B44D /* UnderlineTimeView.xib in Resources */,
 				7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */,
 				7E27772E23D2DF3F00B90F80 /* Spoqa Han Sans Bold.ttf in Resources */,
 				7EBDF21923E70A8300CDDF6B /* HomePlanViewController.xib in Resources */,
+				7E7A95C223EB08600010B44D /* UnderlineLabelView.xib in Resources */,
 				7E0F707F23DD7FC500EB1C5E /* CoachViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,12 +794,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */,
+				7E7A95BA23EAFC3F0010B44D /* CreatePlanViewController.swift in Sources */,
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
 				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
+				7E7A95C023EB084E0010B44D /* UnderlineLabelView.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
 				7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */,
+				7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */,
 				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
@@ -745,6 +812,7 @@
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
 				7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */,
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
+				7E7A95C723EB24E50010B44D /* UnderlineTimeView.swift in Sources */,
 				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
@@ -762,6 +830,7 @@
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
+				7E7A95CC23EB2E100010B44D /* NoticeInputView.swift in Sources */,
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7EBDF22B23E7291100CDDF6B /* HomeTabCollectionViewCell.swift in Sources */,
