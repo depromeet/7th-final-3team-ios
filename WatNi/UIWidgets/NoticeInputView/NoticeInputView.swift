@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class NoticeInputView: UIView {
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet weak var textView: UITextView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

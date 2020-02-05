@@ -33,7 +33,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
         return picker
     }()
 
-    private lazy var timePicker: UIDatePicker = {
+    let timePicker: UIDatePicker = {
         let picker = UIDatePicker(frame: .zero)
         picker.datePickerMode = .time
         picker.minuteInterval = 5
@@ -81,6 +81,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
         stackView.setInset(forRows: [dateView, noticeInputView],
                            inset: UIEdgeInsets(top: 6, left: 24, bottom: 0, right: 24))
 
+        noticeInputView.textView.delegate = self
     }
 
     @IBAction func closeBtnTapped(_ sender: UIButton) {
@@ -89,5 +90,11 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
     @IBAction func submitBtnTapped(_ sender: UIButton) {
 
+    }
+}
+
+extension CreatePlanViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        stackView.setContentOffset(CGPoint(x: 0, y: noticeInputView.frame.maxY), animated: true)
     }
 }
