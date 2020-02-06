@@ -32,9 +32,10 @@ class LaunchingTaskViewController: UIViewController {
 //                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
 //            }
 
-            let viewModel = HomeViewModel()
-            let viewController = HomeViewController(viewModel: viewModel, nibName: HomeViewController.className)
-            self?.navigationController?.setViewControllers([viewController], animated: false)
+            let viewModel = CreatePlanViewModel()
+            let viewController = CreatePlanViewController(viewModel: viewModel,
+                                                          nibName: CreatePlanViewController.className)
+            self?.navigationController?.present(viewController, animated: true, completion: nil)
         }
     }
 
