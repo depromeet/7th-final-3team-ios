@@ -13,6 +13,8 @@ enum MemberTarget: TargetType {
 
     /// 회원 가입
     case signUp(Encodable)
+    /// 회원의 그룹 정보 조회
+    case memberMeta
 
     var baseURL: URL {
         return APIConfig.baseURL
@@ -22,6 +24,8 @@ enum MemberTarget: TargetType {
         switch self {
         case .signUp:
             return "sign-up"
+        case .memberMeta:
+            return "api/user/me"
         }
     }
 
@@ -29,6 +33,8 @@ enum MemberTarget: TargetType {
         switch self {
         case .signUp:
             return .post
+        case .memberMeta:
+            return .get
         }
     }
 
@@ -40,10 +46,18 @@ enum MemberTarget: TargetType {
         switch self {
         case .signUp(let body):
             return .requestJSONEncodable(body)
+        case .memberMeta:
+            return .requestPlain
         }
     }
 
     var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+        switch self {
+        case .signUp:
+            return ["Content-Type": "application/json"]
+        case .memberMeta:
+            return ["Content-Type": "application/json",
+                    "Authorization": "Bearer \(MemberAccess.headerToken)"]
+        }
     }
 }
