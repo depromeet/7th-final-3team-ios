@@ -9,5 +9,9 @@
 import Foundation
 
 class HomeViewModel {
+    var memberMeta: [MemberMeta]
 
+    init(memberMeta: [MemberMeta] = []) {
+        self.memberMeta = memberMeta
+    }
 }

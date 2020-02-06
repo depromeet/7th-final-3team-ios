@@ -9,6 +9,11 @@
 import Foundation
 
 class CoachViewModel {
+    var memberMeta: [MemberMeta]
+
+    init(memberMeta: [MemberMeta] = []) {
+        self.memberMeta = memberMeta
+    }
 
     var memberNameStr: String {
         guard let member = MemberAccess.default.member else {

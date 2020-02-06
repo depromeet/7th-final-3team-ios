@@ -17,42 +17,52 @@ class LaunchingTaskViewController: UIViewController {
         case onboarding
         /// 모임 생성, 참여 이력이 없는 사용자 화면
         case coach
+        /// 모임을 생성한 사용자
+        case home
     }
+
+    let worker = LaunchingTaskWorker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupInitialViewController { [weak self] scene in
-//            let viewController: UIViewController
-//            switch scene {
-//            case .onboarding:
-//                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
-//            case .coach:
-//                let viewModel = CoachViewModel()
-//                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
-//            }
-
-            let viewModel = CreatePlanViewModel()
-            let viewController = CreatePlanViewController(viewModel: viewModel,
-                                                          nibName: CreatePlanViewController.className)
-            self?.navigationController?.present(viewController, animated: true, completion: nil)
+        setupInitialViewController { [weak self] scene, memberMeta in
+            let viewController: UIViewController
+            switch scene {
+            case .onboarding:
+                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
+            case .coach:
+                let viewModel = CoachViewModel(memberMeta: memberMeta)
+                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+            case .home:
+                let viewModel = HomeViewModel(memberMeta: memberMeta)
+                viewController = HomeViewController(viewModel: viewModel, nibName: HomeViewController.className)
+            }
+            self?.navigationController?.pushViewController(viewController, animated: false)
         }
     }
 
-    private func setupInitialViewController(completionHandler: @escaping (InitialScene) -> Void) {
+    private func setupInitialViewController(completionHandler: @escaping (InitialScene, [MemberMeta]) -> Void) {
 
         guard MemberAccess.default.isLogin else {
-            completionHandler(.onboarding)
+            completionHandler(.onboarding, [])
             return
         }
 
-        MemberAccess.default.refreshToken { (result) in
+        MemberAccess.default.refreshToken { [weak self] (result) in
             switch result {
             case .failure:
-                completionHandler(.onboarding)
+                completionHandler(.onboarding, [])
             case .success:
-                // TODO: 사용자의 모임 정보에 대한 API 반영하여 화면 변경
-                completionHandler(.coach)
+                self?.worker.userMetaData { result in
+                    switch result {
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        completionHandler(.coach, [])
+                    case .success(let metaData):
+                        completionHandler(.home, metaData)
+                    }
+                }
             }
         }
     }
