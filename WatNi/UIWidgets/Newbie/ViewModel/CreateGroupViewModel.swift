@@ -56,10 +56,3 @@ class CreateGroupViewModel: NewbieViewModelProtocol {
             }).store(in: &cancelables)
     }
 }
-
-struct WNGroup: Decodable {
-    let groupId: Int
-    let name: String
-    let conferences: [String]
-    let accessions: [String]
-}

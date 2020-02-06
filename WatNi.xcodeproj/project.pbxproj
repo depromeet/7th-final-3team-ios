@@ -14,6 +14,9 @@
 		7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708223DDC39100EB1C5E /* WNAuthError.swift */; };
 		7E18AFE923EC75B3009764CC /* ImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFE823EC75B3009764CC /* ImageInputView.swift */; };
 		7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E18AFEA23EC75CD009764CC /* ImageInputView.xib */; };
+		7E18AFED23EC7CF5009764CC /* WNGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFEC23EC7CF5009764CC /* WNGroup.swift */; };
+		7E18AFEF23EC8422009764CC /* MemberMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFEE23EC8422009764CC /* MemberMeta.swift */; };
+		7E18AFF123EC8656009764CC /* LaunchingTaskWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFF023EC8656009764CC /* LaunchingTaskWorker.swift */; };
 		7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */; };
 		7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */; };
 		7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */; };
@@ -121,6 +124,9 @@
 		7E0F708223DDC39100EB1C5E /* WNAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAuthError.swift; sourceTree = "<group>"; };
 		7E18AFE823EC75B3009764CC /* ImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputView.swift; sourceTree = "<group>"; };
 		7E18AFEA23EC75CD009764CC /* ImageInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageInputView.xib; sourceTree = "<group>"; };
+		7E18AFEC23EC7CF5009764CC /* WNGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNGroup.swift; sourceTree = "<group>"; };
+		7E18AFEE23EC8422009764CC /* MemberMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberMeta.swift; sourceTree = "<group>"; };
+		7E18AFF023EC8656009764CC /* LaunchingTaskWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskWorker.swift; sourceTree = "<group>"; };
 		7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Subscription.swift"; sourceTree = "<group>"; };
 		7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
 		7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
@@ -323,6 +329,8 @@
 			children = (
 				7E5D4F5323CB256B0008D92D /* Member.swift */,
 				7E5D4F5523CB2F3F0008D92D /* Token.swift */,
+				7E18AFEC23EC7CF5009764CC /* WNGroup.swift */,
+				7E18AFEE23EC8422009764CC /* MemberMeta.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +552,7 @@
 				7EB3C39423C9B9E500A2B41C /* OnBoardingViewController.xib */,
 				7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */,
 				7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */,
+				7E18AFF023EC8656009764CC /* LaunchingTaskWorker.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -833,7 +842,9 @@
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */,
+				7E18AFEF23EC8422009764CC /* MemberMeta.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
+				7E18AFF123EC8656009764CC /* LaunchingTaskWorker.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
 				7EBDF21423E70A6800CDDF6B /* HomeTabPageViewController.swift in Sources */,
 				7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */,
@@ -843,6 +854,7 @@
 				7EBDF22323E70FBF00CDDF6B /* HomePlanViewModel.swift in Sources */,
 				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
+				7E18AFED23EC7CF5009764CC /* WNGroup.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
