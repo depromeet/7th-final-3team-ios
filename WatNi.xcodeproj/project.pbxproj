@@ -12,6 +12,8 @@
 		7E0F707F23DD7FC500EB1C5E /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */; };
 		7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */; };
 		7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708223DDC39100EB1C5E /* WNAuthError.swift */; };
+		7E18AFE923EC75B3009764CC /* ImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFE823EC75B3009764CC /* ImageInputView.swift */; };
+		7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E18AFEA23EC75CD009764CC /* ImageInputView.xib */; };
 		7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */; };
 		7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */; };
 		7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */; };
@@ -117,6 +119,8 @@
 		7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewModel.swift; sourceTree = "<group>"; };
 		7E0F708223DDC39100EB1C5E /* WNAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAuthError.swift; sourceTree = "<group>"; };
+		7E18AFE823EC75B3009764CC /* ImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputView.swift; sourceTree = "<group>"; };
+		7E18AFEA23EC75CD009764CC /* ImageInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageInputView.xib; sourceTree = "<group>"; };
 		7E2776BE23CB7BE900B90F80 /* UIControl+Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Subscription.swift"; sourceTree = "<group>"; };
 		7E2776C023CB7C6D00B90F80 /* UIControl+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Publisher.swift"; sourceTree = "<group>"; };
 		7E2776C223CB7CDD00B90F80 /* UIControl+CombineCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+CombineCompatible.swift"; sourceTree = "<group>"; };
@@ -265,6 +269,15 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		7E18AFE723EC758F009764CC /* ImageInputView */ = {
+			isa = PBXGroup;
+			children = (
+				7E18AFE823EC75B3009764CC /* ImageInputView.swift */,
+				7E18AFEA23EC75CD009764CC /* ImageInputView.xib */,
+			);
+			path = ImageInputView;
+			sourceTree = "<group>";
+		};
 		7E27771A23CF781500B90F80 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +301,7 @@
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				7E18AFE723EC758F009764CC /* ImageInputView */,
 				7E7A95C823EB2D2F0010B44D /* NoticeInputView */,
 				7E7A95C523EB24D10010B44D /* UnderlineTimeView */,
 				7E7A95BE23EB07FB0010B44D /* UnderlineLabel */,
@@ -683,6 +697,7 @@
 				7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
 				7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */,
+				7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */,
 				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
 				7EBDF21D23E70A9500CDDF6B /* HomeHistoryViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
@@ -823,6 +838,7 @@
 				7EBDF21423E70A6800CDDF6B /* HomeTabPageViewController.swift in Sources */,
 				7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */,
 				7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */,
+				7E18AFE923EC75B3009764CC /* ImageInputView.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
 				7EBDF22323E70FBF00CDDF6B /* HomePlanViewModel.swift in Sources */,
 				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,

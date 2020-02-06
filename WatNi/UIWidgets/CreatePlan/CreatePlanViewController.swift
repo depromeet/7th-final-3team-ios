@@ -25,6 +25,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     let timeView = UnderlineTimeView(frame: .zero)
     let placeView = UnderlineTextFieldView()
     let noticeInputView = NoticeInputView(frame: .zero)
+    let imageInputView = ImageInputView(frame: .zero)
 
     let datePicker: UIDatePicker = {
         let picker = UIDatePicker(frame: .zero)
@@ -62,7 +63,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
         timeView.snp.makeConstraints { $0.height.equalTo(60) }
         placeView.snp.makeConstraints { $0.height.equalTo(77) }
 
-        stackView.addRows([titleView, dateView, datePicker, timeView, timePicker, placeView, noticeInputView])
+        stackView.addRows([titleView, dateView, datePicker, timeView, timePicker, placeView, noticeInputView, imageInputView])
         stackView.setRowsHidden([datePicker, timePicker], isHidden: true)
 
         stackView.setTapHandler(forRow: dateView) { [weak self] _ in
@@ -76,7 +77,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
             self.stackView.setRowHidden(self.timePicker, isHidden: isHidden, animated: !isHidden)
         }
 
-        stackView.setInset(forRows: [titleView, timeView, placeView],
+        stackView.setInset(forRows: [titleView, timeView, placeView, imageInputView],
                            inset: UIEdgeInsets(top: 26, left: 24, bottom: 0, right: 24))
         stackView.setInset(forRows: [dateView, noticeInputView],
                            inset: UIEdgeInsets(top: 6, left: 24, bottom: 0, right: 24))
