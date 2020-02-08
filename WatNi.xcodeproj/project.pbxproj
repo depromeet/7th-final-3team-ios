@@ -96,6 +96,10 @@
 		7EC2BF1223EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */; };
 		7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */; };
 		7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */; };
+		7EC2BF1C23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1A23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift */; };
+		7EC2BF1D23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1B23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib */; };
+		7EC2BF2023EEC99600B05BF6 /* HomePlanCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1E23EEC99600B05BF6 /* HomePlanCollectionReusableView.swift */; };
+		7EC2BF2123EEC99600B05BF6 /* HomePlanCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1F23EEC99600B05BF6 /* HomePlanCollectionReusableView.xib */; };
 		7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */; };
 		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
 		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
@@ -206,6 +210,10 @@
 		7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewModel.swift; sourceTree = "<group>"; };
 		7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
+		7EC2BF1A23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EC2BF1B23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlanCollectionViewCell.xib; sourceTree = "<group>"; };
+		7EC2BF1E23EEC99600B05BF6 /* HomePlanCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanCollectionReusableView.swift; sourceTree = "<group>"; };
+		7EC2BF1F23EEC99600B05BF6 /* HomePlanCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlanCollectionReusableView.xib; sourceTree = "<group>"; };
 		7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Nib.swift"; sourceTree = "<group>"; };
 		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -456,8 +464,7 @@
 			children = (
 				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EBDF22123E70FB000CDDF6B /* ViewModel */,
-				7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */,
-				7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */,
+				7EC2BF2223EECC5400B05BF6 /* HomePlan */,
 				7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */,
 				7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */,
 				7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */,
@@ -593,6 +600,19 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		7EC2BF2223EECC5400B05BF6 /* HomePlan */ = {
+			isa = PBXGroup;
+			children = (
+				7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */,
+				7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */,
+				7EC2BF1A23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift */,
+				7EC2BF1B23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib */,
+				7EC2BF1E23EEC99600B05BF6 /* HomePlanCollectionReusableView.swift */,
+				7EC2BF1F23EEC99600B05BF6 /* HomePlanCollectionReusableView.xib */,
+			);
+			path = HomePlan;
+			sourceTree = "<group>";
+		};
 		8B16E2131FBF0DBE25F4DF11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +724,7 @@
 			files = (
 				7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */,
 				7E7A95BD23EB02D40010B44D /* CreatePlanViewController.xib in Resources */,
+				7EC2BF1D23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib in Resources */,
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
@@ -712,6 +733,7 @@
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
 				7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */,
 				7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */,
+				7EC2BF2123EEC99600B05BF6 /* HomePlanCollectionReusableView.xib in Resources */,
 				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
 				7EBDF21D23E70A9500CDDF6B /* HomeHistoryViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
@@ -840,6 +862,7 @@
 				7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */,
 				7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
+				7EC2BF1C23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift in Sources */,
 				7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */,
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
 				7E7A95C723EB24E50010B44D /* UnderlineTimeView.swift in Sources */,
@@ -877,6 +900,7 @@
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
 				7EBDF22623E70FD000CDDF6B /* HomeHistoryViewModel.swift in Sources */,
 				7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */,
+				7EC2BF2023EEC99600B05BF6 /* HomePlanCollectionReusableView.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7EBDF21C23E70A9500CDDF6B /* HomeHistoryViewController.swift in Sources */,

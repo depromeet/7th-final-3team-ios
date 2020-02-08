@@ -30,7 +30,6 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
         let planViewModel = HomePlanViewModel()
         let planVC = HomePlanViewController(viewModel: planViewModel,
                                             nibName: HomePlanViewController.className)
-        
         let historyViewModel = HomeHistoryViewModel()
         let historyVC = HomeHistoryViewController(viewModel: historyViewModel,
                                                   nibName: HomeHistoryViewController.className)
