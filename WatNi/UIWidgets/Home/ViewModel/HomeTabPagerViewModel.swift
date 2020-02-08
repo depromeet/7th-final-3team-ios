@@ -24,6 +24,12 @@ enum HomeTab: CaseIterable {
 
 class HomeTabPagerViewModel {
 
+    let memberMeta: [MemberMeta]
+
+    init(memberMeta: [MemberMeta]) {
+        self.memberMeta = memberMeta
+    }
+
     func craeteSubViewModel(tab: HomeTab) -> HomeTabViewModel {
         switch tab {
         case .plan:
