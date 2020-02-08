@@ -89,8 +89,10 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                 case .success(let anyDecodable):
 
                     guard let group = anyDecodable as? WNGroup else {
-                        let homeViewModel = HomeViewModel()
-                        let homeVC = HomeViewController(viewModel: homeViewModel, nibName: HomeViewController.className)
+
+                        let viewModel = HomeTabPagerViewModel()
+                        let homeVC = HomeTabPagerViewController(viewModel: viewModel,
+                                                                nibName: HomeTabPagerViewController.className)
                         self?.navigationController?.setViewControllers([homeVC], animated: false)
                         return
                     }

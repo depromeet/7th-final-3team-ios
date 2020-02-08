@@ -57,9 +57,8 @@
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
 		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
-		7E6F810323E58E5600C97F35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F810223E58E5600C97F35 /* HomeViewController.swift */; };
-		7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F810423E58EB800C97F35 /* HomeViewController.xib */; };
-		7E6F810723E58EC300C97F35 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F810623E58EC300C97F35 /* HomeViewModel.swift */; };
+		7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */; };
+		7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
 		7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */; };
 		7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */; };
@@ -87,7 +86,6 @@
 		7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */; };
 		7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF20A23E6CA7E00CDDF6B /* Moya+URLRequest.swift */; };
 		7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */; };
-		7EBDF21423E70A6800CDDF6B /* HomeTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF21223E70A6800CDDF6B /* HomeTabPageViewController.swift */; };
 		7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */; };
 		7EBDF21923E70A8300CDDF6B /* HomePlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */; };
 		7EBDF21C23E70A9500CDDF6B /* HomeHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */; };
@@ -95,9 +93,9 @@
 		7EBDF22023E70D2A00CDDF6B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7EBDF21F23E70D2A00CDDF6B /* SnapKit */; };
 		7EBDF22323E70FBF00CDDF6B /* HomePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF22223E70FBF00CDDF6B /* HomePlanViewModel.swift */; };
 		7EBDF22623E70FD000CDDF6B /* HomeHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF22523E70FD000CDDF6B /* HomeHistoryViewModel.swift */; };
-		7EBDF22823E7286300CDDF6B /* HomeTabCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF22723E7286300CDDF6B /* HomeTabCollectionViewModel.swift */; };
-		7EBDF22B23E7291100CDDF6B /* HomeTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF22923E7291100CDDF6B /* HomeTabCollectionViewCell.swift */; };
-		7EBDF22C23E7291100CDDF6B /* HomeTabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBDF22A23E7291100CDDF6B /* HomeTabCollectionViewCell.xib */; };
+		7EC2BF1223EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */; };
+		7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */; };
+		7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */; };
 		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
 		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
 /* End PBXBuildFile section */
@@ -168,9 +166,8 @@
 		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
-		7E6F810223E58E5600C97F35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7E6F810423E58EB800C97F35 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7E6F810623E58EC300C97F35 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewController.swift; sourceTree = "<group>"; };
+		7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabPagerViewController.xib; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
 		7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchingTaskViewController.xib; sourceTree = "<group>"; };
 		7E7A953C23E1E303000DAAE0 /* NewbieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbieViewController.swift; sourceTree = "<group>"; };
@@ -199,16 +196,15 @@
 		7EB3C3C323C9ECF100A2B41C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		7EBDF20A23E6CA7E00CDDF6B /* Moya+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+URLRequest.swift"; sourceTree = "<group>"; };
 		7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProvider.swift; sourceTree = "<group>"; };
-		7EBDF21223E70A6800CDDF6B /* HomeTabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPageViewController.swift; sourceTree = "<group>"; };
 		7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanViewController.swift; sourceTree = "<group>"; };
 		7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlanViewController.xib; sourceTree = "<group>"; };
 		7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryViewController.swift; sourceTree = "<group>"; };
 		7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHistoryViewController.xib; sourceTree = "<group>"; };
 		7EBDF22223E70FBF00CDDF6B /* HomePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanViewModel.swift; sourceTree = "<group>"; };
 		7EBDF22523E70FD000CDDF6B /* HomeHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryViewModel.swift; sourceTree = "<group>"; };
-		7EBDF22723E7286300CDDF6B /* HomeTabCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCollectionViewModel.swift; sourceTree = "<group>"; };
-		7EBDF22923E7291100CDDF6B /* HomeTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabCollectionViewCell.swift; sourceTree = "<group>"; };
-		7EBDF22A23E7291100CDDF6B /* HomeTabCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabCollectionViewCell.xib; sourceTree = "<group>"; };
+		7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewModel.swift; sourceTree = "<group>"; };
+		7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
 		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -455,16 +451,14 @@
 		7E6F810123E58E4900C97F35 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EBDF22123E70FB000CDDF6B /* ViewModel */,
-				7E6F810223E58E5600C97F35 /* HomeViewController.swift */,
-				7E6F810423E58EB800C97F35 /* HomeViewController.xib */,
-				7EBDF21223E70A6800CDDF6B /* HomeTabPageViewController.swift */,
 				7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */,
 				7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */,
 				7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */,
 				7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */,
-				7EBDF22923E7291100CDDF6B /* HomeTabCollectionViewCell.swift */,
-				7EBDF22A23E7291100CDDF6B /* HomeTabCollectionViewCell.xib */,
+				7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */,
+				7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -580,12 +574,20 @@
 		7EBDF22123E70FB000CDDF6B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7E6F810623E58EC300C97F35 /* HomeViewModel.swift */,
 				7EBDF22223E70FBF00CDDF6B /* HomePlanViewModel.swift */,
 				7EBDF22523E70FD000CDDF6B /* HomeHistoryViewModel.swift */,
-				7EBDF22723E7286300CDDF6B /* HomeTabCollectionViewModel.swift */,
+				7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7EC2BF1523EEAC7A00B05BF6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */,
+				7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		8B16E2131FBF0DBE25F4DF11 /* Frameworks */ = {
@@ -703,7 +705,7 @@
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
-				7E6F810523E58EB800C97F35 /* HomeViewController.xib in Resources */,
+				7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
 				7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */,
 				7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */,
@@ -711,7 +713,6 @@
 				7EBDF21D23E70A9500CDDF6B /* HomeHistoryViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
-				7EBDF22C23E7291100CDDF6B /* HomeTabCollectionViewCell.xib in Resources */,
 				7E68A70E23B49C2F0021371D /* Assets.xcassets in Resources */,
 				7E7A95C423EB22640010B44D /* UnderlineTimeView.xib in Resources */,
 				7E68A73B23B4AA890021371D /* SignupViewController.xib in Resources */,
@@ -832,6 +833,7 @@
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */,
+				7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */,
 				7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */,
 				7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */,
 				7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */,
@@ -846,13 +848,14 @@
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7E18AFF123EC8656009764CC /* LaunchingTaskWorker.swift in Sources */,
 				7EB3C3C023C9EAA700A2B41C /* AuthTarget.swift in Sources */,
-				7EBDF21423E70A6800CDDF6B /* HomeTabPageViewController.swift in Sources */,
 				7E6F80F723E46FB000C97F35 /* UserCodeViewModel.swift in Sources */,
 				7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */,
 				7E18AFE923EC75B3009764CC /* ImageInputView.swift in Sources */,
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
+				7EC2BF1223EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift in Sources */,
 				7EBDF22323E70FBF00CDDF6B /* HomePlanViewModel.swift in Sources */,
 				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,
+				7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */,
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
 				7E18AFED23EC7CF5009764CC /* WNGroup.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
@@ -862,7 +865,6 @@
 				7E7A95CC23EB2E100010B44D /* NoticeInputView.swift in Sources */,
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
-				7EBDF22B23E7291100CDDF6B /* HomeTabCollectionViewCell.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
 				7E0F707923DD715A00EB1C5E /* MemberAccess.swift in Sources */,
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
@@ -870,14 +872,12 @@
 				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
 				7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */,
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
-				7EBDF22823E7286300CDDF6B /* HomeTabCollectionViewModel.swift in Sources */,
 				7EBDF22623E70FD000CDDF6B /* HomeHistoryViewModel.swift in Sources */,
 				7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */,
-				7E6F810323E58E5600C97F35 /* HomeViewController.swift in Sources */,
-				7E6F810723E58EC300C97F35 /* HomeViewModel.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7EBDF21C23E70A9500CDDF6B /* HomeHistoryViewController.swift in Sources */,
+				7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
 				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
 			);

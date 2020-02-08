@@ -35,8 +35,9 @@ class LaunchingTaskViewController: UIViewController {
                 let viewModel = CoachViewModel(memberMeta: memberMeta)
                 viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
             case .home:
-                let viewModel = HomeViewModel(memberMeta: memberMeta)
-                viewController = HomeViewController(viewModel: viewModel, nibName: HomeViewController.className)
+                let viewModel = HomeTabPagerViewModel()
+                let viewController = HomeTabPagerViewController(viewModel: viewModel,
+                                                            nibName: HomeTabPagerViewController.className)
             }
             self?.navigationController?.pushViewController(viewController, animated: false)
         }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class HomeHistoryViewController: UIViewController, ViewModelInjectable {
+class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabViewController {
 
     typealias ViewModel = HomeHistoryViewModel
 
@@ -23,8 +24,11 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable {
         fatalError("init(coder:) has not been implemented")
     }
 
+    var tabTitle: String {
+        return viewModel.tabTitle
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
