@@ -6,7 +6,8 @@ target 'WatNi' do
   use_frameworks!
 
   pod 'AloeStackView'
-
+  pod 'XLPagerTabStrip'
+  
   target 'WatNiTests' do
     inherit! :search_paths
     # Pods for testing
