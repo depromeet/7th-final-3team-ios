@@ -1,16 +1,20 @@
 PODS:
   - AloeStackView (1.2.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - AloeStackView
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - AloeStackView
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   AloeStackView: 8a4ce0efa08128dd78d538372f60c76c224034bb
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: ea3fc55b38d9ae221a81520b1201072315426ea1
+PODFILE CHECKSUM: d37a7b795b8321971cf12ef963211ee24bde78f7
 
 COCOAPODS: 1.8.4
