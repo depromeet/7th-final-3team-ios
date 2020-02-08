@@ -96,6 +96,7 @@
 		7EC2BF1223EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */; };
 		7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */; };
 		7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */; };
+		7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */; };
 		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
 		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
 /* End PBXBuildFile section */
@@ -205,6 +206,7 @@
 		7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewModel.swift; sourceTree = "<group>"; };
 		7EC2BF1323EEAC7500B05BF6 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		7EC2BF1623EEACA700B05BF6 /* HomeTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewModel.swift; sourceTree = "<group>"; };
+		7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Nib.swift"; sourceTree = "<group>"; };
 		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -434,6 +436,7 @@
 				7E68A73623B4A9D20021371D /* UIColor+Initializers.swift */,
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
 				7E9F6A8C23D360B500E78027 /* UIView+properties.swift */,
+				7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				7EBDF21C23E70A9500CDDF6B /* HomeHistoryViewController.swift in Sources */,
 				7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
+				7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */,
 				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
