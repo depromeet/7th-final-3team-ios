@@ -26,22 +26,32 @@ class LaunchingTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupInitialViewController { [weak self] scene, memberMeta in
-            let viewController: UIViewController
-            switch scene {
-            case .onboarding:
-                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
-            case .coach:
-                let viewModel = CoachViewModel(memberMeta: memberMeta)
-                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
-            case .home:
-                let viewModel = HomeTabPagerViewModel(memberMeta: memberMeta)
-                viewController = HomeTabPagerViewController(viewModel: viewModel,
-                                                            nibName: HomeTabPagerViewController.className)
-            }
-            self?.navigationController?.pushViewController(viewController, animated: false)
-        }
+//        setupInitialViewController { [weak self] scene, memberMeta in
+//            let viewController: UIViewController
+//            switch scene {
+//            case .onboarding:
+//                viewController = OnBoardingViewController(nibName: OnBoardingViewController.className, bundle: nil)
+//            case .coach:
+//                let viewModel = CoachViewModel(memberMeta: memberMeta)
+//                viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+//            case .home:
+//                let viewModel = HomeTabPagerViewModel(memberMeta: memberMeta)
+//                viewController = HomeTabPagerViewController(viewModel: viewModel,
+//                                                            nibName: HomeTabPagerViewController.className)
+//            }
+//            self?.navigationController?.pushViewController(viewController, animated: false)
+//        }
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let viewModel = HomeTabPagerViewModel(memberMeta: [])
+        let viewController = HomeTabPagerViewController(viewModel: viewModel,
+                                                        nibName: HomeTabPagerViewController.className)
+        navigationController?.pushViewController(viewController, animated: false)
+    }
+
 
     private func setupInitialViewController(completionHandler: @escaping (InitialScene, [MemberMeta]) -> Void) {
 
