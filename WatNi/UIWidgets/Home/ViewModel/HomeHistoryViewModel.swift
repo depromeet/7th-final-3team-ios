@@ -8,6 +8,6 @@
 
 import Foundation
 
-class HomeHistoryViewModel {
-
+class HomeHistoryViewModel: HomeTabViewModel {
+    let tabTitle = "출석 기록"
 }

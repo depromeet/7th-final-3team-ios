@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import XLPagerTabStrip
 
-class HomePlanViewModel {
-
+class HomePlanViewModel: HomeTabViewModel {
+    let tabTitle = "일정"
 }
