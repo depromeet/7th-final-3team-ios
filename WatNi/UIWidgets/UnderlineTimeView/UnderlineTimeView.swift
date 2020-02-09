@@ -11,8 +11,11 @@ import UIKit
 
 class UnderlineTimeView: UIView {
 
-    @IBOutlet private weak var fromTimeLabel: UILabel!
-    @IBOutlet private weak var toTimeLabel: UILabel!
+    @IBOutlet weak var fromTimeLabel: UILabel!
+    @IBOutlet weak var toTimeLabel: UILabel!
+
+    var didTapFromLabel: (() -> Void)?
+    var didTapToLabel: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,5 +24,13 @@ class UnderlineTimeView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @IBAction func fromLabelTapped(_ sender: UITapGestureRecognizer) {
+        didTapFromLabel?()
+    }
+
+    @IBAction func toLabelTapped(_ sender: UITapGestureRecognizer) {
+        didTapToLabel?()
     }
 }
