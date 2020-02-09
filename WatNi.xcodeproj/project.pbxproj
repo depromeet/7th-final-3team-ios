@@ -33,6 +33,7 @@
 		7E367E9F23EEDF0700E366D4 /* WNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */; };
 		7E367EA123EEDF2A00E366D4 /* WNAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */; };
 		7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */; };
+		7E367EA523EFEC0800E366D4 /* ImagePickerAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */; };
 		7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
@@ -151,6 +152,7 @@
 		7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertController.swift; sourceTree = "<group>"; };
 		7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WNAlertController.xib; sourceTree = "<group>"; };
 		7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertAction.swift; sourceTree = "<group>"; };
+		7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerAccess.swift; sourceTree = "<group>"; };
 		7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Auth.swift"; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				7E0F707823DD715A00EB1C5E /* MemberAccess.swift */,
+				7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */,
 			);
 			path = ModelLayer;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				7E2776BF23CB7BE900B90F80 /* UIControl+Subscription.swift in Sources */,
 				7EC2BF1223EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift in Sources */,
 				7EBDF22323E70FBF00CDDF6B /* HomePlanViewModel.swift in Sources */,
+				7E367EA523EFEC0800E366D4 /* ImagePickerAccess.swift in Sources */,
 				7E7A953D23E1E303000DAAE0 /* NewbieViewController.swift in Sources */,
 				7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */,
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
