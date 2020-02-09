@@ -33,6 +33,7 @@
 		7E367E9F23EEDF0700E366D4 /* WNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */; };
 		7E367EA123EEDF2A00E366D4 /* WNAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */; };
 		7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */; };
+		7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -150,6 +151,7 @@
 		7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertController.swift; sourceTree = "<group>"; };
 		7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WNAlertController.xib; sourceTree = "<group>"; };
 		7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertAction.swift; sourceTree = "<group>"; };
+		7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Auth.swift"; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				7E68A73823B4AA090021371D /* UIView+Nib.swift */,
 				7E9F6A8C23D360B500E78027 /* UIView+properties.swift */,
 				7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */,
+				7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -891,6 +894,7 @@
 				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
+				7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */,
 				7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */,
 				7E18AFEF23EC8422009764CC /* MemberMeta.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
