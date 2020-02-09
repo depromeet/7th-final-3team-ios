@@ -9,6 +9,7 @@
 import UIKit
 import AloeStackView
 import SnapKit
+import Photos
 
 class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
@@ -18,6 +19,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var submitButton: UIButton!
     @IBOutlet private weak var separatorView: UIView!
     var viewModel: CreatePlanViewModel
+    private var imagePickerAccess: ImagePickerAccess?
 
     let stackView = AloeStackView()
     let titleView = UnderlineTextFieldView()
@@ -79,16 +81,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
             self.stackView.setRowHidden(self.timePicker, isHidden: isHidden, animated: !isHidden)
         }
         stackView.setTapHandler(forRow: imageInputView) { [weak self] (_) in
-
-            let alertController = WNAlertController(title: nil, message: "인증샷 예시 올리기", style: .actionSheet)
-            alertController.modalPresentationStyle = .pageSheet
-            let albumAction = WNAlertAction(title: "앨범", handler: nil)
-            let cameraAction = WNAlertAction(title: "카메라", handler: nil)
-            alertController.addActions([albumAction, cameraAction])
-            alertController.didTapBackground = { [weak self] in
-                self?.navigationController?.dismiss(animated: true, completion: nil)
-            }
-            self?.navigationController?.present(alertController, animated: true, completion: nil)
+            self?.setupActionHandler()
         }
 
         stackView.setInset(forRows: [titleView, timeView, placeView, imageInputView],
@@ -105,6 +98,47 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
     @IBAction func submitBtnTapped(_ sender: UIButton) {
 
+    }
+
+    private func setupActionHandler() {
+        let alertController = WNAlertController(title: nil, message: "인증샷 예시 올리기", style: .actionSheet)
+        alertController.modalPresentationStyle = .pageSheet
+
+        let albumAction = WNAlertAction(title: "앨범", handler: { [weak self] in
+            self?.dismiss(animated: true, completion: {
+                self?.presentImagePicker(sourceType: .photoLibrary)
+            })
+        })
+
+        let cameraAction = WNAlertAction(title: "카메라", handler: { [weak self] in
+            self?.dismiss(animated: true, completion: {
+                self?.presentImagePicker(sourceType: .camera)
+            })
+        })
+
+        alertController.addActions([albumAction, cameraAction])
+        alertController.didTapBackground = { [weak self] in
+            self?.navigationController?.dismiss(animated: true, completion: nil)
+        }
+        navigationController?.present(alertController, animated: true, completion: nil)
+    }
+
+    private func presentImagePicker(sourceType: UIImagePickerController.SourceType) {
+        viewModel.authStatus { [weak self] (result) in
+            switch result {
+            case .success:
+                self?.imagePickerAccess = ImagePickerAccess(presentationController: self, sourceType: sourceType)
+                self?.imagePickerAccess?.didSelectImage = { [weak self] image in
+                    self?.imageInputView.imageView.image = image
+                }
+                self?.imagePickerAccess?.present()
+            case .failure(let error):
+                let errorMessage = self?.viewModel.photoErrorMessage(error: error) ?? ""
+                let alert = UIAlertController(title: "사진 접근 실패", message: errorMessage, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }
 
