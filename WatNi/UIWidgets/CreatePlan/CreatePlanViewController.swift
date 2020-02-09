@@ -18,7 +18,8 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var submitButton: UIButton!
     @IBOutlet private weak var separatorView: UIView!
-    var viewModel: CreatePlanViewModel
+
+    let viewModel: CreatePlanViewModel
     private var imagePickerAccess: ImagePickerAccess?
 
     let stackView = AloeStackView()
