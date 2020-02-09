@@ -29,6 +29,10 @@
 		7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E27772B23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf */; };
 		7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E27772C23D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf */; };
 		7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E27773123D2EC1D00B90F80 /* Font+Custom.swift */; };
+		7E367E9C23EEDE7700E366D4 /* WNActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367E9B23EEDE7700E366D4 /* WNActionButton.swift */; };
+		7E367E9F23EEDF0700E366D4 /* WNAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */; };
+		7E367EA123EEDF2A00E366D4 /* WNAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */; };
+		7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -142,6 +146,10 @@
 		7E27772B23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Regular.ttf"; sourceTree = "<group>"; };
 		7E27772C23D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Spoqa Han Sans Thin.ttf"; sourceTree = "<group>"; };
 		7E27773123D2EC1D00B90F80 /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		7E367E9B23EEDE7700E366D4 /* WNActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNActionButton.swift; sourceTree = "<group>"; };
+		7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertController.swift; sourceTree = "<group>"; };
+		7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WNAlertController.xib; sourceTree = "<group>"; };
+		7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertAction.swift; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -310,9 +318,21 @@
 			path = UnderlineTextField;
 			sourceTree = "<group>";
 		};
+		7E367E9D23EEDEBC00E366D4 /* WNAlert */ = {
+			isa = PBXGroup;
+			children = (
+				7E367E9B23EEDE7700E366D4 /* WNActionButton.swift */,
+				7E367E9E23EEDF0700E366D4 /* WNAlertController.swift */,
+				7E367EA023EEDF2A00E366D4 /* WNAlertController.xib */,
+				7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */,
+			);
+			path = WNAlert;
+			sourceTree = "<group>";
+		};
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				7E367E9D23EEDEBC00E366D4 /* WNAlert */,
 				7E18AFE723EC758F009764CC /* ImageInputView */,
 				7E7A95C823EB2D2F0010B44D /* NoticeInputView */,
 				7E7A95C523EB24D10010B44D /* UnderlineTimeView */,
@@ -728,6 +748,7 @@
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
+				7E367EA123EEDF2A00E366D4 /* WNAlertController.xib in Resources */,
 				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
 				7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
@@ -851,6 +872,7 @@
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E7A95C023EB084E0010B44D /* UnderlineLabelView.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
+				7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
 				7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */,
 				7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */,
@@ -892,6 +914,8 @@
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
+				7E367E9C23EEDE7700E366D4 /* WNActionButton.swift in Sources */,
+				7E367E9F23EEDF0700E366D4 /* WNAlertController.swift in Sources */,
 				7E0F707923DD715A00EB1C5E /* MemberAccess.swift in Sources */,
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
 				7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */,

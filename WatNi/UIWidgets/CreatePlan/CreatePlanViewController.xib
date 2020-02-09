@@ -82,6 +82,11 @@
                 <constraint firstItem="Yiv-Pl-4gu" firstAttribute="centerY" secondItem="lcg-yO-tmZ" secondAttribute="centerY" id="zxr-RD-T5u"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.76026302580000005" green="0.75998252629999996" blue="0.77523344760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="220" y="172"/>
         </view>
     </objects>
