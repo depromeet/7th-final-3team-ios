@@ -35,6 +35,7 @@
 		7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */; };
 		7E367EA523EFEC0800E366D4 /* ImagePickerAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */; };
 		7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */; };
+		7E367EA923F04C9600E366D4 /* Date+Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA823F04C9600E366D4 /* Date+Component.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -154,6 +155,7 @@
 		7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAlertAction.swift; sourceTree = "<group>"; };
 		7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerAccess.swift; sourceTree = "<group>"; };
 		7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Auth.swift"; sourceTree = "<group>"; };
+		7E367EA823F04C9600E366D4 /* Date+Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Component.swift"; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 				7E9F6A8C23D360B500E78027 /* UIView+properties.swift */,
 				7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */,
 				7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */,
+				7E367EA823F04C9600E366D4 /* Date+Component.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
 				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
+				7E367EA923F04C9600E366D4 /* Date+Component.swift in Sources */,
 				7E7A95C023EB084E0010B44D /* UnderlineLabelView.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */,
