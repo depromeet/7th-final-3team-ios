@@ -10,6 +10,7 @@ import UIKit
 import AloeStackView
 import SnapKit
 import Photos
+import Combine
 
 class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
@@ -21,6 +22,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
     let viewModel: CreatePlanViewModel
     private var imagePickerAccess: ImagePickerAccess?
+    var cancelables = Set<AnyCancellable>()
 
     let stackView = AloeStackView()
     let titleView = UnderlineTextFieldView()
@@ -76,11 +78,45 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
             let isHidden = !self.stackView.isRowHidden(self.datePicker)
             self.stackView.setRowHidden(self.datePicker, isHidden: isHidden, animated: !isHidden)
         }
-        stackView.setTapHandler(forRow: timeView) { [weak self] _ in
+
+        timeView.didTapFromLabel = { [weak self] in
             guard let self = self else { return }
-            let isHidden = !self.stackView.isRowHidden(self.timePicker)
-            self.stackView.setRowHidden(self.timePicker, isHidden: isHidden, animated: !isHidden)
+            guard let type = self.viewModel.selectedTimePicker else {
+                self.viewModel.selectedTimePicker = .fromTime
+                self.timePicker.setDate(self.viewModel.fromTime, animated: false)
+                self.stackView.setRowHidden(self.timePicker, isHidden: false, animated: true)
+                return
+            }
+
+            switch type {
+            case .fromTime:
+                self.viewModel.selectedTimePicker = nil
+                self.stackView.setRowHidden(self.timePicker, isHidden: true, animated: false)
+            case .toTime:
+                self.viewModel.selectedTimePicker = .fromTime
+                self.timePicker.setDate(self.viewModel.fromTime, animated: false)
+            }
         }
+
+        timeView.didTapToLabel = { [weak self] in
+            guard let self = self else { return }
+            guard let type = self.viewModel.selectedTimePicker else {
+                self.viewModel.selectedTimePicker = .toTime
+                self.timePicker.setDate(self.viewModel.toTime, animated: false)
+                self.stackView.setRowHidden(self.timePicker, isHidden: false, animated: true)
+                return
+            }
+
+            switch type {
+            case .fromTime:
+                self.viewModel.selectedTimePicker = .toTime
+                self.timePicker.setDate(self.viewModel.toTime, animated: false)
+            case .toTime:
+                self.viewModel.selectedTimePicker = nil
+                self.stackView.setRowHidden(self.timePicker, isHidden: true, animated: false)
+            }
+        }
+
         stackView.setTapHandler(forRow: imageInputView) { [weak self] (_) in
             self?.setupActionHandler()
         }
@@ -91,6 +127,9 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
                            inset: UIEdgeInsets(top: 6, left: 24, bottom: 0, right: 24))
 
         noticeInputView.textView.delegate = self
+        submitButton.isEnabled = false
+        setupDefaultDateLabel()
+        setupViewModels()
     }
 
     @IBAction func closeBtnTapped(_ sender: UIButton) {
@@ -99,6 +138,61 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
     @IBAction func submitBtnTapped(_ sender: UIButton) {
 
+    }
+
+    private func setupDefaultDateLabel() {
+        dateView.titleLabel.text = viewModel.defaultValue(.date)
+        timeView.fromTimeLabel.text = viewModel.defaultValue(.time(.fromTime))
+        timeView.toTimeLabel.text = viewModel.defaultValue(.time(.toTime))
+    }
+
+    private func setupViewModels() {
+        titleView.viewModel = UnderlineTextFieldViewModel(descLabelStr: "제목")
+        placeView.viewModel = UnderlineTextFieldViewModel(descLabelStr: "장소")
+
+        let titlePublisher = titleView.textField.publisher(for: .editingChanged)
+        let placePublisher = placeView.textField.publisher(for: .editingChanged)
+
+        titlePublisher.compactMap {
+            ($0 as? UITextField)?.text
+        }.sink { [weak self] (input) in
+            self?.viewModel.update(.title, newValue: input)
+            self?.submitButton.isEnabled = self?.viewModel.submitAvailable ?? false
+        }.store(in: &cancelables)
+
+        placePublisher.compactMap {
+            ($0 as? UITextField)?.text
+        }.sink { [weak self] (input) in
+            self?.viewModel.update(.place, newValue: input)
+            self?.submitButton.isEnabled = self?.viewModel.submitAvailable ?? false
+        }.store(in: &cancelables)
+
+        datePicker.publisher(for: .valueChanged).compactMap {
+            ($0 as? UIDatePicker)?.date
+        }.sink { [weak self] (inputDate) in
+            let dateStr = self?.viewModel.dateFormatter(for: .date).string(from: inputDate) ?? ""
+            self?.dateView.titleLabel.text = dateStr
+            self?.viewModel.update(.date, newValue: inputDate)
+        }.store(in: &cancelables)
+
+        timePicker.publisher(for: .valueChanged).compactMap {
+            ($0 as? UIDatePicker)?.date
+        }.sink { [weak self] (inputTime) in
+
+            guard let type = self?.viewModel.selectedTimePicker,
+                let timeStr = self?.viewModel.dateFormatter(for: .time).string(from: inputTime) else {
+                return
+            }
+
+            switch type {
+            case .fromTime:
+                self?.viewModel.update(.time(.fromTime), newValue: inputTime)
+                self?.timeView.fromTimeLabel.text = timeStr
+            case .toTime:
+                self?.viewModel.update(.time(.toTime), newValue: inputTime)
+                self?.timeView.toTimeLabel.text = timeStr
+            }
+        }.store(in: &cancelables)
     }
 
     private func setupActionHandler() {
