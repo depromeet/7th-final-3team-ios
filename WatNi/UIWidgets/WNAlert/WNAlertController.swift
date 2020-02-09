@@ -100,6 +100,9 @@ class WNAlertController: UIViewController {
         case .actionSheet:
             let actionButton = WNActionButton(frame: .zero)
             actionButton.setTitle(action.title, for: .normal)
+            actionButton.didTapButton = { _ in
+                action.handler?()
+            }
             aloeStackView.addRow(actionButton)
             aloeStackView.setInset(forRow: actionButton, inset: .zero)
             actionButton.snp.makeConstraints {
