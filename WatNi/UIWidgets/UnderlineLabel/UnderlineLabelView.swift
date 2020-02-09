@@ -9,7 +9,7 @@
 import UIKit
 
 class UnderlineLabelView: UIView {
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

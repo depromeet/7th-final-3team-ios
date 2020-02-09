@@ -42,14 +42,18 @@
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-tq-8Wz">
                     <rect key="frame" x="0.0" y="29" width="197" height="25"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTJ-ad-duT">
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTJ-ad-duT">
                             <rect key="frame" x="0.0" y="0.0" width="80.5" height="25"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="F3U-5c-LOV"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="48z-OH-6it" appends="YES" id="lxh-39-Gff"/>
+                            </connections>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-cT-Kyr">
                             <rect key="frame" x="93.5" y="12" width="10" height="1"/>
@@ -59,14 +63,18 @@
                                 <constraint firstAttribute="width" constant="10" id="nyW-H4-ADc"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-XS-DbY">
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후 01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-XS-DbY">
                             <rect key="frame" x="116.5" y="0.0" width="80.5" height="25"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="4uW-lX-k4Y"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="abk-Po-Nx8" appends="YES" id="eeC-jh-EPV"/>
+                            </connections>
                         </label>
                     </subviews>
                     <constraints>
@@ -92,5 +100,15 @@
             <viewLayoutGuide key="safeArea" id="40q-wU-IlC"/>
             <point key="canvasLocation" x="137.68115942028987" y="174.10714285714286"/>
         </view>
+        <tapGestureRecognizer id="48z-OH-6it">
+            <connections>
+                <action selector="fromLabelTapped:" destination="-1" id="KUE-9V-LxT"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="abk-Po-Nx8">
+            <connections>
+                <action selector="toLabelTapped:" destination="-1" id="aoK-uQ-gZT"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
