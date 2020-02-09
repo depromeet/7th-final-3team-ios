@@ -53,6 +53,8 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(stackView)
+        self.navigationController?.navigationBar.isHidden = true
+
         stackView.hidesSeparatorsByDefault = true
         stackView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
@@ -75,6 +77,18 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
             guard let self = self else { return }
             let isHidden = !self.stackView.isRowHidden(self.timePicker)
             self.stackView.setRowHidden(self.timePicker, isHidden: isHidden, animated: !isHidden)
+        }
+        stackView.setTapHandler(forRow: imageInputView) { [weak self] (_) in
+
+            let alertController = WNAlertController(title: nil, message: "인증샷 예시 올리기", style: .actionSheet)
+            alertController.modalPresentationStyle = .pageSheet
+            let albumAction = WNAlertAction(title: "앨범", handler: nil)
+            let cameraAction = WNAlertAction(title: "카메라", handler: nil)
+            alertController.addActions([albumAction, cameraAction])
+            alertController.didTapBackground = { [weak self] in
+                self?.navigationController?.dismiss(animated: true, completion: nil)
+            }
+            self?.navigationController?.present(alertController, animated: true, completion: nil)
         }
 
         stackView.setInset(forRows: [titleView, timeView, placeView, imageInputView],
