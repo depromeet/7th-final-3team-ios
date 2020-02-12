@@ -111,6 +111,9 @@
 		7EDFB95623F43877006310EB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDFB95523F43877006310EB /* Lottie */; };
 		7EDFB95923F43AEC006310EB /* watni_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFB95723F43AEB006310EB /* watni_1.json */; };
 		7EDFB95A23F43AEC006310EB /* watni_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFB95823F43AEB006310EB /* watni_2.json */; };
+		7EDFB95C23F44AE4006310EB /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFB95B23F44AE4006310EB /* OnBoardingPageViewController.swift */; };
+		7EDFB96023F45498006310EB /* OnBoardingLottieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFB95F23F45498006310EB /* OnBoardingLottieViewController.xib */; };
+		7EDFB96223F45594006310EB /* OnBoardingLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFB96123F45594006310EB /* OnBoardingLottieViewController.swift */; };
 		827B9DDEC701433BD16D5C53 /* Pods_WatNi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C66FF41076BCDCBD04C43FE /* Pods_WatNi.framework */; };
 		8BF0DE3DA9ADBBE48CD069A1 /* Pods_WatNiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8ACB8FE5741CEAD6E0E4D1 /* Pods_WatNiTests.framework */; };
 /* End PBXBuildFile section */
@@ -234,6 +237,9 @@
 		7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Nib.swift"; sourceTree = "<group>"; };
 		7EDFB95723F43AEB006310EB /* watni_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watni_1.json; sourceTree = "<group>"; };
 		7EDFB95823F43AEB006310EB /* watni_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watni_2.json; sourceTree = "<group>"; };
+		7EDFB95B23F44AE4006310EB /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
+		7EDFB95F23F45498006310EB /* OnBoardingLottieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingLottieViewController.xib; sourceTree = "<group>"; };
+		7EDFB96123F45594006310EB /* OnBoardingLottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingLottieViewController.swift; sourceTree = "<group>"; };
 		87D530A310DB54C0AD7964DF /* Pods-WatNiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.release.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCB62CE6AA4A21A26F947516 /* Pods-WatNiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatNiTests.debug.xcconfig"; path = "Target Support Files/Pods-WatNiTests/Pods-WatNiTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -594,6 +600,9 @@
 				7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */,
 				7E7A6D3C23DDEE510086EF88 /* LaunchingTaskViewController.xib */,
 				7E18AFF023EC8656009764CC /* LaunchingTaskWorker.swift */,
+				7EDFB95B23F44AE4006310EB /* OnBoardingPageViewController.swift */,
+				7EDFB95F23F45498006310EB /* OnBoardingLottieViewController.xib */,
+				7EDFB96123F45594006310EB /* OnBoardingLottieViewController.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -766,6 +775,7 @@
 				7EC2BF1D23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib in Resources */,
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
+				7EDFB96023F45498006310EB /* OnBoardingLottieViewController.xib in Resources */,
 				7E68A71123B49C2F0021371D /* LaunchScreen.storyboard in Resources */,
 				7E367EA123EEDF2A00E366D4 /* WNAlertController.xib in Resources */,
 				7E7A6D3D23DDEE510086EF88 /* LaunchingTaskViewController.xib in Resources */,
@@ -888,6 +898,7 @@
 			files = (
 				7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */,
 				7E7A95BA23EAFC3F0010B44D /* CreatePlanViewController.swift in Sources */,
+				7EDFB96223F45594006310EB /* OnBoardingLottieViewController.swift in Sources */,
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
 				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
@@ -900,6 +911,7 @@
 				7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */,
 				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
+				7EDFB95C23F44AE4006310EB /* OnBoardingPageViewController.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */,
 				7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */,
