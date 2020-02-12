@@ -12,8 +12,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="WatNi" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingViewController" customModule="watni" customModuleProvider="target">
             <connections>
+                <outlet property="pageControl" destination="SMS-xZ-Suq" id="hFD-mI-jpb"/>
                 <outlet property="startButton" destination="gft-bS-fr4" id="77I-eL-BqT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5Xh-qG-d3h"/>
             </connections>
@@ -23,8 +24,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gft-bS-fr4" customClass="SubmitButton" customModule="WatNi" customModuleProvider="target">
-                    <rect key="frame" x="16" y="794" width="382" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gft-bS-fr4" customClass="SubmitButton" customModule="watni" customModuleProvider="target">
+                    <rect key="frame" x="16" y="689" width="382" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="ctz-57-L46"/>
                     </constraints>
@@ -33,15 +34,40 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-xZ-Suq">
+                    <rect key="frame" x="16" y="776" width="382" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                </pageControl>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-uA-9jz">
+                    <rect key="frame" x="137" y="350.5" width="140" height="69"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ShG-31-8S5">
+                            <rect key="frame" x="0.0" y="0.0" width="140" height="54"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_title" translatesAutoresizingMaskIntoConstraints="NO" id="ll0-El-iOD">
+                            <rect key="frame" x="0.0" y="54" width="140" height="15"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gft-bS-fr4" secondAttribute="trailing" constant="16" id="AhU-bc-BjW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SMS-xZ-Suq" secondAttribute="bottom" constant="49" id="BFz-ee-IR3"/>
                 <constraint firstItem="gft-bS-fr4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FYY-0j-3EK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gft-bS-fr4" secondAttribute="bottom" constant="20" id="hzf-6a-Icl"/>
+                <constraint firstItem="lJR-uA-9jz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LOC-2w-iHr"/>
+                <constraint firstItem="SMS-xZ-Suq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="UiR-SN-AXC"/>
+                <constraint firstItem="SMS-xZ-Suq" firstAttribute="top" secondItem="gft-bS-fr4" secondAttribute="bottom" constant="39" id="kMT-jH-OTW"/>
+                <constraint firstItem="lJR-uA-9jz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-63" id="ooz-AJ-lJh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SMS-xZ-Suq" secondAttribute="trailing" constant="16" id="pck-t9-KBv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
         </view>
     </objects>
+    <resources>
+        <image name="launch_title" width="115" height="15"/>
+        <image name="logo" width="140" height="54"/>
+    </resources>
 </document>
