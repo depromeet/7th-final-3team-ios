@@ -66,7 +66,17 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
                 completionHandler(.failure(error))
             }
         }, receiveValue: { json in
-            completionHandler(.success(json["code"].intValue))
+            print("[Group][초대 코드 생성] 성공: \(json["code"].stringValue)")
+
+            MemberProvider.memberMeta { (result) in
+                switch result {
+                case .failure(let error):
+                    completionHandler(.failure(error))
+                case .success(let memberMeta):
+                    MemberAccess.default.update(memberMeta: memberMeta)
+                    completionHandler(.success(json["code"].stringValue))
+                }
+            }
         }).store(in: &cancelables)
     }
 }
