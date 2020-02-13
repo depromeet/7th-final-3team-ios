@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import SwiftyJSON
 
 class MemberProvider {
 
@@ -41,6 +42,35 @@ class MemberProvider {
                 completion(.success(member))
             case .failure(let error):
                 print("[Member][가입][실패] Error: \(error)")
+                completion(.failure(error))
+            }
+        }
+    }
+
+    static func memberMeta(completion: @escaping (Result<MemberMeta, Error>) -> Void) {
+
+        provider.request(.memberMeta) { (result) in
+            switch result {
+            case .success(let response):
+                guard (200...399).contains(response.statusCode) else {
+                    completion(.failure(WNAuthError.invalidGrant))
+                    return
+                }
+                do {
+                    let json = try JSON(data: response.data)
+                    let email = json["email"].stringValue
+                    let name = json["name"].stringValue
+                    let isManager = json["manager"].bool ?? false
+
+                    let member = Member(name: name, email: email, password: "")
+                    let memberMeta = MemberMeta(memberIdentity: member, isManager: isManager, group: [])
+                    completion(.success(memberMeta))
+                } catch {
+                    completion(.failure(error))
+                }
+
+            case .failure(let error):
+                print("[Member][ME][실패] Error: \(error)")
                 completion(.failure(error))
             }
         }
