@@ -9,14 +9,9 @@
 import Foundation
 
 class CoachViewModel {
-    var memberMeta: [MemberMeta]
-
-    init(memberMeta: [MemberMeta] = []) {
-        self.memberMeta = memberMeta
-    }
 
     var memberNameStr: String {
-        guard let member = MemberAccess.default.member else {
+        guard let member = MemberManager.shared.memberMeta?.memberIdentity else {
             return "익명님!\n반갑습니다."
         }
         return "\(member.name)님!\n반갑습니다."
