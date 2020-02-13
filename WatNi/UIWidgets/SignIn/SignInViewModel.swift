@@ -42,14 +42,38 @@ class SignInViewModel {
                 print("[SignIn][요청] 실패: \(error)")
                 completionHandler(.failure(error))
             case .success(let token):
-                // TODO: 이름 처리
-                let member = Member.fromKeychain
-                let email = self?.email ?? ""
-                let password = self?.password ?? ""
-                MemberAccess.default.update(identity: Member(name: member.name, email: email, password: password))
-                MemberAccess.default.update(token: token)
 
-                completionHandler(.success(()))
+                self?.memberMetaData { result in
+                    switch result {
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        completionHandler(.failure(error))
+                    case .success(var memberMeta):
+                        guard let self = self else { return }
+
+                        let name = memberMeta.memberIdentity.name
+                        let newMember = Member(name: name, email: self.email, password: self.password)
+                        memberMeta.updateMember(newMember)
+                        MemberManager.shared.update(memberMeta: memberMeta)
+                        MemberAccess.default.update(identity: newMember)
+                        MemberAccess.default.update(token: token)
+
+                        completionHandler(.success(()))
+                    }
+                }
+            }
+        }
+    }
+
+    func memberMetaData(completionHandler: @escaping (Result<MemberMeta, Error>) -> Void) {
+        MemberProvider.memberMeta { (result) in
+            switch result {
+            case .success(let memberMeta):
+                print("[User][조회] \(memberMeta)")
+                completionHandler(.success(memberMeta))
+            case .failure(let error):
+                print("[User][조회] 실패: \(error)")
+                completionHandler(.failure(error))
             }
         }
     }

@@ -9,7 +9,11 @@
 import Foundation
 
 struct MemberMeta {
-    let memberIdentity: MemberIdentity
+    private(set) var memberIdentity: MemberIdentity
     let isManager: Bool
     let group: [WNGroup]
+
+    mutating func updateMember(_ memberIdentity: MemberIdentity) {
+        self.memberIdentity = memberIdentity
+    }
 }
