@@ -27,6 +27,8 @@ class OnBoardingLottieViewController: UIViewController {
         let animation = Animation.named(jsonName)
         animationView.animation = animation
         pageControl.currentPage = currentPage
+        headLabel.text = head
+        descLabel.text = desc
     }
 
     override func viewWillAppear(_ animated: Bool) {
