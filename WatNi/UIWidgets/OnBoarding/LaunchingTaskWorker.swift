@@ -23,7 +23,7 @@ class LaunchingTaskWorker {
                         completionHandler(.failure(error))
                     case .success(let memberMeta):
                         MemberAccess.default.update(memberMeta: memberMeta)
-                        let scene: InitialScene = memberMeta.group.isEmpty ? .coach : .home
+                        let scene: InitialScene = memberMeta.groups.isEmpty ? .coach : .home
                         completionHandler(.success(scene))
                     }
                 }

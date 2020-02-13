@@ -11,12 +11,12 @@ import Foundation
 class MemberMeta {
     private(set) var member: Member
     let isManager: Bool
-    let group: [WNGroup]
+    let groups: [WNGroup]
 
-    init(member: Member, isManager: Bool = false, group: [WNGroup] = []) {
+    init(member: Member, isManager: Bool = false, groups: [WNGroup] = []) {
         self.member = member
         self.isManager = isManager
-        self.group = group
+        self.groups = groups
     }
 
     func updateMember(_ member: Member) {
