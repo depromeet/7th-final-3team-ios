@@ -64,6 +64,7 @@
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
 		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
+		7E7033FD23F58A5400B307E5 /* MemberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7033FC23F58A5400B307E5 /* MemberManager.swift */; };
 		7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */; };
 		7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
@@ -191,6 +192,7 @@
 		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
+		7E7033FC23F58A5400B307E5 /* MemberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberManager.swift; sourceTree = "<group>"; };
 		7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewController.swift; sourceTree = "<group>"; };
 		7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabPagerViewController.xib; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			children = (
 				7E0F707823DD715A00EB1C5E /* MemberAccess.swift */,
 				7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */,
+				7E7033FC23F58A5400B307E5 /* MemberManager.swift */,
 			);
 			path = ModelLayer;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 				7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
 				7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */,
+				7E7033FD23F58A5400B307E5 /* MemberManager.swift in Sources */,
 				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
