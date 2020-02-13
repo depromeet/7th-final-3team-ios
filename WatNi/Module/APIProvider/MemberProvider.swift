@@ -63,7 +63,7 @@ class MemberProvider {
                     let isManager = json["manager"].bool ?? false
 
                     let member = Member(name: name, email: email, password: "")
-                    let memberMeta = MemberMeta(memberIdentity: member, isManager: isManager, group: [])
+                    let memberMeta = MemberMeta(member: member, isManager: isManager, group: [])
                     completion(.success(memberMeta))
                 } catch {
                     completion(.failure(error))

@@ -17,11 +17,11 @@ class MemberAccess {
 
     static let `default` = MemberAccess()
 
-    private(set) var member: Member?
+    private(set) var memberMeta: MemberMeta?
     private(set) var token: Token?
 
     private init() {
-        self.member = Member.fromKeychain
+        self.memberMeta = MemberMeta(member: Member.fromKeychain)
         self.token = Token.fromKeychain
     }
 
@@ -38,9 +38,14 @@ class MemberAccess {
         return UserDefaults.standard.bool(forKey: MemberAccess.StorageKey.token)
     }
 
+    func update(memberMeta: MemberMeta) {
+        self.memberMeta = memberMeta
+        self.memberMeta?.member.save()
+    }
+
     func update(identity: MemberIdentity) {
-        self.member = Member(name: identity.name, email: identity.email, password: identity.password)
-        self.member?.save()
+        memberMeta?.updateMember(Member(name: identity.name, email: identity.email, password: identity.password))
+        memberMeta?.member.save()
     }
 
     func update(token: HasAuthToken) {
