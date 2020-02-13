@@ -62,8 +62,15 @@ class MemberProvider {
                     let name = json["name"].stringValue
                     let isManager = json["manager"].bool ?? false
 
+                    let decoder = JSONDecoder()
+                    let groupData = json["memberDetails"].arrayValue
+
+                    let groups: [WNGroup] = try groupData.compactMap { data in
+                        let itemData = try data["group"].rawData()
+                        return try? decoder.decode(WNGroup.self, from: itemData)
+                    }
                     let member = Member(name: name, email: email, password: "")
-                    let memberMeta = MemberMeta(member: member, isManager: isManager, group: [])
+                    let memberMeta = MemberMeta(member: member, isManager: isManager, groups: groups)
                     completion(.success(memberMeta))
                 } catch {
                     completion(.failure(error))
