@@ -63,7 +63,7 @@ class LaunchingTaskViewController: UIViewController {
                         print(error.localizedDescription)
                         completionHandler(.onboarding)
                     case .success(let metaData):
-                        let scene: InitialScene = metaData.group.isEmpty ? .coach : .home
+                        let scene: InitialScene = metaData.groups.isEmpty ? .coach : .home
                         completionHandler(scene)
                     }
                 }
