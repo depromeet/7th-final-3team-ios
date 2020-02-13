@@ -11,7 +11,6 @@ import Foundation
 class LaunchingTaskWorker {
 
     func initialViewController(completionHandler: @escaping (Result<InitialScene, Error>) -> Void) {
-        
         MemberAccess.default.refreshToken { [weak self] (result) in
             switch result {
             case .failure(let error):
@@ -23,7 +22,7 @@ class LaunchingTaskWorker {
                         print(error.localizedDescription)
                         completionHandler(.failure(error))
                     case .success(let memberMeta):
-                        MemberManager.shared.update(memberMeta: memberMeta)
+                        MemberAccess.default.update(memberMeta: memberMeta)
                         let scene: InitialScene = memberMeta.group.isEmpty ? .coach : .home
                         completionHandler(.success(scene))
                     }

@@ -8,12 +8,18 @@
 
 import Foundation
 
-struct MemberMeta {
-    private(set) var memberIdentity: MemberIdentity
+class MemberMeta {
+    private(set) var member: Member
     let isManager: Bool
     let group: [WNGroup]
 
-    mutating func updateMember(_ memberIdentity: MemberIdentity) {
-        self.memberIdentity = memberIdentity
+    init(member: Member, isManager: Bool = false, group: [WNGroup] = []) {
+        self.member = member
+        self.isManager = isManager
+        self.group = group
+    }
+
+    func updateMember(_ member: Member) {
+        self.member = member
     }
 }

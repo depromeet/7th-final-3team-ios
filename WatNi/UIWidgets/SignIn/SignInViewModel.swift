@@ -48,14 +48,14 @@ class SignInViewModel {
                     case .failure(let error):
                         print(error.localizedDescription)
                         completionHandler(.failure(error))
-                    case .success(var memberMeta):
+                    case .success(let memberMeta):
                         guard let self = self else { return }
 
-                        let name = memberMeta.memberIdentity.name
+                        let name = memberMeta.member.name
                         let newMember = Member(name: name, email: self.email, password: self.password)
+
                         memberMeta.updateMember(newMember)
-                        MemberManager.shared.update(memberMeta: memberMeta)
-                        MemberAccess.default.update(identity: newMember)
+                        MemberAccess.default.update(memberMeta: memberMeta)
                         MemberAccess.default.update(token: token)
 
                         completionHandler(.success(()))

@@ -11,7 +11,7 @@ import Foundation
 class CoachViewModel {
 
     var memberNameStr: String {
-        guard let member = MemberManager.shared.memberMeta?.memberIdentity else {
+        guard let member = MemberAccess.default.memberMeta?.member else {
             return "익명님!\n반갑습니다."
         }
         return "\(member.name)님!\n반갑습니다."
