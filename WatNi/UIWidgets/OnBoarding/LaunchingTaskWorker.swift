@@ -7,29 +7,41 @@
 //
 
 import Foundation
-import Combine
 
 class LaunchingTaskWorker {
 
-    var cancelables = Set<AnyCancellable>()
-
-    func userMetaData(completionHandler: @escaping (Result<[MemberMeta], Error>) -> Void) {
-
-        let request = URLRequest(target: MemberTarget.memberMeta)
-
-        URLSession.shared.dataTaskPublisher(for: request)
-            .receive(on: DispatchQueue.main)
-            .map(\.data)
-            .decode(type: [MemberMeta].self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
-            .sink(receiveCompletion: { completion in
-                if case .failure(let error) = completion {
-                    print("[User][조회] 실패: \(error)")
-                    completionHandler(.failure(error))
+    func initialViewController(completionHandler: @escaping (Result<InitialScene, Error>) -> Void) {
+        
+        MemberAccess.default.refreshToken { [weak self] (result) in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+            case .success:
+                self?.memberMetaData { result in
+                    switch result {
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        completionHandler(.failure(error))
+                    case .success(let memberMeta):
+                        MemberManager.shared.update(memberMeta: memberMeta)
+                        let scene: InitialScene = memberMeta.group.isEmpty ? .coach : .home
+                        completionHandler(.success(scene))
+                    }
                 }
-            }, receiveValue: { metaDatas in
-                print("[User][조회] \(metaDatas)")
-                completionHandler(.success(metaDatas))
-            }).store(in: &cancelables)
+            }
+        }
+    }
+
+    func memberMetaData(completionHandler: @escaping (Result<MemberMeta, Error>) -> Void) {
+        MemberProvider.memberMeta { (result) in
+            switch result {
+            case .success(let memberMeta):
+                print("[User][조회] \(memberMeta)")
+                completionHandler(.success(memberMeta))
+            case .failure(let error):
+                print("[User][조회] 실패: \(error)")
+                completionHandler(.failure(error))
+            }
+        }
     }
 }
