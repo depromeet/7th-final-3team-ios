@@ -8,12 +8,8 @@
 
 import Foundation
 
-struct MemberMeta: Decodable {
+struct MemberMeta {
+    let memberIdentity: MemberIdentity
     let isManager: Bool
     let group: [WNGroup]
-
-    enum CodingKeys: String, CodingKey {
-        case isManager = "manager"
-        case group
-    }
 }
