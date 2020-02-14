@@ -6,10 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePlanViewController" customModule="watni" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Lkl-sF-gbE" id="Pdf-Wh-wPX"/>
+                <outlet property="managerEmptyView" destination="W46-Zy-0qM" id="5Q6-fa-nk1"/>
+                <outlet property="participantEmptyView" destination="DDX-jH-okg" id="pVr-Zl-Yod"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,16 +35,98 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="W46-Zy-0qM">
+                    <rect key="frame" x="98.5" y="340" width="217.5" height="216"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="B96-dG-InV">
+                            <rect key="frame" x="0.0" y="0.0" width="217.5" height="110"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="F4i-1D-riz">
+                                    <rect key="frame" x="0.0" y="0.0" width="217.5" height="80"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정을 등록해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ5-1L-DCd">
+                                    <rect key="frame" x="0.0" y="91" width="217.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-6v-09t">
+                            <rect key="frame" x="0.0" y="145" width="217.5" height="71"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjm-SU-h1d">
+                                    <rect key="frame" x="0.0" y="0.0" width="217.5" height="48"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Hsp-Sz-PGW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="15"/>
+                                    <state key="normal" title="일정 등록하기">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="createPlanBtnTapped:" destination="-1" eventType="touchUpInside" id="hv3-YG-Bnv"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우측 상단 메뉴에서도 일정 등록이 가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-7G-Avc">
+                                    <rect key="frame" x="0.0" y="57" width="217.5" height="14"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="12"/>
+                                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-jH-okg">
+                    <rect key="frame" x="126" y="375" width="162.5" height="146"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-Hf-PYF">
+                            <rect key="frame" x="7.5" y="0.0" width="147" height="110"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace2" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-r2-ej2">
+                                    <rect key="frame" x="0.0" y="0.0" width="147" height="80"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 일정이 없어요..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-wD-K38">
+                                    <rect key="frame" x="0.0" y="91" width="147" height="19"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조금만 기다려주세요 🌿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-La-73U">
+                            <rect key="frame" x="0.0" y="127" width="162.5" height="19"/>
+                            <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Lkl-sF-gbE" secondAttribute="bottom" id="E1c-65-AcK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkl-sF-gbE" secondAttribute="trailing" id="EYx-91-xUx"/>
                 <constraint firstItem="Lkl-sF-gbE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a7O-we-6DG"/>
+                <constraint firstItem="DDX-jH-okg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="auc-9K-fDv"/>
                 <constraint firstItem="Lkl-sF-gbE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cc7-fF-NmF"/>
+                <constraint firstItem="DDX-jH-okg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eH1-Id-7zu"/>
+                <constraint firstItem="W46-Zy-0qM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nZC-1Z-9a6"/>
+                <constraint firstItem="W46-Zy-0qM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yW8-z6-M22"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="112"/>
         </view>
     </objects>
+    <resources>
+        <image name="emptyFace" width="80" height="80"/>
+        <image name="emptyFace2" width="80" height="80"/>
+    </resources>
 </document>
