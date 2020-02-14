@@ -10,16 +10,28 @@ import Foundation
 
 class MemberMeta {
     private(set) var member: Member
-    let isManager: Bool
+    let managers: [Int: Bool]
     let groups: [WNGroup]
 
-    init(member: Member, isManager: Bool = false, groups: [WNGroup] = []) {
+    init(member: Member, managers: [Int: Bool] = [:], groups: [WNGroup] = []) {
         self.member = member
-        self.isManager = isManager
+        self.managers = managers
         self.groups = groups
     }
 
     func updateMember(_ member: Member) {
         self.member = member
+    }
+
+    var isManager: Bool {
+        guard managers.isEmpty == false else {
+            return false
+        }
+
+        guard let currentGroupId = groups.first?.groupId else {
+            return false
+        }
+
+        return managers[currentGroupId] ?? false
     }
 }
