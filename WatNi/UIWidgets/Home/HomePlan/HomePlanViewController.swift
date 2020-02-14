@@ -14,6 +14,8 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
     typealias ViewModel = HomePlanViewModel
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var managerEmptyView: UIStackView!
+    @IBOutlet weak var participantEmptyView: UIStackView!
 
     let viewModel: HomePlanViewModel
 
@@ -38,6 +40,18 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
+
+        collectionView.isHidden = viewModel.shouldHideCollectionView
+        managerEmptyView.isHidden = viewModel.shouldHideManagerEmptyView
+        participantEmptyView.isHidden = viewModel.shouldHideParticipantEmptyView
+    }
+
+    @IBAction func createPlanBtnTapped(_ sender: UIButton) {
+        let viewModel = CreatePlanViewModel()
+        let createPlanVC = CreatePlanViewController(viewModel: viewModel,
+                                                    nibName: CreatePlanViewController.className)
+        let navigationController = UINavigationController(rootViewController: createPlanVC)
+        self.navigationController?.present(navigationController, animated: true, completion: nil)
     }
 }
 

@@ -11,4 +11,29 @@ import XLPagerTabStrip
 
 class HomePlanViewModel: HomeTabViewModel {
     let tabTitle = "일정"
+
+    var shouldHideCollectionView: Bool {
+        let groups = MemberAccess.default.memberMeta?.groups ?? []
+
+        guard let conferences = groups.first?.conferences else {
+            return false
+        }
+        return conferences.isEmpty
+    }
+
+    var shouldHideManagerEmptyView: Bool {
+        let isManager = MemberAccess.default.memberMeta?.isManager ?? false
+        guard isManager else {
+            return true
+        }
+        return !shouldHideCollectionView
+    }
+
+    var shouldHideParticipantEmptyView: Bool {
+        let isManager = MemberAccess.default.memberMeta?.isManager ?? false
+        guard !isManager else {
+            return true
+        }
+        return !shouldHideCollectionView
+    }
 }
