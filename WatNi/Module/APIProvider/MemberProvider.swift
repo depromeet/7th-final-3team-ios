@@ -60,17 +60,22 @@ class MemberProvider {
                     let json = try JSON(data: response.data)
                     let email = json["email"].stringValue
                     let name = json["name"].stringValue
-                    let isManager = json["manager"].bool ?? false
 
                     let decoder = JSONDecoder()
                     let groupData = json["memberDetails"].arrayValue
+
+                    let managers: [Int: Bool] = groupData.reduce(into: [Int: Bool]()) { (dict, data) in
+                        guard let groupId = data["group"]["groupId"].int else { return }
+                        let isManager = data["manager"].boolValue
+                        dict[groupId] = isManager
+                    }
 
                     let groups: [WNGroup] = try groupData.compactMap { data in
                         let itemData = try data["group"].rawData()
                         return try? decoder.decode(WNGroup.self, from: itemData)
                     }
                     let member = Member(name: name, email: email, password: "")
-                    let memberMeta = MemberMeta(member: member, isManager: isManager, groups: groups)
+                    let memberMeta = MemberMeta(member: member, managers: managers, groups: groups)
                     completion(.success(memberMeta))
                 } catch {
                     completion(.failure(error))
