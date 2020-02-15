@@ -34,7 +34,7 @@ class AuthProvider {
             case .success(let response):
 
                 guard (200...399).contains(response.statusCode) else {
-                    completion(.failure(WNAuthError.invalidGrant))
+                    completion(.failure(WNError.invalidStatusCode(response: response)))
                     return
                 }
                 do {
