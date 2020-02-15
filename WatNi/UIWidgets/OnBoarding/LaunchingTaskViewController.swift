@@ -26,7 +26,7 @@ class LaunchingTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupInitialViewController { [weak self] scene in
+        setupInitialViewController { [weak self] scene, groups  in
             let viewController: UIViewController
             switch scene {
             case .onboarding:
@@ -37,7 +37,7 @@ class LaunchingTaskViewController: UIViewController {
                 let viewModel = CoachViewModel()
                 viewController = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
             case .home:
-                let viewModel = HomeTabPagerViewModel()
+                let viewModel = HomeTabPagerViewModel(groups: groups)
                 viewController = HomeTabPagerViewController(viewModel: viewModel,
                                                             nibName: HomeTabPagerViewController.className)
             }
@@ -45,26 +45,26 @@ class LaunchingTaskViewController: UIViewController {
         }
     }
 
-    private func setupInitialViewController(completionHandler: @escaping (InitialScene) -> Void) {
+    private func setupInitialViewController(completionHandler: @escaping (InitialScene, [WNGroup]) -> Void) {
 
         guard MemberAccess.default.isLogin else {
-            completionHandler(.onboarding)
+            completionHandler(.onboarding, [])
             return
         }
 
         worker.initialViewController { [weak self] (result) in
             switch result {
             case .failure:
-                completionHandler(.onboarding)
+                completionHandler(.onboarding, [])
             case .success:
                 self?.worker.memberMetaData { result in
                     switch result {
                     case .failure(let error):
                         print(error.localizedDescription)
-                        completionHandler(.onboarding)
+                        completionHandler(.onboarding, [])
                     case .success(let metaData):
                         let scene: InitialScene = metaData.groups.isEmpty ? .coach : .home
-                        completionHandler(scene)
+                        completionHandler(scene, metaData.groups)
                     }
                 }
             }
