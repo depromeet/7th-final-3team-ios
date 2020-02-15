@@ -16,7 +16,7 @@ class HomePlanViewModel: HomeTabViewModel {
     init(groups: [WNGroup]) {
         self.groups = groups
     }
-    
+
     var shouldHideCollectionView: Bool {
         let groups = MemberAccess.default.memberMeta?.groups ?? []
 
