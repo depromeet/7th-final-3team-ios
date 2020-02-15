@@ -33,6 +33,7 @@ final class CreatePlanViewModel {
     private(set) var date: Date = Date()
     private(set) var fromTime: Date
     private(set) var toTime: Date
+    private(set) var image: UIImage?
 
     var selectedTimePicker: TimeType?
 
@@ -72,6 +73,7 @@ final class CreatePlanViewModel {
 
         let stringValue = newValue as? String ?? ""
         let dateValue = newValue as? Date ?? Date()
+        let image = newValue as? UIImage
 
         switch rowType {
         case .title:
@@ -90,7 +92,7 @@ final class CreatePlanViewModel {
                 self.toTime = dateValue
             }
         case .image:
-            break
+            self.image = image
         }
     }
 

@@ -241,6 +241,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
                 self?.imagePickerAccess = ImagePickerAccess(presentationController: self, sourceType: sourceType)
                 self?.imagePickerAccess?.didSelectImage = { [weak self] image in
                     self?.imageInputView.imageView.image = image
+                    self?.viewModel.update(.image, newValue: image)
                 }
                 self?.imagePickerAccess?.present()
             case .failure(let error):
@@ -256,5 +257,10 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 extension CreatePlanViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         stackView.setContentOffset(CGPoint(x: 0, y: noticeInputView.frame.maxY), animated: true)
+    }
+
+    func textViewDidChange(_ textView: UITextView) {
+        guard let noticeText = textView.text else { return }
+        viewModel.update(.notice, newValue: noticeText)
     }
 }
