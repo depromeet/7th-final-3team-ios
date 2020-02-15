@@ -89,11 +89,13 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                 case .success(let anyDecodable):
 
                     guard let group = anyDecodable as? WNGroup else {
-                        // TODO: 사용자 코드 입력 이후 페이지 이동 점검
-                        let viewModel = HomeTabPagerViewModel(groups: [])
-                        let homeVC = HomeTabPagerViewController(viewModel: viewModel,
-                                                                nibName: HomeTabPagerViewController.className)
-                        self?.navigationController?.setViewControllers([homeVC], animated: false)
+                        // 관리자 초대 코드 입력 이후 이동
+                        if let groups = anyDecodable as? [WNGroup] {
+                            let viewModel = HomeTabPagerViewModel(groups: groups)
+                            let homeVC = HomeTabPagerViewController(viewModel: viewModel,
+                                                                    nibName: HomeTabPagerViewController.className)
+                            self?.navigationController?.setViewControllers([homeVC], animated: false)
+                        }
                         return
                     }
 

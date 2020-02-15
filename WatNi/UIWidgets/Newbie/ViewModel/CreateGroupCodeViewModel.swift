@@ -74,7 +74,7 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
                     completionHandler(.failure(error))
                 case .success(let memberMeta):
                     MemberAccess.default.update(memberMeta: memberMeta)
-                    completionHandler(.success(json["code"].stringValue))
+                    completionHandler(.success(memberMeta.groups))
                 }
             }
         }).store(in: &cancelables)
