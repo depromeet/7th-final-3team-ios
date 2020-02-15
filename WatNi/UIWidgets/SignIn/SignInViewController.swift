@@ -100,10 +100,19 @@ class SignInViewController: UIViewController, ViewModelInjectable {
                                                             preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                     self?.present(alertController, animated: true, completion: nil)
-                case .success:
-                    let viewModel = CoachViewModel()
-                    let coachVC = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
-                    self?.navigationController?.setViewControllers([coachVC], animated: true)
+                case .success(let groups):
+
+                    if groups.isEmpty {
+                        let viewModel = CoachViewModel()
+                        let coachVC = CoachViewController(viewModel: viewModel, nibName: CoachViewController.className)
+                        self?.navigationController?.setViewControllers([coachVC], animated: true)
+
+                    } else {
+                        let viewModel = HomeTabPagerViewModel(groups: groups)
+                        let pagerVC = HomeTabPagerViewController(viewModel: viewModel,
+                                                                 nibName: HomeTabPagerViewController.className)
+                        self?.navigationController?.setViewControllers([pagerVC], animated: true)
+                    }
                 }
             })
         }.store(in: &cancelables)
