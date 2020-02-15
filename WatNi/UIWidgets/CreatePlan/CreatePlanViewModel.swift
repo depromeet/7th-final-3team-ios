@@ -26,6 +26,7 @@ final class CreatePlanViewModel {
         case toTime
     }
 
+    let group: WNGroup
     private(set) var title: String = ""
     private(set) var place: String = ""
     private(set) var notice: String = ""
@@ -39,11 +40,12 @@ final class CreatePlanViewModel {
         return !title.isEmpty && !place.isEmpty
     }
 
-    init() {
+    init(group: WNGroup) {
         let minuteGap = Date().component(of: .minute) * -1
         let fromComponent = DateComponents(hour: 1, minute: minuteGap)
         let toComponent = DateComponents(hour: 2, minute: minuteGap)
 
+        self.group = group
         self.fromTime = Calendar.current.date(byAdding: fromComponent, to: Date()) ?? Date()
         self.toTime = Calendar.current.date(byAdding: toComponent, to: Date()) ?? Date()
     }

@@ -47,7 +47,9 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
     }
 
     @IBAction func createPlanBtnTapped(_ sender: UIButton) {
-        let viewModel = CreatePlanViewModel()
+        guard let group = viewModel.groups.first else { return }
+
+        let viewModel = CreatePlanViewModel(group: group)
         let createPlanVC = CreatePlanViewController(viewModel: viewModel,
                                                     nibName: CreatePlanViewController.className)
         let navigationController = UINavigationController(rootViewController: createPlanVC)

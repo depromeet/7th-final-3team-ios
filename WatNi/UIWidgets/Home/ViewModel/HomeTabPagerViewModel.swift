@@ -24,12 +24,9 @@ enum HomeTab: CaseIterable {
 
 class HomeTabPagerViewModel {
 
-    func craeteSubViewModel(tab: HomeTab) -> HomeTabViewModel {
-        switch tab {
-        case .plan:
-            return HomePlanViewModel()
-        case .history:
-            return HomeHistoryViewModel()
-        }
+    let groups: [WNGroup]
+
+    init(groups: [WNGroup]) {
+        self.groups = groups
     }
 }

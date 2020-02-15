@@ -10,8 +10,13 @@ import Foundation
 import XLPagerTabStrip
 
 class HomePlanViewModel: HomeTabViewModel {
+    let groups: [WNGroup]
     let tabTitle = "일정"
 
+    init(groups: [WNGroup]) {
+        self.groups = groups
+    }
+    
     var shouldHideCollectionView: Bool {
         let groups = MemberAccess.default.memberMeta?.groups ?? []
 

@@ -27,7 +27,7 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
 
-        let planViewModel = HomePlanViewModel()
+        let planViewModel = HomePlanViewModel(groups: viewModel.groups)
         let planVC = HomePlanViewController(viewModel: planViewModel,
                                             nibName: HomePlanViewController.className)
         let historyViewModel = HomeHistoryViewModel()
