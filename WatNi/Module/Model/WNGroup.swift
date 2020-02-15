@@ -11,6 +11,5 @@ import Foundation
 struct WNGroup: Decodable {
     let groupId: Int
     let name: String
-    // TODO: WNConference 정의 이후 변경
-    let conferences: [String]
+    let conferences: [WNConference]
 }

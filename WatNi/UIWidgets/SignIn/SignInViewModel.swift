@@ -34,7 +34,7 @@ class SignInViewModel {
         }
     }
 
-    func signIn(completionHandler: @escaping (Result<Void, Error>) -> Void) {
+    func signIn(completionHandler: @escaping (Result<[WNGroup], Error>) -> Void) {
 
         AuthProvider.issueToken(email: email, password: password) { [weak self] (result) in
             switch result {
@@ -43,6 +43,7 @@ class SignInViewModel {
                 completionHandler(.failure(error))
             case .success(let token):
 
+                MemberAccess.default.update(token: token)
                 self?.memberMetaData { result in
                     switch result {
                     case .failure(let error):
@@ -56,9 +57,8 @@ class SignInViewModel {
 
                         memberMeta.updateMember(newMember)
                         MemberAccess.default.update(memberMeta: memberMeta)
-                        MemberAccess.default.update(token: token)
 
-                        completionHandler(.success(()))
+                        completionHandler(.success(memberMeta.groups))
                     }
                 }
             }
