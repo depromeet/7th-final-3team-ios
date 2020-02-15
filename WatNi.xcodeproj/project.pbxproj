@@ -11,7 +11,6 @@
 		7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F707C23DD7FA000EB1C5E /* CoachViewController.swift */; };
 		7E0F707F23DD7FC500EB1C5E /* CoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */; };
 		7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */; };
-		7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F708223DDC39100EB1C5E /* WNAuthError.swift */; };
 		7E18AFE923EC75B3009764CC /* ImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFE823EC75B3009764CC /* ImageInputView.swift */; };
 		7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E18AFEA23EC75CD009764CC /* ImageInputView.xib */; };
 		7E18AFED23EC7CF5009764CC /* WNGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E18AFEC23EC7CF5009764CC /* WNGroup.swift */; };
@@ -64,6 +63,9 @@
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
 		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
+		7E70340323F7F23700B307E5 /* DateComponent+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340223F7F23700B307E5 /* DateComponent+Init.swift */; };
+		7E70340523F7F49F00B307E5 /* WNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340423F7F49F00B307E5 /* WNError.swift */; };
+		7E70340723F7F5E300B307E5 /* Error+UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340623F7F5E300B307E5 /* Error+UserMessage.swift */; };
 		7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */; };
 		7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
@@ -137,7 +139,6 @@
 		7E0F707C23DD7FA000EB1C5E /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		7E0F707E23DD7FC500EB1C5E /* CoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoachViewController.xib; sourceTree = "<group>"; };
 		7E0F708023DD806A00EB1C5E /* CoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewModel.swift; sourceTree = "<group>"; };
-		7E0F708223DDC39100EB1C5E /* WNAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNAuthError.swift; sourceTree = "<group>"; };
 		7E18AFE823EC75B3009764CC /* ImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInputView.swift; sourceTree = "<group>"; };
 		7E18AFEA23EC75CD009764CC /* ImageInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageInputView.xib; sourceTree = "<group>"; };
 		7E18AFEC23EC7CF5009764CC /* WNGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNGroup.swift; sourceTree = "<group>"; };
@@ -191,6 +192,9 @@
 		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
+		7E70340223F7F23700B307E5 /* DateComponent+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponent+Init.swift"; sourceTree = "<group>"; };
+		7E70340423F7F49F00B307E5 /* WNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNError.swift; sourceTree = "<group>"; };
+		7E70340623F7F5E300B307E5 /* Error+UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+UserMessage.swift"; sourceTree = "<group>"; };
 		7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewController.swift; sourceTree = "<group>"; };
 		7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabPagerViewController.xib; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
@@ -303,7 +307,7 @@
 		7E0F708523DDC3CB00EB1C5E /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				7E0F708223DDC39100EB1C5E /* WNAuthError.swift */,
+				7E70340423F7F49F00B307E5 /* WNError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -486,6 +490,8 @@
 				7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */,
 				7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */,
 				7E367EA823F04C9600E366D4 /* Date+Component.swift */,
+				7E70340223F7F23700B307E5 /* DateComponent+Init.swift */,
+				7E70340623F7F5E300B307E5 /* Error+UserMessage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -907,6 +913,8 @@
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
+				7E70340723F7F5E300B307E5 /* Error+UserMessage.swift in Sources */,
+				7E70340523F7F49F00B307E5 /* WNError.swift in Sources */,
 				7EBDF20D23E6D4EB00CDDF6B /* MemberProvider.swift in Sources */,
 				7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */,
 				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
@@ -955,8 +963,8 @@
 				7E0F707923DD715A00EB1C5E /* MemberAccess.swift in Sources */,
 				7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */,
 				7E0F708123DD806A00EB1C5E /* CoachViewModel.swift in Sources */,
+				7E70340323F7F23700B307E5 /* DateComponent+Init.swift in Sources */,
 				7E662F5423D74A9F005A68B7 /* MemberTarget.swift in Sources */,
-				7E0F708323DDC39100EB1C5E /* WNAuthError.swift in Sources */,
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
 				7EBDF22623E70FD000CDDF6B /* HomeHistoryViewModel.swift in Sources */,
 				7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */,
