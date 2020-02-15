@@ -31,11 +31,14 @@ enum WNError: Error {
 extension WNError {
     enum InvalidInputReason: ErrorReason {
         case cannotFormTimeRange
+        case emptyRequestBody
 
         var message: String {
             switch self {
             case .cannotFormTimeRange:
                 return "시작시간이 종료시간보다 빠를 수 없습니다."
+            case .emptyRequestBody:
+                return "Request Body가 누락되었습니다."
             }
         }
     }
