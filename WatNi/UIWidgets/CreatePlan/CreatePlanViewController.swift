@@ -137,7 +137,23 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     }
 
     @IBAction func submitBtnTapped(_ sender: UIButton) {
+        sender.isUserInteractionEnabled = false
 
+        viewModel.createPlan { [weak self] (result) in
+            defer {
+                sender.isUserInteractionEnabled = true
+            }
+            switch result {
+            case .failure(let error):
+                let alertController = UIAlertController(title: "일정 생성 실패",
+                                                        message: error.userMessage,
+                                                        preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self?.present(alertController, animated: true, completion: nil)
+            case .success:
+                break
+            }
+        }
     }
 
     private func setupDefaultDateLabel() {

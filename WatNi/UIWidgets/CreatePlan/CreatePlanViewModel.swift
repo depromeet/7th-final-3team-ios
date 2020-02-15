@@ -125,4 +125,31 @@ final class CreatePlanViewModel {
             }
         }
     }
+
+    func createPlan(completion: @escaping (Result<Void, Error>) -> Void) {
+
+        let fromDate = Calendar.current.date(from: DateComponents(date: date, time: fromTime)) ?? Date()
+        let toDate = Calendar.current.date(from: DateComponents(date: date, time: toTime)) ?? Date()
+
+        let fromTimeInterval = Int(fromDate.timeIntervalSince1970)
+        let toTimeInterval = Int(toDate.timeIntervalSince1970)
+
+        guard fromTimeInterval < toTimeInterval else {
+            completion(.failure(WNError.invalidInput(reason: .cannotFormTimeRange)))
+            return
+        }
+
+        let requestBody = WNConferenceRequest(name: title, description: "", locationInfo: place,
+                                              startAt: fromTimeInterval, endAt: toTimeInterval)
+
+        ConferenceProvider.createConference(groupId: group.groupId, requestBody: requestBody) { (result) in
+            switch result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let conference):
+                print(conference)
+                // TODO: Conference 이미지 URL 추가, notice 추가
+            }
+        }
+    }
 }
