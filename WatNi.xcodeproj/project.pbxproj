@@ -63,9 +63,12 @@
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
 		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
+		7E7033FF23F7E57300B307E5 /* ConferenceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */; };
+		7E70340123F7E61F00B307E5 /* WNConfererce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340023F7E61F00B307E5 /* WNConfererce.swift */; };
 		7E70340323F7F23700B307E5 /* DateComponent+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340223F7F23700B307E5 /* DateComponent+Init.swift */; };
 		7E70340523F7F49F00B307E5 /* WNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340423F7F49F00B307E5 /* WNError.swift */; };
 		7E70340723F7F5E300B307E5 /* Error+UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340623F7F5E300B307E5 /* Error+UserMessage.swift */; };
+		7E70340923F7FAF100B307E5 /* ConferenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340823F7FAF100B307E5 /* ConferenceProvider.swift */; };
 		7E720B4623EDC7E500C25CF7 /* HomeTabPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */; };
 		7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */; };
 		7E7A6D3B23DDEE2D0086EF88 /* LaunchingTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */; };
@@ -192,9 +195,12 @@
 		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
+		7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceTarget.swift; sourceTree = "<group>"; };
+		7E70340023F7E61F00B307E5 /* WNConfererce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNConfererce.swift; sourceTree = "<group>"; };
 		7E70340223F7F23700B307E5 /* DateComponent+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponent+Init.swift"; sourceTree = "<group>"; };
 		7E70340423F7F49F00B307E5 /* WNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNError.swift; sourceTree = "<group>"; };
 		7E70340623F7F5E300B307E5 /* Error+UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+UserMessage.swift"; sourceTree = "<group>"; };
+		7E70340823F7FAF100B307E5 /* ConferenceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceProvider.swift; sourceTree = "<group>"; };
 		7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabPagerViewController.swift; sourceTree = "<group>"; };
 		7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabPagerViewController.xib; sourceTree = "<group>"; };
 		7E7A6D3A23DDEE2D0086EF88 /* LaunchingTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTaskViewController.swift; sourceTree = "<group>"; };
@@ -380,6 +386,7 @@
 				7E5D4F5523CB2F3F0008D92D /* Token.swift */,
 				7E18AFEC23EC7CF5009764CC /* WNGroup.swift */,
 				7E18AFEE23EC8422009764CC /* MemberMeta.swift */,
+				7E70340023F7E61F00B307E5 /* WNConfererce.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,6 +626,7 @@
 				7EB3C3BF23C9EAA700A2B41C /* AuthTarget.swift */,
 				7E662F5323D74A9F005A68B7 /* MemberTarget.swift */,
 				7E6F80F123E4672100C97F35 /* GroupTarget.swift */,
+				7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */,
 			);
 			path = APITarget;
 			sourceTree = "<group>";
@@ -629,6 +637,7 @@
 				7E651EBF23C393E200C43CFA /* KeychainProvider.swift */,
 				7EB3C3BD23C9EA8D00A2B41C /* AuthProvider.swift */,
 				7EBDF20C23E6D4EB00CDDF6B /* MemberProvider.swift */,
+				7E70340823F7FAF100B307E5 /* ConferenceProvider.swift */,
 			);
 			path = APIProvider;
 			sourceTree = "<group>";
@@ -919,6 +928,7 @@
 				7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */,
 				7E6F80F223E4672100C97F35 /* GroupTarget.swift in Sources */,
 				7E68A70523B49C2D0021371D /* AppDelegate.swift in Sources */,
+				7E70340923F7FAF100B307E5 /* ConferenceProvider.swift in Sources */,
 				7EDFB95C23F44AE4006310EB /* OnBoardingPageViewController.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */,
@@ -935,6 +945,7 @@
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */,
 				7EBDF20B23E6CA7E00CDDF6B /* Moya+URLRequest.swift in Sources */,
+				7E7033FF23F7E57300B307E5 /* ConferenceTarget.swift in Sources */,
 				7E18AFEF23EC8422009764CC /* MemberMeta.swift in Sources */,
 				7E5D4F5423CB256B0008D92D /* Member.swift in Sources */,
 				7E18AFF123EC8656009764CC /* LaunchingTaskWorker.swift in Sources */,
@@ -955,6 +966,7 @@
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
 				7E651EC023C393E200C43CFA /* KeychainProvider.swift in Sources */,
 				7E7A95CC23EB2E100010B44D /* NoticeInputView.swift in Sources */,
+				7E70340123F7E61F00B307E5 /* WNConfererce.swift in Sources */,
 				7E27773223D2EC1D00B90F80 /* Font+Custom.swift in Sources */,
 				7EB3C3B923C9E49700A2B41C /* SignInViewController.swift in Sources */,
 				7E68A70723B49C2D0021371D /* SceneDelegate.swift in Sources */,
