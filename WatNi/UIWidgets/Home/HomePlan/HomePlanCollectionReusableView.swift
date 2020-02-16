@@ -23,6 +23,8 @@ class HomePlanCollectionReusableView: UICollectionReusableView, BindableCollecti
     }
 
     func configureView(viewModel: CollectionViewReusableViewModel) {
+        guard let viewModel = viewModel as? HomePlanCollectionHeaderViewModel else { return }
 
+        stateLabel.text = viewModel.stateText
     }
 }

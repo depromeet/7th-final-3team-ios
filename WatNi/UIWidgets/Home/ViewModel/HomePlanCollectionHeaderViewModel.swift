@@ -15,4 +15,9 @@ struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel {
         return HomePlanCollectionReusableView.self
     }
 
+    let userName = MemberAccess.default.memberMeta?.member.name ?? ""
+
+    var stateText: String {
+        return "\(userName)님 왔나요? 👀"
+    }
 }

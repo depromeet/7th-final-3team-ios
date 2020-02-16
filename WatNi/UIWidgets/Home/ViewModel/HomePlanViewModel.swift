@@ -119,6 +119,6 @@ extension HomePlanViewModel {
         let imageHeight = cellImageHeight(indexPath: indexPath)
         let noticeHeight = cellNoticeHeight(indexPath: indexPath, cellWidth: cellWidth)
 
-        return defaultHeight + imageHeight + noticeHeight 
+        return defaultHeight + imageHeight + noticeHeight
     }
 }
