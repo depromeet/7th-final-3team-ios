@@ -59,7 +59,11 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
                 case .failure(let error):
                     print(error)
                 case .success:
-                    self?.collectionView.reloadData()
+                    guard let self = self else { return }
+                    self.collectionView.isHidden = self.viewModel.shouldHideCollectionView
+                    self.managerEmptyView.isHidden = self.viewModel.shouldHideManagerEmptyView
+                    self.participantEmptyView.isHidden = self.viewModel.shouldHideParticipantEmptyView
+                    self.collectionView.reloadData()
                 }
             })
         }
