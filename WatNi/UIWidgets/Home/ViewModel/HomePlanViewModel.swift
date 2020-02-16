@@ -95,7 +95,7 @@ extension HomePlanViewModel {
             return .zero
         }
 
-        return 227
+        return 227 + 15
     }
 
     private func cellNoticeHeight(indexPath: IndexPath, cellWidth: CGFloat) -> CGFloat {
@@ -103,19 +103,19 @@ extension HomePlanViewModel {
             return .zero
         }
 
-        guard let noticeText = cellModel.conference?.notice else {
+        guard let noticeText = cellModel.conference?.notice, !noticeText.isEmpty else {
             return .zero
         }
 
         let labelHeight = TextUtil.contentsHeight(noticeText,
-                                                  font: UIFont.spoqaFont(ofSize: 24, weight: .regular),
+                                                  font: UIFont.spoqaFont(ofSize: 20, weight: .regular),
                                                   maxSize: CGSize(width: cellWidth,
                                                                   height: CGFloat.greatestFiniteMagnitude))
-        return labelHeight
+        return labelHeight + 30
     }
 
     func cellHeight(cellWidth: CGFloat, indexPath: IndexPath) -> CGFloat {
-        let defaultHeight: CGFloat = 161
+        let defaultHeight: CGFloat = 163
         let imageHeight = cellImageHeight(indexPath: indexPath)
         let noticeHeight = cellNoticeHeight(indexPath: indexPath, cellWidth: cellWidth)
 
