@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCell {
 
@@ -45,6 +46,8 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
         } else {
             imageTopConstraint.constant = 15
             imageBottomConstraint.constant = 15
+
+            imageView.kf.setImage(with: viewModel.photoURL)
         }
 
         if !viewModel.hasNotice {
