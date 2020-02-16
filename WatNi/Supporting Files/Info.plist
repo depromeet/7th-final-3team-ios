@@ -35,6 +35,17 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>카메라에 접근하려고 합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>앨범에 접근하려고 합니다.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Spoqa Han Sans Bold.ttf</string>
+		<string>Spoqa Han Sans Light.ttf</string>
+		<string>Spoqa Han Sans Regular.ttf</string>
+		<string>Spoqa Han Sans Thin.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -71,18 +82,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Spoqa Han Sans Bold.ttf</string>
-		<string>Spoqa Han Sans Light.ttf</string>
-		<string>Spoqa Han Sans Regular.ttf</string>
-		<string>Spoqa Han Sans Thin.ttf</string>
-	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-    <key>NSCameraUsageDescription</key>
-    <string>카메라에 접근하려고 합니다.</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>앨범에 접근하려고 합니다.</string>
 </dict>
 </plist>
