@@ -102,7 +102,7 @@ extension HomePlanViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = collectionView.frame.width - 48
         let height = viewModel.cellHeight(cellWidth: width, indexPath: indexPath)
-        
+
         return CGSize(width: width, height: height)
     }
 

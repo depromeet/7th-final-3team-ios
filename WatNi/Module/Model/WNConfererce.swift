@@ -16,8 +16,8 @@ struct WNConference: Decodable {
     let startDate: TimeInterval
     let endDate: TimeInterval
 
-    var photoURLStr: String?
-    var notice: String?
+    private(set) var photoURLStr: String?
+    private(set) var notice: String?
 
     enum CodingKeys: String, CodingKey {
         case conferenceID = "conferenceId"
@@ -28,5 +28,13 @@ struct WNConference: Decodable {
         case endDate = "endAt"
         case photoURLStr = "photoUrl"
         case notice
+    }
+
+    mutating func updatePhoto(urlStr: String?) {
+        self.photoURLStr = urlStr
+    }
+
+    mutating func updateNotice(_ notice: String?) {
+        self.notice = notice
     }
 }
