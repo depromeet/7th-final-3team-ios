@@ -24,7 +24,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     let viewModel: CreatePlanViewModel
     private var imagePickerAccess: ImagePickerAccess?
     var cancelables = Set<AnyCancellable>()
-    var didSuccesCreatePlan: (() -> Void)?
+    var didSuccesCreatePlan: ((MemberMeta) -> Void)?
 
     let stackView = AloeStackView()
     let titleView = UnderlineTextFieldView()
@@ -172,8 +172,15 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
                 alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                 self?.present(alertController, animated: true, completion: nil)
             case .success:
-                self?.didSuccesCreatePlan?()
-                self?.dismiss(animated: true, completion: nil)
+                self?.viewModel.memberMeta(completionHandler: { (result) in
+                    switch result {
+                    case .success(let memberMeta):
+                        self?.didSuccesCreatePlan?(memberMeta)
+                        self?.dismiss(animated: true, completion: nil)
+                    case .failure(let error):
+                        print(error)
+                    }
+                })
             }
         }
     }

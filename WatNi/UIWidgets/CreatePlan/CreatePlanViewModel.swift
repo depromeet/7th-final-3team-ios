@@ -156,4 +156,17 @@ final class CreatePlanViewModel {
             }
         }
     }
+
+    func memberMeta(completionHandler: @escaping (Result<MemberMeta, Error>) -> Void) {
+        MemberProvider.memberMeta { (result) in
+            switch result {
+            case .success(let memberMeta):
+                print("[User][조회] \(memberMeta)")
+                completionHandler(.success(memberMeta))
+            case .failure(let error):
+                print("[User][조회] 실패: \(error)")
+                completionHandler(.failure(error))
+            }
+        }
+    }
 }
