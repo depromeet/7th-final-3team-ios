@@ -60,11 +60,17 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(stackView)
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTapped))
+        self.view.addGestureRecognizer(tapGesture)
         self.navigationController?.navigationBar.isHidden = true
         activityIndicatorView.isHidden = true
         self.view.bringSubviewToFront(activityIndicatorView)
 
         stackView.hidesSeparatorsByDefault = true
+        titleView.textField.delegate = self
+        placeView.textField.delegate = self
+
         stackView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.top.equalTo(separatorView.snp.bottom)
@@ -79,12 +85,14 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
         stackView.setTapHandler(forRow: dateView) { [weak self] _ in
             guard let self = self else { return }
+            self.resignAllTextField()
             let isHidden = !self.stackView.isRowHidden(self.datePicker)
             self.stackView.setRowHidden(self.datePicker, isHidden: isHidden, animated: !isHidden)
         }
 
         timeView.didTapFromLabel = { [weak self] in
             guard let self = self else { return }
+            self.resignAllTextField()
             guard let type = self.viewModel.selectedTimePicker else {
                 self.viewModel.selectedTimePicker = .fromTime
                 self.timePicker.setDate(self.viewModel.fromTime, animated: false)
@@ -104,6 +112,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
         timeView.didTapToLabel = { [weak self] in
             guard let self = self else { return }
+            self.resignAllTextField()
             guard let type = self.viewModel.selectedTimePicker else {
                 self.viewModel.selectedTimePicker = .toTime
                 self.timePicker.setDate(self.viewModel.toTime, animated: false)
@@ -134,6 +143,10 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
         submitButton.isEnabled = false
         setupDefaultDateLabel()
         setupViewModels()
+    }
+
+    @objc func backgroundTapped() {
+        self.resignAllTextField()
     }
 
     @IBAction func closeBtnTapped(_ sender: UIButton) {
@@ -261,6 +274,19 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
             }
         }
     }
+
+    private func resignAllTextField() {
+        titleView.textField.resignFirstResponder()
+        placeView.textField.resignFirstResponder()
+        noticeInputView.textView.resignFirstResponder()
+    }
+}
+
+extension CreatePlanViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension CreatePlanViewController: UITextViewDelegate {
@@ -271,5 +297,9 @@ extension CreatePlanViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         guard let noticeText = textView.text else { return }
         viewModel.update(.notice, newValue: noticeText)
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
     }
 }
