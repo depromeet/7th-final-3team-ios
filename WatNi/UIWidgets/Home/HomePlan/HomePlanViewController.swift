@@ -47,7 +47,7 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
     }
 
     @IBAction func createPlanBtnTapped(_ sender: UIButton) {
-        guard let group = viewModel.groups.first else { return }
+        guard let group = viewModel.userGroups.first else { return }
 
         let viewModel = CreatePlanViewModel(group: group)
         let createPlanVC = CreatePlanViewController(viewModel: viewModel,
@@ -60,20 +60,39 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
 // MARK: UICollectionViewDataSource
 extension HomePlanViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return viewModel.numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePlanCollectionViewCell.className,
-                                                      for: indexPath)
+        guard let cellModel = viewModel.cellModel(indexPath: indexPath) else {
+            return UICollectionViewCell()
+        }
+
+        let dqCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellModel.cellType.className, for: indexPath)
+        guard let cell = dqCell as? BindableCollectionViewCell else {
+            return dqCell
+        }
+
+        cell.viewModel = cellModel
+
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                     withReuseIdentifier: HomePlanCollectionReusableView.className,
+        guard let reusableViewModel = viewModel.reusableViewModel(sectionType: .plan),
+            let viewType = reusableViewModel.viewType(kind: kind) else {
+                return UICollectionReusableView()
+        }
+
+        let dqView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                     withReuseIdentifier: viewType.className,
                                                                      for: indexPath)
-        return header
+        guard let reusableView = dqView as? BindableCollectionReusableView else {
+            return dqView
+        }
+        reusableView.viewModel = reusableViewModel
+
+        return reusableView
     }
 }
 
@@ -81,7 +100,10 @@ extension HomePlanViewController: UICollectionViewDataSource {
 extension HomePlanViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 48, height: 479)
+        let width: CGFloat = collectionView.frame.width - 48
+        let height = viewModel.cellHeight(cellWidth: width, indexPath: indexPath)
+        
+        return CGSize(width: width, height: height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
