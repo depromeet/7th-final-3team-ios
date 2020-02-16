@@ -52,9 +52,7 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
     }
 
     var shouldHideCollectionView: Bool {
-        let groups = MemberAccess.default.memberMeta?.groups ?? []
-
-        guard let conferences = groups.first?.conferences else {
+        guard let conferences = userGroups.first?.conferences else {
             return false
         }
         return conferences.isEmpty
@@ -76,29 +74,8 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         return !shouldHideCollectionView
     }
 
-    func updateMemberMeta(completionHandler: @escaping (Result<Void, Error>) -> Void) {
-        memberMetaData { (result) in
-            switch result {
-            case .failure(let error):
-                completionHandler(.failure(error))
-            case .success(let memberMeta):
-                self.userGroups = memberMeta.groups
-                completionHandler(.success(()))
-            }
-        }
-    }
-
-    private func memberMetaData(completionHandler: @escaping (Result<MemberMeta, Error>) -> Void) {
-        MemberProvider.memberMeta { (result) in
-            switch result {
-            case .success(let memberMeta):
-                print("[User][조회] \(memberMeta)")
-                completionHandler(.success(memberMeta))
-            case .failure(let error):
-                print("[User][조회] 실패: \(error)")
-                completionHandler(.failure(error))
-            }
-        }
+    func updateGroups(_ groups: [WNGroup]) {
+        self.userGroups = groups
     }
 }
 
