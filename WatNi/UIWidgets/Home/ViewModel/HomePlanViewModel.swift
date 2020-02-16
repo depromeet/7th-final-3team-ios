@@ -22,7 +22,16 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
     typealias CellModel = Array<CollectionViewCellModel>.Element
     typealias ReusableViewModel = CollectionViewReusableViewModel
 
-    let userGroups: [WNGroup]
+    var userGroups: [WNGroup] {
+        didSet {
+            let userConferences: [WNConference] = userGroups.first?.conferences ?? []
+            self.models = userConferences
+
+            cellModels = models.map { conference in
+                return HomePlanCollectionViewCellModel(conference: conference)
+            }
+        }
+    }
     var models: [WNConference]
     var cellModels: [CollectionViewCellModel] = []
     var reusableViewModels: [CollectionViewReusableViewModel] = []
@@ -65,6 +74,31 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
             return true
         }
         return !shouldHideCollectionView
+    }
+
+    func updateMemberMeta(completionHandler: @escaping (Result<Void, Error>) -> Void) {
+        memberMetaData { (result) in
+            switch result {
+            case .failure(let error):
+                completionHandler(.failure(error))
+            case .success(let memberMeta):
+                self.userGroups = memberMeta.groups
+                completionHandler(.success(()))
+            }
+        }
+    }
+
+    private func memberMetaData(completionHandler: @escaping (Result<MemberMeta, Error>) -> Void) {
+        MemberProvider.memberMeta { (result) in
+            switch result {
+            case .success(let memberMeta):
+                print("[User][조회] \(memberMeta)")
+                completionHandler(.success(memberMeta))
+            case .failure(let error):
+                print("[User][조회] 실패: \(error)")
+                completionHandler(.failure(error))
+            }
+        }
     }
 }
 

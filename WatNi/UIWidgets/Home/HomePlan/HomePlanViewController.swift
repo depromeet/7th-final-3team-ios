@@ -52,6 +52,18 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
         let viewModel = CreatePlanViewModel(group: group)
         let createPlanVC = CreatePlanViewController(viewModel: viewModel,
                                                     nibName: CreatePlanViewController.className)
+
+        createPlanVC.didSuccesCreatePlan = { [weak self] in
+            self?.viewModel.updateMemberMeta(completionHandler: { (result) in
+                switch result {
+                case .failure(let error):
+                    print(error)
+                case .success:
+                    self?.collectionView.reloadData()
+                }
+            })
+        }
+
         let navigationController = UINavigationController(rootViewController: createPlanVC)
         self.navigationController?.present(navigationController, animated: true, completion: nil)
     }
