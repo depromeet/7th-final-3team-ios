@@ -128,7 +128,7 @@ final class CreatePlanViewModel {
         }
     }
 
-    func createPlan(completion: @escaping (Result<Void, Error>) -> Void) {
+    func createPlan(completion: @escaping (Result<WNConference, Error>) -> Void) {
 
         let fromDate = Calendar.current.date(from: DateComponents(date: date, time: fromTime)) ?? Date()
         let toDate = Calendar.current.date(from: DateComponents(date: date, time: toTime)) ?? Date()
@@ -141,16 +141,18 @@ final class CreatePlanViewModel {
             return
         }
 
+        let base64ImageStr = self.image?.jpegData(compressionQuality: 1.0)?.base64EncodedString()
+
         let requestBody = WNConferenceRequest(name: title, description: "", locationInfo: place,
-                                              startAt: fromTimeInterval, endAt: toTimeInterval)
+                                              startAt: fromTimeInterval, endAt: toTimeInterval,
+                                              base64Image: base64ImageStr, notice: notice)
 
         ConferenceProvider.createConference(groupId: group.groupId, requestBody: requestBody) { (result) in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
             case .success(let conference):
-                print(conference)
-                // TODO: Conference 이미지 URL 추가, notice 추가
+                completion(.success(conference))
             }
         }
     }
