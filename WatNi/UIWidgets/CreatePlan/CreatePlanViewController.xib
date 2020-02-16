@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlanViewController" customModule="watni" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="EkV-T5-ZZw" id="77h-Dg-lCY"/>
                 <outlet property="closeButton" destination="gBR-95-tyQ" id="roE-30-r6C"/>
                 <outlet property="separatorView" destination="Ern-Lz-AWX" id="oXV-DD-ahA"/>
                 <outlet property="submitButton" destination="Yiv-Pl-4gu" id="QFm-Vs-dsu"/>
@@ -68,12 +69,17 @@
                         <constraint firstAttribute="height" constant="1" id="bLK-yq-umb"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EkV-T5-ZZw">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="EkV-T5-ZZw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4az-zL-3K6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yiv-Pl-4gu" secondAttribute="trailing" id="AEa-lB-awR"/>
                 <constraint firstItem="lcg-yO-tmZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MTj-ZP-cib"/>
                 <constraint firstItem="gBR-95-tyQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OVD-re-EOs"/>
+                <constraint firstItem="EkV-T5-ZZw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="a9F-UZ-oBK"/>
                 <constraint firstItem="Ern-Lz-AWX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kgb-gf-5nx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ern-Lz-AWX" secondAttribute="trailing" id="lQr-3Y-Rmu"/>
                 <constraint firstItem="lcg-yO-tmZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="lyx-c9-8Pl"/>
