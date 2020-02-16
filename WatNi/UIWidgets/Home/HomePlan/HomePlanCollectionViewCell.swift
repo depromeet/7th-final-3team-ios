@@ -25,6 +25,7 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
     @IBOutlet weak var imageBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var descLabelTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var descLabelBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var separatorViewTopConstraint: NSLayoutConstraint!
 
     var viewModel: CollectionViewCellModel = HomePlanCollectionViewCellModel() {
         didSet {
@@ -40,23 +41,28 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
         dateLabel.text = viewModel.dateOfConference
         timeLabel.text = viewModel.timeOfConference
 
-        if !viewModel.hasImage {
-            imageTopConstraint.constant = 0
-            imageBottomConstraint.constant = 0
-        } else {
+        if viewModel.hasImage {
             imageTopConstraint.constant = 15
             imageBottomConstraint.constant = 15
 
             imageView.kf.setImage(with: viewModel.photoURL)
+        } else {
+            imageTopConstraint.constant = 0
+            imageBottomConstraint.constant = 0
         }
 
-        if !viewModel.hasNotice {
-            descLabelTopConstraint.constant = 0
-            descLabelBottomConstraint.constant = 0
-        } else {
+        if viewModel.hasNotice {
             descLabelTopConstraint.constant = 13
             descLabelBottomConstraint.constant = 17
+            separatorViewTopConstraint.constant = 12
+
+            descLabel.text = viewModel.notice
+        } else {
+            descLabelTopConstraint.constant = 0
+            descLabelBottomConstraint.constant = 0
+            separatorViewTopConstraint.constant = 0
         }
+
         imageView.isHidden = !viewModel.hasImage
         descLabel.isHidden = !viewModel.hasNotice
         separaterView.isHidden = !viewModel.hasNotice
