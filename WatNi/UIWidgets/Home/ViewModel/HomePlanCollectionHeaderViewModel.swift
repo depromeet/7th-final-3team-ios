@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel {
+    func viewType(kind: String) -> BindableCollectionReusableView.Type? {
+        guard kind == UICollectionView.elementKindSectionHeader else { return nil }
+        return HomePlanCollectionReusableView.self
+    }
+
+}

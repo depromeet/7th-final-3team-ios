@@ -8,11 +8,21 @@
 
 import UIKit
 
-class HomePlanCollectionReusableView: UICollectionReusableView {
+class HomePlanCollectionReusableView: UICollectionReusableView, BindableCollectionReusableView {
 
     @IBOutlet weak var stateLabel: UILabel!
 
+    var viewModel: CollectionViewReusableViewModel = HomePlanCollectionHeaderViewModel() {
+        didSet {
+            configureView(viewModel: viewModel)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+
+    func configureView(viewModel: CollectionViewReusableViewModel) {
+
     }
 }
