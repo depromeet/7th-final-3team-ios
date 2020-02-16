@@ -14,6 +14,8 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
 
     typealias ViewModel = HomeTabPagerViewModel
 
+    @IBOutlet weak var logoutButton: UIButton!
+
     let viewModel: HomeTabPagerViewModel
 
     required init(viewModel: ViewModel, nibName: String) {
@@ -55,5 +57,13 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
             newCell?.label.textColor = WNColor.black87
             oldCell?.label.textColor = UIColor(decimalRed: 34, green: 34, blue: 34, alpha: 0.4)
         }
+    }
+
+    @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        MemberAccess.default.logout()
+        let onboardingVC = OnBoardingPageViewController(transitionStyle: .scroll,
+                                                        navigationOrientation: .horizontal,
+                                                        options: nil)
+        navigationController?.setViewControllers([onboardingVC], animated: false)
     }
 }
