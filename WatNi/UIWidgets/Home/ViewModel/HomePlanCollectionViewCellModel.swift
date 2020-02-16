@@ -62,4 +62,9 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel {
         let notice = conference?.notice ?? ""
         return !notice.isEmpty
     }
+
+    var photoURL: URL? {
+        guard let photoURLStr = conference?.photoURLStr else { return nil }
+        return URL(string: photoURLStr)
+    }
 }
