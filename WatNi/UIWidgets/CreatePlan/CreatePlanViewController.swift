@@ -19,6 +19,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var submitButton: UIButton!
     @IBOutlet private weak var separatorView: UIView!
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
 
     let viewModel: CreatePlanViewModel
     private var imagePickerAccess: ImagePickerAccess?
@@ -59,6 +60,8 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
         super.viewDidLoad()
         self.view.addSubview(stackView)
         self.navigationController?.navigationBar.isHidden = true
+        activityIndicatorView.isHidden = true
+        self.view.bringSubviewToFront(activityIndicatorView)
 
         stackView.hidesSeparatorsByDefault = true
         stackView.snp.makeConstraints {
@@ -138,10 +141,14 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
 
     @IBAction func submitBtnTapped(_ sender: UIButton) {
         sender.isUserInteractionEnabled = false
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
 
         viewModel.createPlan { [weak self] (result) in
             defer {
                 sender.isUserInteractionEnabled = true
+                self?.activityIndicatorView.isHidden = true
+                self?.activityIndicatorView.stopAnimating()
             }
             switch result {
             case .failure(let error):
@@ -151,7 +158,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
                 alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                 self?.present(alertController, animated: true, completion: nil)
             case .success:
-                break
+                self?.dismiss(animated: true, completion: nil)
             }
         }
     }
