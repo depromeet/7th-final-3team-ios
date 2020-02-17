@@ -82,8 +82,7 @@ class NewbieViewController: UIViewController, ViewModelInjectable {
                 }
                 switch result {
                 case .failure(let error):
-                    print(error.localizedDescription)
-                    self?.textFieldView.viewModel.responseStr = error.localizedDescription
+                    self?.textFieldView.viewModel.responseStr = error.userMessage
                     self?.textFieldView.viewModel.update(UnderlineTextFieldViewModel.Mode.response)
                     self?.textFieldView.reloadTextiFieldView()
                 case .success(let anyDecodable):
