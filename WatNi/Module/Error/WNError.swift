@@ -16,6 +16,7 @@ protocol ErrorReason {
 enum WNError: Error {
     case invalidInput(reason: InvalidInputReason)
     case invalidStatusCode(response: Moya.Response)
+    case responseFailed(message: String)
 
     var userMessage: String {
         switch self {
@@ -23,6 +24,8 @@ enum WNError: Error {
             return reason.message
         case .invalidStatusCode(let moyaResponse):
             return moyaResponse.description
+        case .responseFailed(let message):
+            return message
         }
     }
 }

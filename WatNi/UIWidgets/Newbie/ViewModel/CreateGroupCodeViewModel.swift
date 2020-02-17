@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import SwiftyJSON
+import Moya
 
 /// 모임 초대코드 생성 ViewModel
 class CreateGroupCodeViewModel: NewbieViewModelProtocol {
@@ -58,25 +59,36 @@ class CreateGroupCodeViewModel: NewbieViewModelProtocol {
 
         URLSession.shared.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.main)
-            .tryMap { data, _ in
-                try JSON(data: data, options: .allowFragments)
-        }.sink(receiveCompletion: { completion in
-            if case .failure(let error) = completion {
-                print("[Group][초대 코드 생성] 실패: \(error)")
-                completionHandler(.failure(error))
-            }
-        }, receiveValue: { json in
-            print("[Group][초대 코드 생성] 성공: \(json["code"].stringValue)")
+            .tryMap { data, response -> JSON in
 
-            MemberProvider.memberMeta { (result) in
-                switch result {
-                case .failure(let error):
-                    completionHandler(.failure(error))
-                case .success(let memberMeta):
-                    MemberAccess.default.update(memberMeta: memberMeta)
-                    completionHandler(.success(memberMeta.groups))
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw SwiftyJSONError.invalidJSON
                 }
-            }
-        }).store(in: &cancelables)
+
+                guard (200...399).contains(httpResponse.statusCode) else {
+                    let json = try? JSON(data: data)
+                    let message = json?["error_description"].stringValue ?? ""
+                    throw WNError.responseFailed(message: message)
+                }
+                return try JSON(data: data)
+        }.eraseToAnyPublisher()
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("[Group][초대 코드 생성] 실패: \(error)")
+                    completionHandler(.failure(error))
+                }
+            }, receiveValue: { json in
+                print("[Group][초대 코드 생성] 성공: \(json["code"].stringValue)")
+
+                MemberProvider.memberMeta { (result) in
+                    switch result {
+                    case .failure(let error):
+                        completionHandler(.failure(error))
+                    case .success(let memberMeta):
+                        MemberAccess.default.update(memberMeta: memberMeta)
+                        completionHandler(.success(memberMeta.groups))
+                    }
+                }
+            }).store(in: &cancelables)
     }
 }
