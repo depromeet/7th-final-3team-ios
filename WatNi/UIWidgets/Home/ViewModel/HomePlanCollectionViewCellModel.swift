@@ -16,6 +16,8 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel {
     let conference: WNConference?
     let isManager: Bool
 
+    var didTapPhotoButton: ((_ conferenceId: Int) -> Void)?
+
     init(conference: WNConference? = nil) {
         self.conference = conference
         self.isManager = MemberAccess.default.memberMeta?.isManager ?? false
