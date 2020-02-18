@@ -70,4 +70,12 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
 
         attendButton.setupTitle(state: viewModel.buttonState, beforeDays: nil)
     }
+
+    @IBAction func attendBtnTapped(_ sender: AttendButton) {
+        guard let viewModel = viewModel as? HomePlanCollectionViewCellModel,
+            let conferenceId = viewModel.conference?.conferenceID else {
+                return
+        }
+        viewModel.didTapPhotoButton?(conferenceId)
+    }
 }
