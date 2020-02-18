@@ -69,4 +69,8 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel {
         guard let photoURLStr = conference?.photoURLStr else { return nil }
         return URL(string: photoURLStr)
     }
+
+    var buttonState: AttendButton.AttendState {
+        return .available
+    }
 }
