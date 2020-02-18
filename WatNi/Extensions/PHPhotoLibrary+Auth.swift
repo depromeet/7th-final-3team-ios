@@ -13,6 +13,15 @@ extension PHPhotoLibrary {
 
     enum PhotoError: Error {
         case denied, restricted
+
+        var message: String {
+            switch self {
+            case .restricted:
+                return "사진 접근에 제약이 있습니다."
+            case .denied:
+                return "앱 설정에서 사진 접근을 허용해주세요."
+            }
+        }
     }
 
     static func authStatus(completion: @escaping (Result<Void, PhotoError>) -> Void) {

@@ -111,15 +111,6 @@ final class CreatePlanViewModel {
         return formatter
     }
 
-    func photoErrorMessage(error: PHPhotoLibrary.PhotoError) -> String {
-        switch error {
-        case .restricted:
-            return "사진 접근에 제약이 있습니다."
-        case .denied:
-            return "앱 설정에서 사진 접근을 허용해주세요."
-        }
-    }
-
     func authStatus(completion: @escaping (Result<Void, PHPhotoLibrary.PhotoError>) -> Void) {
         PHPhotoLibrary.authStatus { (result) in
             DispatchQueue.main.async {
