@@ -274,8 +274,7 @@ class CreatePlanViewController: UIViewController, ViewModelInjectable {
                 }
                 self?.imagePickerAccess?.present()
             case .failure(let error):
-                let errorMessage = self?.viewModel.photoErrorMessage(error: error) ?? ""
-                let alert = UIAlertController(title: "사진 접근 실패", message: errorMessage, preferredStyle: .alert)
+                let alert = UIAlertController(title: "사진 접근 실패", message: error.message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
                 self?.present(alert, animated: true, completion: nil)
             }
