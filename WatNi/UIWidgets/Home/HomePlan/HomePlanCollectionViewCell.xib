@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="227" id="NyW-Qe-lyq"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhc-av-BnG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhc-av-BnG" customClass="AttendButton" customModule="watni" customModuleProvider="target">
                                 <rect key="frame" x="191" y="321" width="125" height="48"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.10980392160000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -180,7 +180,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="341" height="494"/>
             <connections>
-                <outlet property="checkButton" destination="lhc-av-BnG" id="cJk-CD-YMH"/>
+                <outlet property="attendButton" destination="lhc-av-BnG" id="L21-Wi-vEc"/>
                 <outlet property="conferenceTitleLabel" destination="m7z-dY-bum" id="h50-I1-q2W"/>
                 <outlet property="dateLabel" destination="TJx-Z0-sbU" id="0qR-81-ytY"/>
                 <outlet property="descLabel" destination="4ld-Xy-aYR" id="GPI-Ts-64O"/>
