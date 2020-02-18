@@ -30,7 +30,6 @@ class CreateGroupViewModel: NewbieViewModelProtocol {
     ///
     /// - Parameter inputType: TextField 종류
     func createUnderlineViewModel() -> UnderlineTextFieldViewModel {
-        // TODO: 모임 이름 Validation 룰 반영
         return UnderlineTextFieldViewModel(descLabelStr: "")
     }
 
