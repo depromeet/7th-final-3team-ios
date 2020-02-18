@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
+import Combine
 
 class UserCodeViewModel: NewbieViewModelProtocol {
     private var inputText: String = ""
+    private var cancelables = Set<AnyCancellable>()
 
     var titleGuideText: String {
         return "초대코드를\n입력해주세요."
@@ -31,6 +34,45 @@ class UserCodeViewModel: NewbieViewModelProtocol {
     }
 
     func submitAction(completionHandler: @escaping (Result<Decodable, Error>) -> Void) {
-        // TODO: 초대코드 입력 API 처리
+
+        let body: [String: String] = [
+            "code": inputText
+        ]
+
+        let request = URLRequest(target: GroupTarget.applyGroup(body))
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .tryMap { data, response -> JSON in
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw SwiftyJSONError.invalidJSON
+                }
+
+                guard (200...399).contains(httpResponse.statusCode) else {
+                    let json = try? JSON(data: data)
+                    let message = json?["error_description"].stringValue ?? ""
+                    throw WNError.responseFailed(message: message)
+                }
+                return try JSON(data: data)
+            }.eraseToAnyPublisher()
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("[Group][모임 참여] 실패: \(error)")
+                    completionHandler(.failure(error))
+                }
+            }, receiveValue: { json in
+                print("[Group][모임 참여] 성공: \(json["code"].stringValue)")
+
+                MemberProvider.memberMeta { (result) in
+                    switch result {
+                    case .failure(let error):
+                        completionHandler(.failure(error))
+                    case .success(let memberMeta):
+                        MemberAccess.default.update(memberMeta: memberMeta)
+                        completionHandler(.success(memberMeta.groups))
+                    }
+                }
+            }).store(in: &cancelables)
     }
 }
