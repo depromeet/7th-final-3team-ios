@@ -19,6 +19,8 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
 
     let viewModel: HomePlanViewModel
 
+    private var imagePickerAccess: ImagePickerAccess?
+
     required init(viewModel: ViewModel, nibName: String) {
         self.viewModel = viewModel
         super.init(nibName: nibName, bundle: nil)
@@ -74,7 +76,7 @@ extension HomePlanViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cellModel = viewModel.cellModel(indexPath: indexPath) else {
+        guard var cellModel = viewModel.cellModel(indexPath: indexPath) as? HomePlanCollectionViewCellModel else {
             return UICollectionViewCell()
         }
 
@@ -83,6 +85,9 @@ extension HomePlanViewController: UICollectionViewDataSource {
             return dqCell
         }
 
+        cellModel.didTapPhotoButton = { [weak self] conferenceId in
+            self?.presentImagePicker(conferenceId: conferenceId)
+        }
         cell.viewModel = cellModel
 
         return cell
@@ -122,5 +127,25 @@ extension HomePlanViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+}
+
+extension HomePlanViewController {
+
+    private func presentImagePicker(conferenceId: Int) {
+        viewModel.authStatus { [weak self] (result) in
+            switch result {
+            case .success:
+                self?.imagePickerAccess = ImagePickerAccess(presentationController: self, sourceType: .camera)
+                self?.imagePickerAccess?.didSelectImage = { image in
+                    guard let selectedImage = image else { return }
+                }
+                self?.imagePickerAccess?.present()
+            case .failure(let error):
+                let alert = UIAlertController(title: "사진 접근 실패", message: error.message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }

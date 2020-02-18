@@ -9,6 +9,7 @@
 import Foundation
 import XLPagerTabStrip
 import UIKit
+import Photos
 
 enum HomePlanSectionType {
     case plan
@@ -132,4 +133,15 @@ extension HomePlanViewModel {
 
         return defaultHeight + imageHeight + noticeHeight
     }
+}
+
+extension HomePlanViewModel {
+    func authStatus(completion: @escaping (Result<Void, PHPhotoLibrary.PhotoError>) -> Void) {
+        PHPhotoLibrary.authStatus { (result) in
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
+    }
+
 }
