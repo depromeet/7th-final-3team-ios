@@ -30,8 +30,8 @@ file_length:
 type_name:
   min_length: 4 # only warning
   max_length: # warning and error
-    warning: 30
-    error: 35
+    warning: 50
+    error: 55
 
 disabled_rules:
   - nesting
