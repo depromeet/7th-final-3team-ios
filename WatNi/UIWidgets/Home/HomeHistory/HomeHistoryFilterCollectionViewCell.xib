@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeHistoryFilterCollectionViewCell" customModule="watni" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="463" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIr-Qa-gbL">
+                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="38"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rnO-kN-Gu1">
+                                <rect key="frame" x="12" y="0.0" width="141.5" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20년 1월 12일 / 전체" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07m-h8-RSs">
+                                        <rect key="frame" x="0.0" y="8.5" width="124.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="029-DQ-bTv">
+                                        <rect key="frame" x="129.5" y="15.5" width="12" height="7.5"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rnO-kN-Gu1" secondAttribute="bottom" id="51F-DN-zao"/>
+                            <constraint firstAttribute="trailing" secondItem="rnO-kN-Gu1" secondAttribute="trailing" constant="12" id="Qul-qM-IiN"/>
+                            <constraint firstItem="rnO-kN-Gu1" firstAttribute="top" secondItem="EIr-Qa-gbL" secondAttribute="top" id="ufi-Gz-WRv"/>
+                            <constraint firstItem="rnO-kN-Gu1" firstAttribute="leading" secondItem="EIr-Qa-gbL" secondAttribute="leading" constant="12" id="yoY-IJ-HAq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원 총 5명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mo-ia-H6Y">
+                        <rect key="frame" x="384.5" y="8.5" width="66.5" height="21"/>
+                        <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EIr-Qa-gbL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AFY-C7-W15"/>
+                <constraint firstAttribute="bottom" secondItem="EIr-Qa-gbL" secondAttribute="bottom" constant="12" id="Dy5-zS-4Jv"/>
+                <constraint firstItem="EIr-Qa-gbL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NiO-Ha-JFb"/>
+                <constraint firstAttribute="trailing" secondItem="0Mo-ia-H6Y" secondAttribute="trailing" constant="12" id="URW-cR-qlA"/>
+                <constraint firstItem="0Mo-ia-H6Y" firstAttribute="centerY" secondItem="EIr-Qa-gbL" secondAttribute="centerY" id="VCt-Mu-mVi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="463" height="50"/>
+            <connections>
+                <outlet property="countLabel" destination="0Mo-ia-H6Y" id="kkq-EI-1YA"/>
+                <outlet property="filterLabel" destination="07m-h8-RSs" id="A1M-Im-Cg1"/>
+                <outlet property="filterView" destination="EIr-Qa-gbL" id="HoI-dA-5Cp"/>
+            </connections>
+            <point key="canvasLocation" x="268.84057971014494" y="158.70535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="filter" width="12" height="7.5"/>
+    </resources>
+</document>
