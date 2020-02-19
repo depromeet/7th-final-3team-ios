@@ -36,16 +36,16 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="W46-Zy-0qM">
-                    <rect key="frame" x="98.5" y="340" width="217.5" height="216"/>
+                    <rect key="frame" x="93.5" y="335.5" width="227" height="225"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="B96-dG-InV">
-                            <rect key="frame" x="0.0" y="0.0" width="217.5" height="110"/>
+                            <rect key="frame" x="0.0" y="0.0" width="227" height="115"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="F4i-1D-riz">
-                                    <rect key="frame" x="0.0" y="0.0" width="217.5" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="227" height="80"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정을 등록해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ5-1L-DCd">
-                                    <rect key="frame" x="0.0" y="91" width="217.5" height="19"/>
+                                    <rect key="frame" x="0.0" y="91" width="227" height="24"/>
                                     <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
                                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -53,10 +53,10 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-6v-09t">
-                            <rect key="frame" x="0.0" y="145" width="217.5" height="71"/>
+                            <rect key="frame" x="0.0" y="150" width="227" height="75"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjm-SU-h1d">
-                                    <rect key="frame" x="0.0" y="0.0" width="217.5" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="227" height="48"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="Hsp-Sz-PGW"/>
@@ -75,7 +75,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우측 상단 메뉴에서도 일정 등록이 가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg8-7G-Avc">
-                                    <rect key="frame" x="0.0" y="57" width="217.5" height="14"/>
+                                    <rect key="frame" x="0.0" y="57" width="227" height="18"/>
                                     <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="12"/>
                                     <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -85,16 +85,16 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-jH-okg">
-                    <rect key="frame" x="126" y="375" width="162.5" height="146"/>
+                    <rect key="frame" x="126" y="372.5" width="162.5" height="151"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-Hf-PYF">
-                            <rect key="frame" x="7.5" y="0.0" width="147" height="110"/>
+                            <rect key="frame" x="4.5" y="0.0" width="153" height="115"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace2" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-r2-ej2">
-                                    <rect key="frame" x="0.0" y="0.0" width="147" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="153" height="80"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 일정이 없어요..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-wD-K38">
-                                    <rect key="frame" x="0.0" y="91" width="147" height="19"/>
+                                    <rect key="frame" x="0.0" y="91" width="153" height="24"/>
                                     <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조금만 기다려주세요 🌿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-La-73U">
-                            <rect key="frame" x="0.0" y="127" width="162.5" height="19"/>
+                            <rect key="frame" x="0.0" y="132" width="162.5" height="19"/>
                             <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Lkl-sF-gbE" secondAttribute="bottom" id="E1c-65-AcK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkl-sF-gbE" secondAttribute="trailing" id="EYx-91-xUx"/>
