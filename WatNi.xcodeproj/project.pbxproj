@@ -91,6 +91,12 @@
 		7E7A95CC23EB2E100010B44D /* NoticeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95CB23EB2E100010B44D /* NoticeInputView.swift */; };
 		7E7A95CF23EB37220010B44D /* CreatePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7A95CE23EB37220010B44D /* CreatePlanViewModel.swift */; };
 		7E7C9F0623FC2C0F00828E9B /* AttendButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0523FC2C0F00828E9B /* AttendButton.swift */; };
+		7E7C9F0A23FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0823FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift */; };
+		7E7C9F0B23FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0923FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib */; };
+		7E7C9F0D23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0C23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift */; };
+		7E7C9F1023FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0E23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift */; };
+		7E7C9F1123FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7C9F0F23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib */; };
+		7E7C9F1323FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7C9F1223FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift */; };
 		7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */; };
 		7E9A0A2423E5AD050016F800 /* CharacterSets+Korean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */; };
 		7E9F6A8823D35AE600E78027 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9F6A8723D35AE600E78027 /* SubmitButton.swift */; };
@@ -231,6 +237,12 @@
 		7E7A95CD23EB36C30010B44D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7E7A95CE23EB37220010B44D /* CreatePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanViewModel.swift; sourceTree = "<group>"; };
 		7E7C9F0523FC2C0F00828E9B /* AttendButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendButton.swift; sourceTree = "<group>"; };
+		7E7C9F0823FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryAttendanceCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E7C9F0923FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHistoryAttendanceCollectionViewCell.xib; sourceTree = "<group>"; };
+		7E7C9F0C23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryCollectionViewCellModel.swift; sourceTree = "<group>"; };
+		7E7C9F0E23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E7C9F0F23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHistoryFilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		7E7C9F1223FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryFilterCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		7E9A0A2123E5ACEE0016F800 /* Array+CharacterSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CharacterSets.swift"; sourceTree = "<group>"; };
 		7E9A0A2323E5AD050016F800 /* CharacterSets+Korean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSets+Korean.swift"; sourceTree = "<group>"; };
 		7E9F6A8723D35AE600E78027 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
@@ -533,11 +545,10 @@
 		7E6F810123E58E4900C97F35 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EBDF22123E70FB000CDDF6B /* ViewModel */,
+				7E7C9F0723FD714600828E9B /* HomeHistory */,
+				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EC2BF2223EECC5400B05BF6 /* HomePlan */,
-				7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */,
-				7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */,
 				7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */,
 				7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */,
 			);
@@ -590,6 +601,19 @@
 				7E7A95CB23EB2E100010B44D /* NoticeInputView.swift */,
 			);
 			path = NoticeInputView;
+			sourceTree = "<group>";
+		};
+		7E7C9F0723FD714600828E9B /* HomeHistory */ = {
+			isa = PBXGroup;
+			children = (
+				7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */,
+				7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */,
+				7E7C9F0823FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift */,
+				7E7C9F0923FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib */,
+				7E7C9F0E23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift */,
+				7E7C9F0F23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib */,
+			);
+			path = HomeHistory;
 			sourceTree = "<group>";
 		};
 		7E9F6A8923D35AEB00E78027 /* SubmitButton */ = {
@@ -668,6 +692,8 @@
 				7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */,
 				7E70341023F9334000B307E5 /* HomePlanCollectionViewCellModel.swift */,
 				7E70341223F934AD00B307E5 /* HomePlanCollectionHeaderViewModel.swift */,
+				7E7C9F0C23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift */,
+				7E7C9F1223FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -818,10 +844,12 @@
 				7E720B4823EDC80F00C25CF7 /* HomeTabPagerViewController.xib in Resources */,
 				7E27772D23D2DF3F00B90F80 /* Spoqa Han Sans Light.ttf in Resources */,
 				7E7A95CA23EB2D410010B44D /* NoticeInputView.xib in Resources */,
+				7E7C9F1123FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib in Resources */,
 				7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */,
 				7EDFB95A23F43AEC006310EB /* watni_2.json in Resources */,
 				7EC2BF2123EEC99600B05BF6 /* HomePlanCollectionReusableView.xib in Resources */,
 				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
+				7E7C9F0B23FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib in Resources */,
 				7EBDF21D23E70A9500CDDF6B /* HomeHistoryViewController.xib in Resources */,
 				7E27772323CF7A7700B90F80 /* UnderlineTextFieldView.xib in Resources */,
 				7EB3C39523C9B9E500A2B41C /* OnBoardingViewController.xib in Resources */,
@@ -936,6 +964,7 @@
 				7E7A95BA23EAFC3F0010B44D /* CreatePlanViewController.swift in Sources */,
 				7EDFB96223F45594006310EB /* OnBoardingLottieViewController.swift in Sources */,
 				7E9F6A8B23D35B8E00E78027 /* WNColor.swift in Sources */,
+				7E7C9F0D23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift in Sources */,
 				7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */,
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E367EA923F04C9600E366D4 /* Date+Extensions.swift in Sources */,
@@ -964,6 +993,7 @@
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
 				7E7A95C723EB24E50010B44D /* UnderlineTimeView.swift in Sources */,
 				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
+				7E7C9F1023FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift in Sources */,
 				7E68A73523B4A9A70021371D /* NSObject+Properties.swift in Sources */,
 				7EB3C3BE23C9EA8D00A2B41C /* AuthProvider.swift in Sources */,
 				7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */,
@@ -988,6 +1018,7 @@
 				7E27772123CF7A5400B90F80 /* UnderlineTextFieldView.swift in Sources */,
 				7E18AFED23EC7CF5009764CC /* WNGroup.swift in Sources */,
 				7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */,
+				7E7C9F1323FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift in Sources */,
 				7E68A73323B4A9880021371D /* Array+Subscript.swift in Sources */,
 				7E70341123F9334000B307E5 /* HomePlanCollectionViewCellModel.swift in Sources */,
 				7E68A72723B49E4E0021371D /* SignupViewController.swift in Sources */,
@@ -1008,6 +1039,7 @@
 				7E0F707D23DD7FA000EB1C5E /* CoachViewController.swift in Sources */,
 				7EBDF22623E70FD000CDDF6B /* HomeHistoryViewModel.swift in Sources */,
 				7E6F80F523E46FA200C97F35 /* CreateGroupViewModel.swift in Sources */,
+				7E7C9F0A23FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift in Sources */,
 				7EC2BF2023EEC99600B05BF6 /* HomePlanCollectionReusableView.swift in Sources */,
 				7E2776C123CB7C6D00B90F80 /* UIControl+Publisher.swift in Sources */,
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
