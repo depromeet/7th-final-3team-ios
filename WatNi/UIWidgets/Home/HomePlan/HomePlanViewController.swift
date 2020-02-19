@@ -139,6 +139,19 @@ extension HomePlanViewController {
                 self?.imagePickerAccess = ImagePickerAccess(presentationController: self, sourceType: .camera)
                 self?.imagePickerAccess?.didSelectImage = { image in
                     guard let selectedImage = image else { return }
+
+                    self?.viewModel.participate(conferenceId, image: selectedImage, completionHandler: { (result) in
+                        switch result {
+                        case .success(let attendance):
+                            print(attendance)
+                        case .failure(let error):
+                            let alert = UIAlertController(title: "출석체크 실패",
+                                                          message: error.userMessage,
+                                                          preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                            self?.present(alert, animated: true, completion: nil)
+                        }
+                    })
                 }
                 self?.imagePickerAccess?.present()
             case .failure(let error):

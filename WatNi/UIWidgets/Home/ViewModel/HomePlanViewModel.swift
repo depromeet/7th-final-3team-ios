@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import XLPagerTabStrip
 import UIKit
 import Photos
+import Combine
+
 
 enum HomePlanSectionType {
     case plan
@@ -38,6 +39,8 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
     var reusableViewModels: [CollectionViewReusableViewModel] = []
 
     let tabTitle = "일정"
+
+    private var cancelables = Set<AnyCancellable>()
 
     init(groups: [WNGroup]) {
         self.userGroups = groups
@@ -144,4 +147,40 @@ extension HomePlanViewModel {
         }
     }
 
+    func participate(_ conferenceId: Int, image: UIImage, completionHandler: @escaping (Result<WNAttendance, Error>) -> Void) {
+
+        DispatchQueue.global().async { [weak self] in
+            guard let self = self else { return }
+
+            guard let groupId = self.userGroups.first?.groupId else {
+                return
+            }
+
+            let base64ImageStr = image.jpegData(compressionQuality: 1.0)?.base64EncodedString() ?? ""
+
+            let body: [String: String] = [
+                "attendanceType": "PHOTO",
+                "base64Image": base64ImageStr
+            ]
+
+            let request = URLRequest(target: AttendanceTarget.createAttendance(body,
+                                                                               groupId: groupId,
+                                                                               conferenceId: conferenceId))
+            URLSession.shared.dataTaskPublisher(for: request)
+                .receive(on: DispatchQueue.main)
+                .map(\.data)
+                .decode(type: WNAttendance.self, decoder: JSONDecoder())
+                .eraseToAnyPublisher()
+                .sink(receiveCompletion: { completion in
+                    if case .failure(let error) = completion {
+                        print("[Attendance][생성] 실패: \(error)")
+                        completionHandler(.failure(error))
+                    }
+                }, receiveValue: { attendance in
+                    print("[Attendance][생성] \(attendance)")
+                    completionHandler(.success(attendance))
+                }).store(in: &self.cancelables)
+        }
+
+    }
 }
