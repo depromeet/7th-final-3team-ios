@@ -11,6 +11,8 @@ import Moya
 
 enum AttendanceTarget: TargetType {
     case createAttendance(Encodable, groupId: Int, conferenceId: Int)
+    /// 컨퍼런스별 참가자 정보
+    case searchAttendances(groupId: Int, conferenceId: Int)
 
     var baseURL: URL {
         return APIConfig.baseURL
@@ -20,6 +22,8 @@ enum AttendanceTarget: TargetType {
         switch self {
         case .createAttendance(_, let groupId, let conferenceId):
             return "api/group/\(groupId)/conference/\(conferenceId)/attendance"
+        case .searchAttendances(let groupId, let conferenceId):
+            return "api/group/\(groupId)/conference/\(conferenceId)/attendances"
         }
     }
 
@@ -27,6 +31,8 @@ enum AttendanceTarget: TargetType {
         switch self {
         case .createAttendance:
             return .post
+        case .searchAttendances:
+            return .get
         }
     }
 
@@ -38,12 +44,14 @@ enum AttendanceTarget: TargetType {
         switch self {
         case .createAttendance(let body, _, _):
             return .requestJSONEncodable(body)
+        case .searchAttendances:
+            return .requestPlain
         }
     }
 
     var headers: [String: String]? {
         switch self {
-        case .createAttendance:
+        case .createAttendance, .searchAttendances:
             return ["Content-Type": "application/json",
                     "Authorization": "Bearer \(MemberAccess.headerToken)"]
         }

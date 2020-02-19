@@ -43,6 +43,38 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     init(groups: [WNGroup]) {
         self.userGroups = groups
     }
+
+    func attendances(completionHandler: @escaping (Result<[WNAttendance], Error>) -> Void) {
+        guard let group = userGroups.first, let conferenceId = group.conferences.first?.conferenceID else { return }
+
+        let request = URLRequest(target: AttendanceTarget.searchAttendances(groupId: group.groupId, conferenceId: conferenceId))
+
+        URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .tryMap { data, response -> [WNAttendance] in
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw SwiftyJSONError.invalidJSON
+                }
+
+                guard (200...399).contains(httpResponse.statusCode) else {
+                    let json = try? JSON(data: data)
+                    let message = json?["error_description"].stringValue ?? ""
+                    throw WNError.responseFailed(message: message)
+                }
+                return try JSONDecoder().decode([WNAttendance].self, from: data)
+        }.eraseToAnyPublisher()
+            .sink(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    print("[Attendance][조회] 실패: \(error)")
+                    completionHandler(.failure(error))
+                }
+            }, receiveValue: { attendances in
+                print("[Attendance][조회] 성공: \(attendances)")
+                completionHandler(.success(attendances))
+            }).store(in: &cancelables)
+
+    }
 }
 
 extension HomeHistoryViewModel: HasCellModel {
