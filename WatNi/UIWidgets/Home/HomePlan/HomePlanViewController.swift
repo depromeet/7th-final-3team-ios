@@ -57,6 +57,7 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
 
         createPlanVC.didSuccesCreatePlan = { [weak self] memberMeta in
             guard let self = self else { return }
+            // TODO: Group 업데이트
             self.viewModel.updateGroups(memberMeta.groups)
             self.collectionView.isHidden = self.viewModel.shouldHideCollectionView
             self.managerEmptyView.isHidden = self.viewModel.shouldHideManagerEmptyView

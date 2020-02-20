@@ -56,6 +56,23 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
             }
         }
     }
+
+    @IBAction func createPlanBtnTapped(_ sender: UIButton) {
+        guard let group = viewModel.userGroups.first else { return }
+
+        let viewModel = CreatePlanViewModel(group: group)
+        let createPlanVC = CreatePlanViewController(viewModel: viewModel,
+                                                    nibName: CreatePlanViewController.className)
+
+        createPlanVC.didSuccesCreatePlan = { [weak self] memberMeta in
+            // TODO: Group 업데이트
+            self?.appearView()
+            self?.collectionView.reloadData()
+        }
+
+        let navigationController = UINavigationController(rootViewController: createPlanVC)
+        self.navigationController?.present(navigationController, animated: true, completion: nil)
+    }
 }
 
 extension HomeHistoryViewController: UICollectionViewDataSource {
