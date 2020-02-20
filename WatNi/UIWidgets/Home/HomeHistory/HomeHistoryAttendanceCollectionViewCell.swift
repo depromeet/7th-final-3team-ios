@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeHistoryAttendanceCollectionViewCell: UICollectionViewCell, BindableCollectionViewCell {
 
@@ -20,11 +21,12 @@ class HomeHistoryAttendanceCollectionViewCell: UICollectionViewCell, BindableCol
         }
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     func configureCell(viewModel: CollectionViewCellModel) {
         guard let viewModel = viewModel as? HomeHistoryCollectionViewCellModel else { return }
+
+        imageView.kf.setImage(with: viewModel.photoURL)
+        nameLabel.text = viewModel.name
+        attendStatusLabel.text = viewModel.statusStr
+        attendStatusLabel.textColor = viewModel.statusColor
     }
 }
