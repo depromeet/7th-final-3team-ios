@@ -38,3 +38,12 @@ struct WNConference: Decodable {
         self.notice = notice
     }
 }
+
+extension WNConference: Comparable {
+    static func < (lhs: WNConference, rhs: WNConference) -> Bool {
+        guard lhs.startDate == rhs.startDate else {
+            return lhs.endDate < rhs.endDate
+        }
+        return lhs.startDate < rhs.startDate
+    }
+}
