@@ -76,6 +76,6 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
             let conferenceId = viewModel.conference?.conferenceID else {
                 return
         }
-        viewModel.didTapPhotoButton?(conferenceId)
+        viewModel.didTapPhotoButton?(conferenceId, viewModel.isEventTime)
     }
 }
