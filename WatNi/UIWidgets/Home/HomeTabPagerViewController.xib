@@ -16,8 +16,9 @@
             <connections>
                 <outlet property="buttonBarView" destination="3Yz-jM-OMJ" id="Rga-U4-saC"/>
                 <outlet property="containerView" destination="gDM-D5-Gw2" id="Q9e-Rj-SfI"/>
-                <outlet property="logoutButton" destination="X23-KF-Bk0" id="7WZ-h0-aRY"/>
+                <outlet property="dimmedView" destination="AgL-BP-IPW" id="x6f-4r-DPt"/>
                 <outlet property="naviTitleLabel" destination="fhz-uy-RGo" id="g26-ma-1aV"/>
+                <outlet property="sideMenuButton" destination="X23-KF-Bk0" id="XM5-aX-9TD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="duw-Kr-K3Z"/>
             </connections>
         </placeholder>
@@ -40,11 +41,11 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="72" id="mRz-Tk-K1l"/>
                             </constraints>
-                            <state key="normal" title="로그아웃">
+                            <state key="normal" image="sidemenu">
                                 <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
-                                <action selector="logoutBtnTapped:" destination="-1" eventType="touchUpInside" id="k3y-Ge-W0t"/>
+                                <action selector="sideMenuBtnTapped:" destination="-1" eventType="touchUpInside" id="ejS-vU-cYz"/>
                             </connections>
                         </button>
                     </subviews>
@@ -102,6 +103,11 @@
                         <constraint firstAttribute="bottom" secondItem="gDM-D5-Gw2" secondAttribute="bottom" id="y5w-xQ-mhQ"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AgL-BP-IPW">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -111,10 +117,14 @@
                 <constraint firstItem="nNb-YY-oR7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Oxs-Ri-BaA"/>
                 <constraint firstItem="EnI-HQ-YSC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QSm-29-Z4O"/>
                 <constraint firstItem="nNb-YY-oR7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZjT-dH-riw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="nNb-YY-oR7" secondAttribute="bottom" constant="-44" id="bod-B3-tIb"/>
                 <constraint firstItem="EnI-HQ-YSC" firstAttribute="top" secondItem="nNb-YY-oR7" secondAttribute="bottom" id="wdK-M9-cDh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </view>
     </objects>
+    <resources>
+        <image name="sidemenu" width="18" height="14"/>
+    </resources>
 </document>
