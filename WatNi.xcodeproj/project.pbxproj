@@ -35,6 +35,10 @@
 		7E367EA523EFEC0800E366D4 /* ImagePickerAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */; };
 		7E367EA723EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */; };
 		7E367EA923F04C9600E366D4 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E367EA823F04C9600E366D4 /* Date+Extensions.swift */; };
+		7E43DAB623FEEBC5006DF739 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43DAB523FEEBC5006DF739 /* SideMenuViewController.swift */; };
+		7E43DAB823FEEBEF006DF739 /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E43DAB723FEEBEF006DF739 /* SideMenuViewController.xib */; };
+		7E43DABB23FEF3EF006DF739 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 7E43DABA23FEF3EF006DF739 /* SideMenu */; };
+		7E43DABD23FEFCD8006DF739 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43DABC23FEFCD8006DF739 /* SideMenuViewModel.swift */; };
 		7E5D4F5223CB22EC0008D92D /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5123CB22EC0008D92D /* APIConfig.swift */; };
 		7E5D4F5423CB256B0008D92D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5323CB256B0008D92D /* Member.swift */; };
 		7E5D4F5623CB2F3F0008D92D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4F5523CB2F3F0008D92D /* Token.swift */; };
@@ -183,6 +187,9 @@
 		7E367EA423EFEC0800E366D4 /* ImagePickerAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerAccess.swift; sourceTree = "<group>"; };
 		7E367EA623EFFC7300E366D4 /* PHPhotoLibrary+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+Auth.swift"; sourceTree = "<group>"; };
 		7E367EA823F04C9600E366D4 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		7E43DAB523FEEBC5006DF739 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		7E43DAB723FEEBEF006DF739 /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
+		7E43DABC23FEFCD8006DF739 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		7E5D4F5123CB22EC0008D92D /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		7E5D4F5323CB256B0008D92D /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7E5D4F5523CB2F3F0008D92D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -295,6 +302,7 @@
 			files = (
 				7E604FB723C1CF8A00842B72 /* Kingfisher in Frameworks */,
 				7EDFB95623F43877006310EB /* Lottie in Frameworks */,
+				7E43DABB23FEF3EF006DF739 /* SideMenu in Frameworks */,
 				7E604FB423C1CF0E00842B72 /* KeychainAccess in Frameworks */,
 				7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */,
 				7EBDF22023E70D2A00CDDF6B /* SnapKit in Frameworks */,
@@ -390,6 +398,16 @@
 				7E367EA223EEE96A00E366D4 /* WNAlertAction.swift */,
 			);
 			path = WNAlert;
+			sourceTree = "<group>";
+		};
+		7E43DAB423FEEBB8006DF739 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7E43DAB523FEEBC5006DF739 /* SideMenuViewController.swift */,
+				7E43DAB723FEEBEF006DF739 /* SideMenuViewController.xib */,
+				7E43DABC23FEFCD8006DF739 /* SideMenuViewModel.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		7E5D4F5823CB4A6C0008D92D /* UIWidgets */ = {
@@ -554,6 +572,7 @@
 		7E6F810123E58E4900C97F35 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7E43DAB423FEEBB8006DF739 /* SideMenu */,
 				7E7C9F0723FD714600828E9B /* HomeHistory */,
 				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EC2BF2223EECC5400B05BF6 /* HomePlan */,
@@ -776,6 +795,7 @@
 				7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */,
 				7EBDF21F23E70D2A00CDDF6B /* SnapKit */,
 				7EDFB95523F43877006310EB /* Lottie */,
+				7E43DABA23FEF3EF006DF739 /* SideMenu */,
 			);
 			productName = CheckThat;
 			productReference = 7E68A70123B49C2D0021371D /* watni.app */;
@@ -836,6 +856,7 @@
 				7E6F80FC23E47CDC00C97F35 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				7EBDF21E23E70D2900CDDF6B /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7EDFB95423F43877006310EB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7E43DAB923FEF3EF006DF739 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 7E68A70223B49C2D0021371D /* Products */;
 			projectDirPath = "";
@@ -854,6 +875,7 @@
 			files = (
 				7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */,
 				7E7A95BD23EB02D40010B44D /* CreatePlanViewController.xib in Resources */,
+				7E43DAB823FEEBEF006DF739 /* SideMenuViewController.xib in Resources */,
 				7EC2BF1D23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib in Resources */,
 				7E27773023D2DF3F00B90F80 /* Spoqa Han Sans Thin.ttf in Resources */,
 				7EB3C3BB23C9E4A100A2B41C /* SignInViewController.xib in Resources */,
@@ -1015,6 +1037,7 @@
 				7EC2BF1C23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift in Sources */,
 				7E9F6A8D23D360B500E78027 /* UIView+properties.swift in Sources */,
 				7E27772823CF7F3000B90F80 /* HasViewModel.swift in Sources */,
+				7E43DABD23FEFCD8006DF739 /* SideMenuViewModel.swift in Sources */,
 				7E7A95C723EB24E50010B44D /* UnderlineTimeView.swift in Sources */,
 				7E27772623CF7DEE00B90F80 /* UnderlineTextFieldViewModel.swift in Sources */,
 				7E7C9F1023FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift in Sources */,
@@ -1069,6 +1092,7 @@
 				7E68A73923B4AA0A0021371D /* UIView+Nib.swift in Sources */,
 				7EBDF21C23E70A9500CDDF6B /* HomeHistoryViewController.swift in Sources */,
 				7EC2BF1723EEACA700B05BF6 /* HomeTabViewModel.swift in Sources */,
+				7E43DAB623FEEBC5006DF739 /* SideMenuViewController.swift in Sources */,
 				7E68A73723B4A9D20021371D /* UIColor+Initializers.swift in Sources */,
 				7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */,
 				7EB3C3C423C9ECF100A2B41C /* SignInViewModel.swift in Sources */,
@@ -1348,6 +1372,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7E43DAB923FEF3EF006DF739 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.4.6;
+			};
+		};
 		7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1399,6 +1431,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7E43DABA23FEF3EF006DF739 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E43DAB923FEF3EF006DF739 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
 		7E604FB023C1CEAB00842B72 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E604FAF23C1CEAB00842B72 /* XCRemoteSwiftPackageReference "Moya" */;
