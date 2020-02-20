@@ -31,7 +31,11 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
             cellModels = models.map { attendance in
                 return HomeHistoryCollectionViewCellModel(attendance: attendance)
             }
-            cellModels.insert(HomeHistoryFilterCollectionViewCellModel(), at: 0)
+
+            let conference = userGroups.first?.conferences.first
+            let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: models.count,
+                                                                           conference: conference)
+            cellModels.insert(filterCellModel, at: 0)
             reusableViewModels = [HomePlanCollectionHeaderViewModel()]
         }
     }

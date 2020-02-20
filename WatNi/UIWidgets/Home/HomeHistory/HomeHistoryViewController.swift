@@ -61,7 +61,7 @@ extension HomeHistoryViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cellModel = viewModel.cellModel(indexPath: indexPath) as? CollectionViewCellModel else {
+        guard let cellModel = viewModel.cellModel(indexPath: indexPath) else {
             return UICollectionViewCell()
         }
 
