@@ -35,4 +35,10 @@ class HomeTabPagerViewModel {
         }
         self.groups = sortedGroups
     }
+
+    var groupTitle: String {
+        guard let group = groups.first else { return "" }
+
+        return group.name
+    }
 }
