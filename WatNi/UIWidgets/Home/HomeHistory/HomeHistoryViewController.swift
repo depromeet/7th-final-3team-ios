@@ -44,6 +44,10 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
 
         appearView()
         searchAttendances()
+
+        viewModel.didUpdateUserGroups = { [weak self] in
+            self?.searchAttendances()
+        }
     }
 
     private func searchAttendances() {
@@ -64,10 +68,10 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
         let createPlanVC = CreatePlanViewController(viewModel: viewModel,
                                                     nibName: CreatePlanViewController.className)
 
-        createPlanVC.didSuccesCreatePlan = { [weak self] memberMeta in
-            // TODO: Group 업데이트
-            self?.appearView()
-            self?.collectionView.reloadData()
+        createPlanVC.didSuccesCreatePlan = { memberMeta in
+            NotificationCenter.default.post(name: .userGroupIsUpdated,
+                                            object: nil,
+                                            userInfo: ["groups": memberMeta.groups])
         }
 
         let navigationController = UINavigationController(rootViewController: createPlanVC)

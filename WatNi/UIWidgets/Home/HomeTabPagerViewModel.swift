@@ -24,7 +24,7 @@ enum HomeTab: CaseIterable {
 
 class HomeTabPagerViewModel {
 
-    let groups: [WNGroup]
+    private(set) var groups: [WNGroup]
 
     init(groups: [WNGroup]) {
         let sortedGroups: [WNGroup] = groups.map { group in
@@ -34,6 +34,22 @@ class HomeTabPagerViewModel {
             return sortedGroup
         }
         self.groups = sortedGroups
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(userGroupUpdated),
+                                               name: .userGroupIsUpdated,
+                                               object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc func userGroupUpdated(_ notification: NSNotification) {
+        guard let userInfo = notification.userInfo as? [String: [WNGroup]],
+            let groups = userInfo["groups"] else {
+                return
+        }
+        self.groups = groups
     }
 
     var groupTitle: String {

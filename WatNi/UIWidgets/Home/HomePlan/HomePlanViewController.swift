@@ -8,6 +8,11 @@
 
 import UIKit
 import XLPagerTabStrip
+import Combine
+
+extension Notification.Name {
+    static let userGroupIsUpdated = Notification.Name("userGroupIsUpdated")
+}
 
 class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabViewController {
 
@@ -43,9 +48,12 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
 
-        collectionView.isHidden = viewModel.shouldHideCollectionView
-        managerEmptyView.isHidden = viewModel.shouldHideManagerEmptyView
-        participantEmptyView.isHidden = viewModel.shouldHideParticipantEmptyView
+        appearView()
+
+        viewModel.didUpdateUserGroups = { [weak self] in
+            self?.appearView()
+            self?.collectionView.reloadData()
+        }
     }
 
     @IBAction func createPlanBtnTapped(_ sender: UIButton) {
@@ -56,13 +64,9 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
                                                     nibName: CreatePlanViewController.className)
 
         createPlanVC.didSuccesCreatePlan = { [weak self] memberMeta in
-            guard let self = self else { return }
-            // TODO: Group 업데이트
-            self.viewModel.updateGroups(memberMeta.groups)
-            self.collectionView.isHidden = self.viewModel.shouldHideCollectionView
-            self.managerEmptyView.isHidden = self.viewModel.shouldHideManagerEmptyView
-            self.participantEmptyView.isHidden = self.viewModel.shouldHideParticipantEmptyView
-            self.collectionView.reloadData()
+            NotificationCenter.default.post(name: .userGroupIsUpdated,
+                                            object: nil,
+                                            userInfo: ["groups": memberMeta.groups])
         }
 
         let navigationController = UINavigationController(rootViewController: createPlanVC)
