@@ -31,12 +31,12 @@ class AttendButton: UIButton {
         adjustsImageWhenDisabled = false
     }
 
-    func setupTitle(state: AttendState, beforeDays: Int?) {
+    func setupTitle(state: AttendState, dDays: Int?) {
         let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.white,
                                                          .font: UIFont.spoqaFont(ofSize: 15, weight: .bold),
                                                          .kern: 1.25]
 
-        let title = buttonTitle(state: state, beforeDays: beforeDays)
+        let title = buttonTitle(state: state, dDays: dDays)
         let attributedString = NSAttributedString(string: title, attributes: attributes)
         let image = buttomImage(state: state)
 
@@ -46,10 +46,10 @@ class AttendButton: UIButton {
         isEnabled = state == .available
     }
 
-    private func buttonTitle(state: AttendState, beforeDays: Int?) -> String {
+    private func buttonTitle(state: AttendState, dDays: Int?) -> String {
         switch state {
         case .before:
-            let days = beforeDays ?? 0
+            let days = dDays ?? 0
             return "출석 D-\(days)"
         case .available:
             return "왔어요!"
