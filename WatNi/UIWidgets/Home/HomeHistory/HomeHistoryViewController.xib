@@ -6,10 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Spoqa Han Sans Regular.ttf">
+            <string>SpoqaHanSans-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeHistoryViewController" customModule="watni" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="eSf-U1-wZA" id="qVj-9A-IJD"/>
+                <outlet property="managerEmptyView" destination="Kzo-43-Xom" id="nF8-w8-oIe"/>
+                <outlet property="participantEmptyView" destination="RFH-ZR-P9Z" id="Jye-zW-glh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,16 +35,97 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-ZR-P9Z">
+                    <rect key="frame" x="122.5" y="372" width="169.5" height="152.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ANf-Uh-O11">
+                            <rect key="frame" x="20" y="0.0" width="129.5" height="115"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-df-AjT">
+                                    <rect key="frame" x="24.5" y="0.0" width="80" height="80"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출석 기록이 없어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-wZ-qzU">
+                                    <rect key="frame" x="0.0" y="91" width="129.5" height="24"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조만간 만나요! 우리~ ❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-Tn-Y3r">
+                            <rect key="frame" x="0.0" y="132" width="169.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-43-Xom">
+                    <rect key="frame" x="93.5" y="335.5" width="227" height="225"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ikT-ZK-uB9">
+                            <rect key="frame" x="0.0" y="0.0" width="227" height="115"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="k6t-YF-pte">
+                                    <rect key="frame" x="0.0" y="0.0" width="227" height="80"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정을 등록해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKD-4r-XVg">
+                                    <rect key="frame" x="0.0" y="91" width="227" height="24"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-l5-bjY">
+                            <rect key="frame" x="0.0" y="150" width="227" height="75"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OP0-5u-Vn0">
+                                    <rect key="frame" x="0.0" y="0.0" width="227" height="48"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="ZSt-rX-YEE"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="15"/>
+                                    <state key="normal" title="일정 등록하기">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="createPlanBtnTapped:" destination="-1" eventType="touchUpInside" id="aSF-2O-DJJ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우측 상단 메뉴에서도 일정 등록이 가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOa-wJ-AXc">
+                                    <rect key="frame" x="0.0" y="57" width="227" height="18"/>
+                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="12"/>
+                                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.9373082519" green="0.93733018639999999" blue="0.93731838460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="eSf-U1-wZA" secondAttribute="trailing" id="2FV-ai-96D"/>
                 <constraint firstAttribute="bottom" secondItem="eSf-U1-wZA" secondAttribute="bottom" id="4HU-jc-wch"/>
                 <constraint firstItem="eSf-U1-wZA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7ch-Qv-yn4"/>
+                <constraint firstItem="RFH-ZR-P9Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RUe-uq-d8G"/>
+                <constraint firstItem="Kzo-43-Xom" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XgD-3Z-gAo"/>
+                <constraint firstItem="Kzo-43-Xom" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJ5-4p-qQt"/>
+                <constraint firstItem="RFH-ZR-P9Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tTP-sy-ciT"/>
                 <constraint firstItem="eSf-U1-wZA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vIc-DQ-LIf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="112"/>
         </view>
     </objects>
+    <resources>
+        <image name="emptyFace" width="80" height="80"/>
+    </resources>
 </document>
