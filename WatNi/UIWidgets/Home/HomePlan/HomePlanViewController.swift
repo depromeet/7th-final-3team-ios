@@ -85,7 +85,18 @@ extension HomePlanViewController: UICollectionViewDataSource {
             return dqCell
         }
 
-        cellModel.didTapPhotoButton = { [weak self] conferenceId in
+        cellModel.didTapPhotoButton = { [weak self] conferenceId, isEventTime in
+            guard isEventTime else {
+                let notEventTimeTitle = self?.viewModel.notEventTimeTitle ?? ""
+                let notEventTiemMessage = self?.viewModel.notEventTimeMessage ?? ""
+
+                let alert = UIAlertController(title: notEventTimeTitle,
+                                              message: notEventTiemMessage,
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+                return
+            }
             self?.presentImagePicker(conferenceId: conferenceId)
         }
         cell.viewModel = cellModel

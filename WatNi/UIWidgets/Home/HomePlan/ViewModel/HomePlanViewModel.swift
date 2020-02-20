@@ -78,6 +78,17 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         return !shouldHideCollectionView
     }
 
+    var notEventTimeTitle: String {
+        return "빨리 오셨네요...! 😮"
+    }
+
+    var notEventTimeMessage: String {
+        return """
+        아직 출석시간이 안되었어요!
+        조금만 기다려주세요.
+        """
+    }
+    
     func updateGroups(_ groups: [WNGroup]) {
         self.userGroups = groups
     }

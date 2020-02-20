@@ -12,7 +12,7 @@ class AttendButton: UIButton {
 
     enum AttendState {
         case before
-        case available
+        case available(isEventTime: Bool)
         case finish
     }
 
@@ -43,7 +43,12 @@ class AttendButton: UIButton {
         setImage(image, for: .normal)
         setAttributedTitle(attributedString, for: .normal)
         backgroundColor = buttonBackgroundColor(state: state)
-        isEnabled = state == .available
+
+        var buttonAvailable: Bool = false
+        if case .available(let submitAvailable) = state {
+            buttonAvailable = submitAvailable
+        }
+        isEnabled = buttonAvailable
     }
 
     private func buttonTitle(state: AttendState, dDays: Int?) -> String {

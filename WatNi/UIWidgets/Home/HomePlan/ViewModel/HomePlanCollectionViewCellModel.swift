@@ -18,7 +18,7 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel, HasConferenceDa
     let isManager: Bool
     var conferenceStartTimeInterval: TimeInterval
 
-    var didTapPhotoButton: ((_ conferenceId: Int) -> Void)?
+    var didTapPhotoButton: ((_ conferenceId: Int, _ isEventTime: Bool) -> Void)?
 
     init(conference: WNConference? = nil) {
         self.conference = conference
@@ -78,6 +78,17 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel, HasConferenceDa
             return .before
         }
         // TODO: user 출석 완료 여부 체크
-        return .available
+        return .available(isEventTime: isEventTime)
+    }
+
+    var isEventTime: Bool {
+        let startDate = conference?.startDate ?? 0
+        let endDate = conference?.endDate ?? 0
+
+        guard startDate < endDate else {
+            return false
+        }
+
+        return (startDate...endDate).contains(Date().timeIntervalSince1970)
     }
 }
