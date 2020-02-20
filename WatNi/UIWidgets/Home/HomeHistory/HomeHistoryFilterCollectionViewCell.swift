@@ -28,10 +28,13 @@ class HomeHistoryFilterCollectionViewCell: UICollectionViewCell, BindableCollect
     }
 
     @objc func filterViewTapped(_ sender: UITapGestureRecognizer) {
-
+        (viewModel as? HomeHistoryFilterCollectionViewCellModel)?.didTapFilterView?()
     }
 
     func configureCell(viewModel: CollectionViewCellModel) {
         guard let viewModel = viewModel as? HomeHistoryFilterCollectionViewCellModel else { return }
+
+        countLabel.text = viewModel.totalCountStr
+        filterLabel.text = viewModel.filterViewStr
     }
 }
