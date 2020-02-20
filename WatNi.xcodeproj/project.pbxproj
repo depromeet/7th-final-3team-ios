@@ -63,6 +63,9 @@
 		7E6F80FB23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */; };
 		7E6F80FE23E47CDC00C97F35 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7E6F80FD23E47CDC00C97F35 /* SwiftyJSON */; };
 		7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */; };
+		7E6FF06823FE790000588E03 /* HomeHistoryCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FF06623FE790000588E03 /* HomeHistoryCollectionReusableView.swift */; };
+		7E6FF06923FE790000588E03 /* HomeHistoryCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6FF06723FE790000588E03 /* HomeHistoryCollectionReusableView.xib */; };
+		7E6FF06B23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FF06A23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift */; };
 		7E7033FF23F7E57300B307E5 /* ConferenceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */; };
 		7E70340123F7E61F00B307E5 /* WNConfererce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340023F7E61F00B307E5 /* WNConfererce.swift */; };
 		7E70340323F7F23700B307E5 /* DateComponent+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340223F7F23700B307E5 /* DateComponent+Init.swift */; };
@@ -208,6 +211,9 @@
 		7E6F80F623E46FB000C97F35 /* UserCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FA23E47A7C00C97F35 /* CreateGroupCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupCodeViewModel.swift; sourceTree = "<group>"; };
 		7E6F80FF23E4849400C97F35 /* NewbiewViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewbiewViewModelProtocol.swift; sourceTree = "<group>"; };
+		7E6FF06623FE790000588E03 /* HomeHistoryCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryCollectionReusableView.swift; sourceTree = "<group>"; };
+		7E6FF06723FE790000588E03 /* HomeHistoryCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHistoryCollectionReusableView.xib; sourceTree = "<group>"; };
+		7E6FF06A23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryCollectionHeaderViewModel.swift; sourceTree = "<group>"; };
 		7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceTarget.swift; sourceTree = "<group>"; };
 		7E70340023F7E61F00B307E5 /* WNConfererce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNConfererce.swift; sourceTree = "<group>"; };
 		7E70340223F7F23700B307E5 /* DateComponent+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponent+Init.swift"; sourceTree = "<group>"; };
@@ -545,14 +551,35 @@
 		7E6F810123E58E4900C97F35 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7EBDF22123E70FB000CDDF6B /* ViewModel */,
 				7E7C9F0723FD714600828E9B /* HomeHistory */,
 				7EC2BF1523EEAC7A00B05BF6 /* Protocol */,
 				7EC2BF2223EECC5400B05BF6 /* HomePlan */,
 				7E720B4523EDC7E500C25CF7 /* HomeTabPagerViewController.swift */,
 				7E720B4723EDC80F00C25CF7 /* HomeTabPagerViewController.xib */,
+				7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7E6FF06C23FE796E00588E03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E6FF06A23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift */,
+				7E7C9F0C23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift */,
+				7E7C9F1223FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift */,
+				7EBDF22523E70FD000CDDF6B /* HomeHistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7E6FF06D23FE798100588E03 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E70341223F934AD00B307E5 /* HomePlanCollectionHeaderViewModel.swift */,
+				7E70341023F9334000B307E5 /* HomePlanCollectionViewCellModel.swift */,
+				7EBDF22223E70FBF00CDDF6B /* HomePlanViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7E7A953B23E1E299000DAAE0 /* Newbie */ = {
@@ -606,12 +633,15 @@
 		7E7C9F0723FD714600828E9B /* HomeHistory */ = {
 			isa = PBXGroup;
 			children = (
+				7E6FF06C23FE796E00588E03 /* ViewModel */,
 				7EBDF21A23E70A9500CDDF6B /* HomeHistoryViewController.swift */,
 				7EBDF21B23E70A9500CDDF6B /* HomeHistoryViewController.xib */,
 				7E7C9F0823FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.swift */,
 				7E7C9F0923FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib */,
 				7E7C9F0E23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.swift */,
 				7E7C9F0F23FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib */,
+				7E6FF06623FE790000588E03 /* HomeHistoryCollectionReusableView.swift */,
+				7E6FF06723FE790000588E03 /* HomeHistoryCollectionReusableView.xib */,
 			);
 			path = HomeHistory;
 			sourceTree = "<group>";
@@ -684,20 +714,6 @@
 			path = APIProvider;
 			sourceTree = "<group>";
 		};
-		7EBDF22123E70FB000CDDF6B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7EBDF22223E70FBF00CDDF6B /* HomePlanViewModel.swift */,
-				7EBDF22523E70FD000CDDF6B /* HomeHistoryViewModel.swift */,
-				7EC2BF1123EEA8FB00B05BF6 /* HomeTabPagerViewModel.swift */,
-				7E70341023F9334000B307E5 /* HomePlanCollectionViewCellModel.swift */,
-				7E70341223F934AD00B307E5 /* HomePlanCollectionHeaderViewModel.swift */,
-				7E7C9F0C23FD783100828E9B /* HomeHistoryCollectionViewCellModel.swift */,
-				7E7C9F1223FDA5D600828E9B /* HomeHistoryFilterCollectionViewCellModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		7EC2BF1523EEAC7A00B05BF6 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +726,7 @@
 		7EC2BF2223EECC5400B05BF6 /* HomePlan */ = {
 			isa = PBXGroup;
 			children = (
+				7E6FF06D23FE798100588E03 /* ViewModel */,
 				7EBDF21623E70A8300CDDF6B /* HomePlanViewController.swift */,
 				7EBDF21723E70A8300CDDF6B /* HomePlanViewController.xib */,
 				7EC2BF1A23EEC1C400B05BF6 /* HomePlanCollectionViewCell.swift */,
@@ -847,6 +864,7 @@
 				7E7C9F1123FDA31000828E9B /* HomeHistoryFilterCollectionViewCell.xib in Resources */,
 				7E18AFEB23EC75CD009764CC /* ImageInputView.xib in Resources */,
 				7EDFB95A23F43AEC006310EB /* watni_2.json in Resources */,
+				7E6FF06923FE790000588E03 /* HomeHistoryCollectionReusableView.xib in Resources */,
 				7EC2BF2123EEC99600B05BF6 /* HomePlanCollectionReusableView.xib in Resources */,
 				7E7A953F23E1E31B000DAAE0 /* NewbieViewController.xib in Resources */,
 				7E7C9F0B23FD71C600828E9B /* HomeHistoryAttendanceCollectionViewCell.xib in Resources */,
@@ -969,6 +987,7 @@
 				7E68A72E23B4A00B0021371D /* SignupViewModel.swift in Sources */,
 				7E367EA923F04C9600E366D4 /* Date+Extensions.swift in Sources */,
 				7E7A95C023EB084E0010B44D /* UnderlineLabelView.swift in Sources */,
+				7E6FF06B23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift in Sources */,
 				7E68A72A23B49FDC0021371D /* ViewModelInjectable.swift in Sources */,
 				7E367EA323EEE96A00E366D4 /* WNAlertAction.swift in Sources */,
 				7EB3C39323C9B9A500A2B41C /* OnBoardingViewController.swift in Sources */,
@@ -981,6 +1000,7 @@
 				7E7C9F0623FC2C0F00828E9B /* AttendButton.swift in Sources */,
 				7E70340923F7FAF100B307E5 /* ConferenceProvider.swift in Sources */,
 				7EDFB95C23F44AE4006310EB /* OnBoardingPageViewController.swift in Sources */,
+				7E6FF06823FE790000588E03 /* HomeHistoryCollectionReusableView.swift in Sources */,
 				7E70340B23F8316700B307E5 /* AttendanceTarget.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */,
