@@ -42,12 +42,32 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     var cellModels: [CollectionViewCellModel] = []
     var reusableViewModels: [CollectionViewReusableViewModel] = []
 
+    var didUpdateUserGroups: (() -> Void)?
+
     private var cancelables = Set<AnyCancellable>()
 
     init(groups: [WNGroup]) {
         self.userGroups = groups
 
         reusableViewModels = [HomeHistoryCollectionHeaderViewModel(attendances: [])]
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(userGroupUpdated),
+                                               name: .userGroupIsUpdated,
+                                               object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc func userGroupUpdated(_ notification: NSNotification) {
+        guard let userInfo = notification.userInfo as? [String: [WNGroup]],
+            let groups = userInfo["groups"] else {
+                return
+        }
+        self.userGroups = groups
+        didUpdateUserGroups?()
     }
 
     func attendances(completionHandler: @escaping (Result<Void, Error>) -> Void) {

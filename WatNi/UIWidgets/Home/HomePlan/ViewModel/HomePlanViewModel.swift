@@ -40,6 +40,8 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
 
     let tabTitle = "일정"
 
+    var didUpdateUserGroups: (() -> Void)?
+
     private var cancelables = Set<AnyCancellable>()
 
     init(groups: [WNGroup]) {
@@ -53,6 +55,24 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
             return HomePlanCollectionViewCellModel(conference: conference)
         }
         reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(userGroupUpdated),
+                                               name: .userGroupIsUpdated,
+                                               object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc func userGroupUpdated(_ notification: NSNotification) {
+        guard let userInfo = notification.userInfo as? [String: [WNGroup]],
+            let groups = userInfo["groups"] else {
+                return
+        }
+        self.userGroups = groups
+        didUpdateUserGroups?()
     }
 
     var notEventTimeTitle: String {
