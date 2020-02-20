@@ -42,9 +42,11 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
 
     init(groups: [WNGroup]) {
         self.userGroups = groups
+
+        reusableViewModels = [HomePlanCollectionHeaderViewModel()]
     }
 
-    func attendances(completionHandler: @escaping (Result<[WNAttendance], Error>) -> Void) {
+    func attendances(completionHandler: @escaping (Result<Void, Error>) -> Void) {
         guard let group = userGroups.first, let conferenceId = group.conferences.first?.conferenceID else { return }
 
         let request = URLRequest(target: AttendanceTarget.searchAttendances(groupId: group.groupId, conferenceId: conferenceId))
@@ -71,7 +73,8 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
                 }
             }, receiveValue: { attendances in
                 print("[Attendance][조회] 성공: \(attendances)")
-                completionHandler(.success(attendances))
+                self.models = attendances
+                completionHandler(.success(()))
             }).store(in: &cancelables)
 
     }

@@ -39,6 +39,19 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
         collectionView.register(cells: [HomeHistoryFilterCollectionViewCell.self,
                                         HomeHistoryAttendanceCollectionViewCell.self])
         collectionView.register(headers: [HomePlanCollectionReusableView.self])
+
+        searchAttendances()
+    }
+
+    private func searchAttendances() {
+        viewModel.attendances { [weak self] (result) in
+            switch result {
+            case .success:
+                self?.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
