@@ -31,6 +31,7 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
             cellModels = models.map { conference in
                 return HomePlanCollectionViewCellModel(conference: conference)
             }
+            reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
         }
     }
     var models: [WNConference]
@@ -51,7 +52,7 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         cellModels = userConferences.map { conference in
             return HomePlanCollectionViewCellModel(conference: conference)
         }
-        reusableViewModels = [HomePlanCollectionHeaderViewModel()]
+        reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
     }
 
     var shouldHideCollectionView: Bool {
