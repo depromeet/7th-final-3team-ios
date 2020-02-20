@@ -18,10 +18,6 @@ class HomePlanCollectionReusableView: UICollectionReusableView, BindableCollecti
         }
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     func configureView(viewModel: CollectionViewReusableViewModel) {
         guard let viewModel = viewModel as? HomePlanCollectionHeaderViewModel else { return }
 
