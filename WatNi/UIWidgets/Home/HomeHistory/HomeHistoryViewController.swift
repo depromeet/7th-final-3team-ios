@@ -38,7 +38,7 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
         collectionView.delegate = self
         collectionView.register(cells: [HomeHistoryFilterCollectionViewCell.self,
                                         HomeHistoryAttendanceCollectionViewCell.self])
-        collectionView.register(headers: [HomePlanCollectionReusableView.self])
+        collectionView.register(headers: [HomeHistoryCollectionReusableView.self])
 
         searchAttendances()
     }

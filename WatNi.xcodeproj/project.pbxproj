@@ -66,6 +66,7 @@
 		7E6FF06823FE790000588E03 /* HomeHistoryCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FF06623FE790000588E03 /* HomeHistoryCollectionReusableView.swift */; };
 		7E6FF06923FE790000588E03 /* HomeHistoryCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E6FF06723FE790000588E03 /* HomeHistoryCollectionReusableView.xib */; };
 		7E6FF06B23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FF06A23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift */; };
+		7E6FF06F23FE8AB800588E03 /* HasConferenceDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FF06E23FE8AB800588E03 /* HasConferenceDate.swift */; };
 		7E7033FF23F7E57300B307E5 /* ConferenceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */; };
 		7E70340123F7E61F00B307E5 /* WNConfererce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340023F7E61F00B307E5 /* WNConfererce.swift */; };
 		7E70340323F7F23700B307E5 /* DateComponent+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70340223F7F23700B307E5 /* DateComponent+Init.swift */; };
@@ -214,6 +215,7 @@
 		7E6FF06623FE790000588E03 /* HomeHistoryCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryCollectionReusableView.swift; sourceTree = "<group>"; };
 		7E6FF06723FE790000588E03 /* HomeHistoryCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHistoryCollectionReusableView.xib; sourceTree = "<group>"; };
 		7E6FF06A23FE794300588E03 /* HomeHistoryCollectionHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHistoryCollectionHeaderViewModel.swift; sourceTree = "<group>"; };
+		7E6FF06E23FE8AB800588E03 /* HasConferenceDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasConferenceDate.swift; sourceTree = "<group>"; };
 		7E7033FE23F7E57300B307E5 /* ConferenceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceTarget.swift; sourceTree = "<group>"; };
 		7E70340023F7E61F00B307E5 /* WNConfererce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WNConfererce.swift; sourceTree = "<group>"; };
 		7E70340223F7F23700B307E5 /* DateComponent+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponent+Init.swift"; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				7E68A72923B49FDC0021371D /* ViewModelInjectable.swift */,
 				7E27772723CF7F3000B90F80 /* HasViewModel.swift */,
 				7E70340E23F8440100B307E5 /* CollectionViewBase.swift */,
+				7E6FF06E23FE8AB800588E03 /* HasConferenceDate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				7E70340B23F8316700B307E5 /* AttendanceTarget.swift in Sources */,
 				7E2776C323CB7CDD00B90F80 /* UIControl+CombineCompatible.swift in Sources */,
 				7EBDF21823E70A8300CDDF6B /* HomePlanViewController.swift in Sources */,
+				7E6FF06F23FE8AB800588E03 /* HasConferenceDate.swift in Sources */,
 				7EC2BF1423EEAC7500B05BF6 /* HomeTabViewController.swift in Sources */,
 				7E6F810023E4849400C97F35 /* NewbiewViewModelProtocol.swift in Sources */,
 				7E9A0A2223E5ACEE0016F800 /* Array+CharacterSets.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel {
+struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel, HasConferenceDate {
     func viewType(kind: String) -> BindableCollectionReusableView.Type? {
         guard kind == UICollectionView.elementKindSectionHeader else { return nil }
         return HomePlanCollectionReusableView.self
@@ -20,19 +20,6 @@ struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel {
 
     init(conference: WNConference? = nil) {
         self.conferenceStartTimeInterval = conference?.startDate ?? Date().timeIntervalSince1970
-    }
-
-    private var conferenceIsToday: Bool {
-        let startDate = Date(timeIntervalSince1970: conferenceStartTimeInterval)
-        return Calendar.current.isDateInToday(startDate)
-    }
-
-    private var dDay: Int {
-        let startDate = Date(timeIntervalSince1970: conferenceStartTimeInterval)
-        let date1 = Calendar.current.startOfDay(for: Date())
-        let date2 = Calendar.current.startOfDay(for: startDate)
-
-        return Calendar.current.dateComponents([.day], from: date1, to: date2).day ?? 0
     }
 
     var stateText: String {

@@ -36,7 +36,7 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
             let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: models.count,
                                                                            conference: conference)
             cellModels.insert(filterCellModel, at: 0)
-            reusableViewModels = [HomePlanCollectionHeaderViewModel()]
+            reusableViewModels = [HomeHistoryCollectionHeaderViewModel(conference: conference, attendances: models)]
         }
     }
     var cellModels: [CollectionViewCellModel] = []
@@ -47,7 +47,7 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     init(groups: [WNGroup]) {
         self.userGroups = groups
 
-        reusableViewModels = [HomePlanCollectionHeaderViewModel()]
+        reusableViewModels = [HomeHistoryCollectionHeaderViewModel(attendances: [])]
     }
 
     func attendances(completionHandler: @escaping (Result<Void, Error>) -> Void) {
