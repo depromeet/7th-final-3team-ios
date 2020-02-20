@@ -15,6 +15,8 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
     typealias ViewModel = HomeHistoryViewModel
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var managerEmptyView: UIStackView!
+    @IBOutlet weak var participantEmptyView: UIStackView!
 
     let viewModel: HomeHistoryViewModel
 
@@ -40,6 +42,7 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
                                         HomeHistoryAttendanceCollectionViewCell.self])
         collectionView.register(headers: [HomeHistoryCollectionReusableView.self])
 
+        appearView()
         searchAttendances()
     }
 
