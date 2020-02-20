@@ -87,7 +87,7 @@
                             <rect key="frame" x="0.0" y="40" width="414" height="768"/>
                         </scrollView>
                     </subviews>
-                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="gDM-D5-Gw2" firstAttribute="top" secondItem="yTC-mH-oE8" secondAttribute="bottom" id="1U5-io-Ijd"/>
                         <constraint firstAttribute="trailing" secondItem="3Yz-jM-OMJ" secondAttribute="trailing" id="40M-1I-7Mj"/>

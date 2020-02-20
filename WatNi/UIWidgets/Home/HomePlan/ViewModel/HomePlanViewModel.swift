@@ -55,29 +55,6 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
     }
 
-    var shouldHideCollectionView: Bool {
-        guard let conferences = userGroups.first?.conferences else {
-            return false
-        }
-        return conferences.isEmpty
-    }
-
-    var shouldHideManagerEmptyView: Bool {
-        let isManager = MemberAccess.default.memberMeta?.isManager ?? false
-        guard isManager else {
-            return true
-        }
-        return !shouldHideCollectionView
-    }
-
-    var shouldHideParticipantEmptyView: Bool {
-        let isManager = MemberAccess.default.memberMeta?.isManager ?? false
-        guard !isManager else {
-            return true
-        }
-        return !shouldHideCollectionView
-    }
-
     var notEventTimeTitle: String {
         return "빨리 오셨네요...! 😮"
     }
@@ -88,7 +65,7 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         조금만 기다려주세요.
         """
     }
-    
+
     func updateGroups(_ groups: [WNGroup]) {
         self.userGroups = groups
     }
