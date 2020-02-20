@@ -8,19 +8,22 @@
 
 import Foundation
 
-struct HomePlanCollectionViewCellModel: CollectionViewCellModel {
+struct HomePlanCollectionViewCellModel: CollectionViewCellModel, HasConferenceDate {
+
     var cellType: BindableCollectionViewCell.Type {
         return HomePlanCollectionViewCell.self
     }
 
     let conference: WNConference?
     let isManager: Bool
+    var conferenceStartTimeInterval: TimeInterval
 
     var didTapPhotoButton: ((_ conferenceId: Int) -> Void)?
 
     init(conference: WNConference? = nil) {
         self.conference = conference
         self.isManager = MemberAccess.default.memberMeta?.isManager ?? false
+        self.conferenceStartTimeInterval = conference?.startDate ?? Date().timeIntervalSince1970
     }
 
     var title: String {
@@ -71,6 +74,10 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel {
     }
 
     var buttonState: AttendButton.AttendState {
+        guard conferenceIsToday else {
+            return .before
+        }
+        // TODO: user 출석 완료 여부 체크
         return .available
     }
 }

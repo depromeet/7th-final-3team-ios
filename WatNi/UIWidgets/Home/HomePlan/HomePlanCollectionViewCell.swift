@@ -68,7 +68,7 @@ class HomePlanCollectionViewCell: UICollectionViewCell, BindableCollectionViewCe
         separaterView.isHidden = !viewModel.hasNotice
         moreButton.isHidden = !viewModel.isManager
 
-        attendButton.setupTitle(state: viewModel.buttonState, beforeDays: nil)
+        attendButton.setupTitle(state: viewModel.buttonState, dDays: viewModel.dDay)
     }
 
     @IBAction func attendBtnTapped(_ sender: AttendButton) {
