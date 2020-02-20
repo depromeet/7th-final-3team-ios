@@ -17,6 +17,7 @@
                 <outlet property="buttonBarView" destination="3Yz-jM-OMJ" id="Rga-U4-saC"/>
                 <outlet property="containerView" destination="gDM-D5-Gw2" id="Q9e-Rj-SfI"/>
                 <outlet property="logoutButton" destination="X23-KF-Bk0" id="7WZ-h0-aRY"/>
+                <outlet property="naviTitleLabel" destination="fhz-uy-RGo" id="g26-ma-1aV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="duw-Kr-K3Z"/>
             </connections>
         </placeholder>

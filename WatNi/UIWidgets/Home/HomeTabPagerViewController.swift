@@ -15,6 +15,7 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
     typealias ViewModel = HomeTabPagerViewModel
 
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet private weak var naviTitleLabel: UILabel!
 
     let viewModel: HomeTabPagerViewModel
 
@@ -41,6 +42,8 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
     override func viewDidLoad() {
         setupTab()
         super.viewDidLoad()
+
+        naviTitleLabel.text = viewModel.groupTitle
     }
 
     private func setupTab() {
