@@ -16,3 +16,21 @@ struct WNAttendance: Decodable {
     let attendanceType: String
     let imageUrl: String?
 }
+
+extension WNAttendance {
+    enum PresentCondition {
+        case participant
+        case nonParticipant
+    }
+
+    var presentCondition: PresentCondition {
+        switch attendanceStatus {
+        case "ACCEPT":
+            return .participant
+        case "NOT_PARTICIPATING":
+            return .nonParticipant
+        default:
+            return .nonParticipant
+        }
+    }
+}
