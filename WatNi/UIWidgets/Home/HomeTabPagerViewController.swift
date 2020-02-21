@@ -65,9 +65,35 @@ class HomeTabPagerViewController: ButtonBarPagerTabStripViewController, ViewMode
     }
 
     @IBAction func sideMenuBtnTapped(_ sender: UIButton) {
-        let viewModel = SideMenuViewModel()
-        let sideMenuVC = SideMenuViewController(viewModel: viewModel,
+
+        guard let group = viewModel.groups.first else { return }
+
+        let sideMenuViewModel = SideMenuViewModel()
+        let sideMenuVC = SideMenuViewController(viewModel: sideMenuViewModel,
                                                 nibName: SideMenuViewController.className)
+
+        sideMenuVC.didTapCreatePlanButton = { [weak self] in
+            let viewModel = CreatePlanViewModel(group: group)
+            let createPlanVC = CreatePlanViewController(viewModel: viewModel,
+                                                        nibName: CreatePlanViewController.className)
+
+            createPlanVC.didSuccesCreatePlan = { memberMeta in
+                NotificationCenter.default.post(name: .userGroupIsUpdated,
+                                                object: nil,
+                                                userInfo: ["groups": memberMeta.groups])
+            }
+
+            let navigationController = UINavigationController(rootViewController: createPlanVC)
+            self?.navigationController?.present(navigationController, animated: true, completion: nil)
+        }
+
+        sideMenuVC.didTapLogoutButton = { [weak self] in
+            MemberAccess.default.logout()
+            let onboardingVC = OnBoardingPageViewController(transitionStyle: .scroll,
+                                                            navigationOrientation: .horizontal,
+                                                            options: nil)
+            self?.navigationController?.setViewControllers([onboardingVC], animated: false)
+        }
         let navigationController = SideMenuNavigationController(rootViewController: sideMenuVC)
         navigationController.statusBarEndAlpha = 0
         navigationController.presentationStyle = .menuSlideIn
