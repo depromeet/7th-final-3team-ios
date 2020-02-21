@@ -134,6 +134,7 @@
 		7EC2BF2023EEC99600B05BF6 /* HomePlanCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1E23EEC99600B05BF6 /* HomePlanCollectionReusableView.swift */; };
 		7EC2BF2123EEC99600B05BF6 /* HomePlanCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC2BF1F23EEC99600B05BF6 /* HomePlanCollectionReusableView.xib */; };
 		7EC2BF2423EECC8D00B05BF6 /* UICollectionView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */; };
+		7EDBCD3624002E8700EB4592 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EDBCD3824002E8700EB4592 /* InfoPlist.strings */; };
 		7EDFB95623F43877006310EB /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDFB95523F43877006310EB /* Lottie */; };
 		7EDFB95923F43AEC006310EB /* watni_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFB95723F43AEB006310EB /* watni_1.json */; };
 		7EDFB95A23F43AEC006310EB /* watni_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EDFB95823F43AEB006310EB /* watni_2.json */; };
@@ -286,6 +287,8 @@
 		7EC2BF1E23EEC99600B05BF6 /* HomePlanCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlanCollectionReusableView.swift; sourceTree = "<group>"; };
 		7EC2BF1F23EEC99600B05BF6 /* HomePlanCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePlanCollectionReusableView.xib; sourceTree = "<group>"; };
 		7EC2BF2323EECC8D00B05BF6 /* UICollectionView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Nib.swift"; sourceTree = "<group>"; };
+		7EDBCD3724002E8700EB4592 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EDBCD3B24002F2200EB4592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7EDFB95723F43AEB006310EB /* watni_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watni_1.json; sourceTree = "<group>"; };
 		7EDFB95823F43AEB006310EB /* watni_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = watni_2.json; sourceTree = "<group>"; };
 		7EDFB95B23F44AE4006310EB /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -451,6 +454,7 @@
 				7E68A70623B49C2D0021371D /* SceneDelegate.swift */,
 				7E68A71223B49C2F0021371D /* Info.plist */,
 				7E6E183423E33BB000E395DD /* WatNi.xcconfig */,
+				7EDBCD3824002E8700EB4592 /* InfoPlist.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -874,6 +878,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E27772F23D2DF3F00B90F80 /* Spoqa Han Sans Regular.ttf in Resources */,
+				7EDBCD3624002E8700EB4592 /* InfoPlist.strings in Resources */,
 				7E7A95BD23EB02D40010B44D /* CreatePlanViewController.xib in Resources */,
 				7E43DAB823FEEBEF006DF739 /* SideMenuViewController.xib in Resources */,
 				7EC2BF1D23EEC1C400B05BF6 /* HomePlanCollectionViewCell.xib in Resources */,
@@ -1126,6 +1131,15 @@
 				7E7A95CD23EB36C30010B44D /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7EDBCD3824002E8700EB4592 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EDBCD3724002E8700EB4592 /* ko */,
+				7EDBCD3B24002F2200EB4592 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
