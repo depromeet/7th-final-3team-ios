@@ -127,7 +127,7 @@ final class CreatePlanViewModel {
         let fromTimeInterval = Int(fromDate.timeIntervalSince1970)
         let toTimeInterval = Int(toDate.timeIntervalSince1970)
 
-        guard fromTimeInterval < toTimeInterval else {
+        guard fromTimeInterval < toTimeInterval && Int(Date().timeIntervalSince1970) < toTimeInterval else {
             completion(.failure(WNError.invalidInput(reason: .cannotFormTimeRange)))
             return
         }
