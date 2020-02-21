@@ -42,6 +42,9 @@ class LaunchingTaskViewController: UIViewController {
                                                             nibName: HomeTabPagerViewController.className)
             }
             self?.navigationController?.pushViewController(viewController, animated: false)
+            self?.navigationController?.viewControllers.removeAll(where: { prevVC in
+                return prevVC != viewController
+            })
         }
     }
 
