@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Photos
 import Combine
+import SwiftyJSON
 
 enum HomePlanSectionType {
     case plan
@@ -174,8 +175,19 @@ extension HomePlanViewModel {
                                                                                conferenceId: conferenceId))
             URLSession.shared.dataTaskPublisher(for: request)
                 .receive(on: DispatchQueue.main)
-                .map(\.data)
-                .decode(type: WNAttendance.self, decoder: JSONDecoder())
+                .tryMap { data, response -> WNAttendance in
+
+                        guard let httpResponse = response as? HTTPURLResponse else {
+                            throw SwiftyJSONError.invalidJSON
+                        }
+
+                        guard (200...399).contains(httpResponse.statusCode) else {
+                            let json = try? JSON(data: data)
+                            let message = json?["error_description"].stringValue ?? ""
+                            throw WNError.responseFailed(message: message)
+                        }
+                        return try JSONDecoder().decode(WNAttendance.self, from: data)
+                }
                 .eraseToAnyPublisher()
                 .sink(receiveCompletion: { completion in
                     if case .failure(let error) = completion {
