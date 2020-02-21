@@ -111,9 +111,9 @@
                 <constraint firstItem="G8H-r2-ej2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="33B-z6-wyw"/>
                 <constraint firstItem="DDX-jH-okg" firstAttribute="top" secondItem="G8H-r2-ej2" secondAttribute="bottom" constant="11" id="BS1-TM-IXQ"/>
                 <constraint firstAttribute="bottom" secondItem="Lkl-sF-gbE" secondAttribute="bottom" id="E1c-65-AcK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkl-sF-gbE" secondAttribute="trailing" id="EYx-91-xUx"/>
+                <constraint firstAttribute="trailing" secondItem="Lkl-sF-gbE" secondAttribute="trailing" id="EYx-91-xUx"/>
                 <constraint firstItem="G8H-r2-ej2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-59" id="Rsc-Fc-dQB"/>
-                <constraint firstItem="Lkl-sF-gbE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a7O-we-6DG"/>
+                <constraint firstItem="Lkl-sF-gbE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a7O-we-6DG"/>
                 <constraint firstItem="Lkl-sF-gbE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cc7-fF-NmF"/>
                 <constraint firstItem="DDX-jH-okg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eH1-Id-7zu"/>
                 <constraint firstItem="W46-Zy-0qM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nZC-1Z-9a6"/>

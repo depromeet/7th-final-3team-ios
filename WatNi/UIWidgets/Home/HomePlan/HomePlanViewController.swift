@@ -132,7 +132,8 @@ extension HomePlanViewController: UICollectionViewDataSource {
 extension HomePlanViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.frame.width - 48
+        // TODO: XLPagerTabStrip workaround
+        let width: CGFloat = (self.view.superview?.frame.width ?? 48) - 48
         let height = viewModel.cellHeight(cellWidth: width, indexPath: indexPath)
 
         return CGSize(width: width, height: height)
