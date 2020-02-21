@@ -8,7 +8,6 @@
 
 import UIKit
 import XLPagerTabStrip
-import UIKit
 
 class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabViewController {
 
@@ -17,6 +16,7 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var managerEmptyView: UIStackView!
     @IBOutlet weak var participantEmptyView: UIStackView!
+    @IBOutlet weak var participantEmptyImageView: UIImageView!
 
     let viewModel: HomeHistoryViewModel
 

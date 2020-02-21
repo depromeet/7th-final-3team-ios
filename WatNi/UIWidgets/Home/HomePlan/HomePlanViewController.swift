@@ -21,6 +21,7 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var managerEmptyView: UIStackView!
     @IBOutlet weak var participantEmptyView: UIStackView!
+    @IBOutlet weak var participantEmptyImageView: UIImageView!
 
     let viewModel: HomePlanViewModel
 

@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="collectionView" destination="Lkl-sF-gbE" id="Pdf-Wh-wPX"/>
                 <outlet property="managerEmptyView" destination="W46-Zy-0qM" id="5Q6-fa-nk1"/>
+                <outlet property="participantEmptyImageView" destination="G8H-r2-ej2" id="o6o-zZ-KEg"/>
                 <outlet property="participantEmptyView" destination="DDX-jH-okg" id="pVr-Zl-Yod"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -84,25 +85,20 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace2" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-r2-ej2">
+                    <rect key="frame" x="167" y="349" width="80" height="80"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDX-jH-okg">
-                    <rect key="frame" x="126" y="372.5" width="162.5" height="151"/>
+                    <rect key="frame" x="126" y="440" width="162.5" height="60"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="DFn-Hf-PYF">
-                            <rect key="frame" x="4.5" y="0.0" width="153" height="115"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace2" translatesAutoresizingMaskIntoConstraints="NO" id="G8H-r2-ej2">
-                                    <rect key="frame" x="0.0" y="0.0" width="153" height="80"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 일정이 없어요..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-wD-K38">
-                                    <rect key="frame" x="0.0" y="91" width="153" height="24"/>
-                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="등록된 일정이 없어요..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-wD-K38">
+                            <rect key="frame" x="4.5" y="0.0" width="153" height="24"/>
+                            <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조금만 기다려주세요 🌿" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-La-73U">
-                            <rect key="frame" x="0.0" y="132" width="162.5" height="19"/>
+                            <rect key="frame" x="0.0" y="41" width="162.5" height="19"/>
                             <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -112,10 +108,12 @@
             </subviews>
             <color key="backgroundColor" red="0.9373082519" green="0.93733018639999999" blue="0.93731838460000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="G8H-r2-ej2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="33B-z6-wyw"/>
+                <constraint firstItem="DDX-jH-okg" firstAttribute="top" secondItem="G8H-r2-ej2" secondAttribute="bottom" constant="11" id="BS1-TM-IXQ"/>
                 <constraint firstAttribute="bottom" secondItem="Lkl-sF-gbE" secondAttribute="bottom" id="E1c-65-AcK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lkl-sF-gbE" secondAttribute="trailing" id="EYx-91-xUx"/>
+                <constraint firstItem="G8H-r2-ej2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-59" id="Rsc-Fc-dQB"/>
                 <constraint firstItem="Lkl-sF-gbE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a7O-we-6DG"/>
-                <constraint firstItem="DDX-jH-okg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="auc-9K-fDv"/>
                 <constraint firstItem="Lkl-sF-gbE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cc7-fF-NmF"/>
                 <constraint firstItem="DDX-jH-okg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eH1-Id-7zu"/>
                 <constraint firstItem="W46-Zy-0qM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nZC-1Z-9a6"/>
