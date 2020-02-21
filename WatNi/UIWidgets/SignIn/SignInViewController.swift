@@ -111,7 +111,10 @@ class SignInViewController: UIViewController, ViewModelInjectable {
                         let viewModel = HomeTabPagerViewModel(groups: groups)
                         let pagerVC = HomeTabPagerViewController(viewModel: viewModel,
                                                                  nibName: HomeTabPagerViewController.className)
-                        self?.navigationController?.setViewControllers([pagerVC], animated: true)
+                        self?.navigationController?.pushViewController(pagerVC, animated: true)
+                        self?.navigationController?.viewControllers.removeAll(where: { viewController in
+                            return viewController != pagerVC
+                        })
                     }
                 }
             })
