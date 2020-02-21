@@ -43,7 +43,7 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
                 return HomeHistoryCollectionViewCellModel(attendance: attendance)
             }
 
-            let conference = userGroups.first?.conferences.first
+            let conference = userGroups.first?.conferences.sorted(by: >).first
             let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: uniqueModels.count,
                                                                            conference: conference)
             cellModels.insert(filterCellModel, at: 0)
@@ -82,7 +82,9 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     }
 
     func attendances(completionHandler: @escaping (Result<Void, Error>) -> Void) {
-        guard let group = userGroups.first, let conferenceId = group.conferences.first?.conferenceID else { return }
+        guard let group = userGroups.first, let conferenceId = group.conferences.sorted(by: >).first?.conferenceID else {
+            return
+        }
 
         let request = URLRequest(target: AttendanceTarget.searchAttendances(groupId: group.groupId, conferenceId: conferenceId))
 
@@ -111,7 +113,6 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
                 self.models = attendances
                 completionHandler(.success(()))
             }).store(in: &cancelables)
-
     }
 }
 
