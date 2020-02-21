@@ -44,11 +44,12 @@ class AttendButton: UIButton {
         setAttributedTitle(attributedString, for: .normal)
         backgroundColor = buttonBackgroundColor(state: state)
 
-        var buttonAvailable: Bool = false
-        if case .available(let submitAvailable) = state {
-            buttonAvailable = submitAvailable
+        switch state {
+        case .before, .finish:
+            isEnabled = false
+        case .available:
+            isEnabled = true
         }
-        isEnabled = buttonAvailable
     }
 
     private func buttonTitle(state: AttendState, dDays: Int?) -> String {
