@@ -17,6 +17,7 @@ protocol HomeTabViewController: IndicatorInfoProvider, ViewModelInjectable {
     var collectionView: UICollectionView! { get set }
     var managerEmptyView: UIStackView! { get set }
     var participantEmptyView: UIStackView! { get set }
+    var participantEmptyImageView: UIImageView! { get set }
     func appearView()
 }
 
@@ -34,5 +35,6 @@ extension HomeTabViewController {
         collectionView.isHidden = viewModel.shouldHideCollectionView
         managerEmptyView.isHidden = viewModel.shouldHideManagerEmptyView
         participantEmptyView.isHidden = viewModel.shouldHideParticipantEmptyView
+        participantEmptyImageView.isHidden = viewModel.shouldHideParticipantEmptyView
     }
 }

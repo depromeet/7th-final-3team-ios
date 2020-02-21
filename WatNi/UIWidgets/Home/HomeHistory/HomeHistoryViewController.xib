@@ -16,6 +16,7 @@
             <connections>
                 <outlet property="collectionView" destination="eSf-U1-wZA" id="qVj-9A-IJD"/>
                 <outlet property="managerEmptyView" destination="Kzo-43-Xom" id="nF8-w8-oIe"/>
+                <outlet property="participantEmptyImageView" destination="RUe-df-AjT" id="si0-kZ-oal"/>
                 <outlet property="participantEmptyView" destination="RFH-ZR-P9Z" id="Jye-zW-glh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,32 +36,27 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-df-AjT">
+                    <rect key="frame" x="167" y="349" width="80" height="80"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFH-ZR-P9Z">
-                    <rect key="frame" x="122.5" y="372" width="169.5" height="152.5"/>
+                    <rect key="frame" x="122.5" y="440" width="169.5" height="61.5"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ANf-Uh-O11">
-                            <rect key="frame" x="20" y="0.0" width="129.5" height="115"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyFace" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-df-AjT">
-                                    <rect key="frame" x="24.5" y="0.0" width="80" height="80"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출석 기록이 없어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-wZ-qzU">
-                                    <rect key="frame" x="0.0" y="91" width="129.5" height="24"/>
-                                    <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출석 기록이 없어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-wZ-qzU">
+                            <rect key="frame" x="20" y="0.0" width="129.5" height="24"/>
+                            <fontDescription key="fontDescription" name="SpoqaHanSans-Regular" family="SpoqaHanSans" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조만간 만나요! 우리~ ❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-Tn-Y3r">
-                            <rect key="frame" x="0.0" y="132" width="169.5" height="20.5"/>
+                            <rect key="frame" x="0.0" y="41" width="169.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-43-Xom">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-43-Xom">
                     <rect key="frame" x="93.5" y="335.5" width="227" height="225"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ikT-ZK-uB9">
@@ -115,11 +111,13 @@
                 <constraint firstAttribute="trailing" secondItem="eSf-U1-wZA" secondAttribute="trailing" id="2FV-ai-96D"/>
                 <constraint firstAttribute="bottom" secondItem="eSf-U1-wZA" secondAttribute="bottom" id="4HU-jc-wch"/>
                 <constraint firstItem="eSf-U1-wZA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7ch-Qv-yn4"/>
-                <constraint firstItem="RFH-ZR-P9Z" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RUe-uq-d8G"/>
                 <constraint firstItem="Kzo-43-Xom" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XgD-3Z-gAo"/>
+                <constraint firstItem="RUe-df-AjT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZYT-O7-9iK"/>
                 <constraint firstItem="Kzo-43-Xom" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kJ5-4p-qQt"/>
                 <constraint firstItem="RFH-ZR-P9Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tTP-sy-ciT"/>
                 <constraint firstItem="eSf-U1-wZA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vIc-DQ-LIf"/>
+                <constraint firstItem="RFH-ZR-P9Z" firstAttribute="top" secondItem="RUe-df-AjT" secondAttribute="bottom" constant="11" id="vtb-T9-waT"/>
+                <constraint firstItem="RUe-df-AjT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-59" id="xLE-bZ-Bcx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="112"/>
