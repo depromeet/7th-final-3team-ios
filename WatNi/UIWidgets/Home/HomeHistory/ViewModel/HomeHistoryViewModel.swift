@@ -28,15 +28,26 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     var models: [WNAttendance] = [] {
         didSet {
 
-            cellModels = models.map { attendance in
+            // TODO: 이름 중복 제거, workaround
+            let uniqueModels: [WNAttendance] = models.reduce([WNAttendance]()) { (acc, cur) in
+                let duplicate = acc.first(where: { attendance in
+                    attendance.name == cur.name
+                })
+
+                if duplicate == nil {
+                    return acc + [cur]
+                }
+                return acc
+            }
+            cellModels = uniqueModels.map { attendance in
                 return HomeHistoryCollectionViewCellModel(attendance: attendance)
             }
 
             let conference = userGroups.first?.conferences.first
-            let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: models.count,
+            let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: uniqueModels.count,
                                                                            conference: conference)
             cellModels.insert(filterCellModel, at: 0)
-            reusableViewModels = [HomeHistoryCollectionHeaderViewModel(conference: conference, attendances: models)]
+            reusableViewModels = [HomeHistoryCollectionHeaderViewModel(conference: conference, attendances: uniqueModels)]
         }
     }
     var cellModels: [CollectionViewCellModel] = []
