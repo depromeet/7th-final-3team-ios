@@ -29,7 +29,7 @@ class HomeTabPagerViewModel {
     init(groups: [WNGroup]) {
         let sortedGroups: [WNGroup] = groups.map { group in
             var sortedGroup = group
-            let sortedConferences = group.conferences.sorted(by: <)
+            let sortedConferences = group.conferences.sorted(by: >)
             sortedGroup.conferences = sortedConferences
             return sortedGroup
         }
