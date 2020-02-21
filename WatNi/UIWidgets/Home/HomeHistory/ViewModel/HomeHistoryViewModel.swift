@@ -43,7 +43,7 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
                 return HomeHistoryCollectionViewCellModel(attendance: attendance)
             }
 
-            let conference = userGroups.first?.conferences.sorted(by: >).first
+            let conference = self.visibleConference
             let filterCellModel = HomeHistoryFilterCollectionViewCellModel(totalCount: uniqueModels.count,
                                                                            conference: conference)
             cellModels.insert(filterCellModel, at: 0)
@@ -72,6 +72,18 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
         NotificationCenter.default.removeObserver(self)
     }
 
+    /// 현재 끝나지 않은 가장 최신의 일정이 노출됨
+    var visibleConference: WNConference? {
+        guard let group = userGroups.first else {
+            return nil
+        }
+
+        let conference = group.conferences.sorted(by: <).first(where: {
+            return Date().timeIntervalSince1970 < $0.endDate
+        })
+        return conference
+    }
+
     @objc func userGroupUpdated(_ notification: NSNotification) {
         guard let userInfo = notification.userInfo as? [String: [WNGroup]],
             let groups = userInfo["groups"] else {
@@ -82,7 +94,7 @@ class HomeHistoryViewModel: HomeTabViewModel, CollectionViewModelBase {
     }
 
     func attendances(completionHandler: @escaping (Result<Void, Error>) -> Void) {
-        guard let group = userGroups.first, let conferenceId = group.conferences.sorted(by: >).first?.conferenceID else {
+        guard let group = userGroups.first, let conferenceId = visibleConference?.conferenceID else {
             return
         }
 
