@@ -47,3 +47,11 @@ extension WNConference: Comparable {
         return lhs.startDate < rhs.startDate
     }
 }
+
+extension Array where Element == WNConference {
+    var future: [WNConference] {
+        return filter {
+            return Date().timeIntervalSince1970 < $0.endDate
+        }
+    }
+}

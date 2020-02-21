@@ -26,12 +26,13 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
     var userGroups: [WNGroup] {
         didSet {
             let userConferences: [WNConference] = userGroups.first?.conferences ?? []
-            self.models = userConferences
+            let filteredConferences = userConferences.future
+            self.models = filteredConferences
 
             cellModels = models.map { conference in
                 return HomePlanCollectionViewCellModel(conference: conference)
             }
-            reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
+            reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: filteredConferences.first)]
         }
     }
     var models: [WNConference]
@@ -48,13 +49,14 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         self.userGroups = groups
 
         let userConferences: [WNConference] = groups.first?.conferences ?? []
+        let filteredConferences = userConferences.future
 
-        self.models = userConferences
+        self.models = filteredConferences
 
-        cellModels = userConferences.map { conference in
+        cellModels = filteredConferences.map { conference in
             return HomePlanCollectionViewCellModel(conference: conference)
         }
-        reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: userConferences.first)]
+        reusableViewModels = [HomePlanCollectionHeaderViewModel(conference: filteredConferences.first)]
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(userGroupUpdated),
@@ -84,10 +86,6 @@ class HomePlanViewModel: HomeTabViewModel, CollectionViewModelBase {
         아직 출석시간이 안되었어요!
         조금만 기다려주세요.
         """
-    }
-
-    func updateGroups(_ groups: [WNGroup]) {
-        self.userGroups = groups
     }
 }
 

@@ -19,7 +19,7 @@ protocol HomeTabViewModel {
 
 extension HomeTabViewModel {
     var shouldHideCollectionView: Bool {
-        guard let conferences = userGroups.first?.conferences else {
+        guard let conferences = userGroups.first?.conferences.future else {
             return false
         }
         return conferences.isEmpty
