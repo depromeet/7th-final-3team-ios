@@ -63,7 +63,7 @@ class HomePlanViewController: UIViewController, ViewModelInjectable, HomeTabView
         let createPlanVC = CreatePlanViewController(viewModel: viewModel,
                                                     nibName: CreatePlanViewController.className)
 
-        createPlanVC.didSuccesCreatePlan = { [weak self] memberMeta in
+        createPlanVC.didSuccesCreatePlan = { memberMeta in
             NotificationCenter.default.post(name: .userGroupIsUpdated,
                                             object: nil,
                                             userInfo: ["groups": memberMeta.groups])
