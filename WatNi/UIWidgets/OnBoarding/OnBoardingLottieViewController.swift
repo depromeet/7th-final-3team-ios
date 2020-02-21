@@ -25,6 +25,7 @@ class OnBoardingLottieViewController: UIViewController {
         super.viewDidLoad()
 
         let animation = Animation.named(jsonName)
+        animationView.loopMode = .loop
         animationView.animation = animation
         pageControl.currentPage = currentPage
         headLabel.text = head
