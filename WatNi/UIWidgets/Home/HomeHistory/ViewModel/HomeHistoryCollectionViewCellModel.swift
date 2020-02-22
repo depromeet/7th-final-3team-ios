@@ -45,7 +45,7 @@ struct HomeHistoryCollectionViewCellModel: CollectionViewCellModel {
     var statusColor: UIColor {
         switch presentCondition {
         case .participant:
-            return WNColor.gray
+            return UIColor(decimalRed: 34, green: 34, blue: 34)
         case .nonParticipant:
             return UIColor(decimalRed: 34, green: 34, blue: 34, alpha: 0.3)
         }
