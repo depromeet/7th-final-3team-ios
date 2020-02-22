@@ -11,7 +11,7 @@ import Foundation
 struct WNAttendance: Decodable {
     let attendanceId: Int
     let attendanceStatus: String
-    let attendanceAt: String?
+    let attendanceAt: Int?
     let name: String
     let attendanceType: String
     let imageUrl: String?

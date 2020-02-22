@@ -161,7 +161,15 @@ extension HomePlanViewController {
                     self?.viewModel.participate(conferenceId, image: selectedImage, completionHandler: { (result) in
                         switch result {
                         case .success(let attendance):
-                            print(attendance)
+                            let attendTimeInt = attendance.attendanceAt ?? 0
+                            let date = Date(timeIntervalSince1970: Double(attendTimeInt)).toString(format: "M월 dd일 EEEE")
+
+                            let message = "\(date)\n 출석 완료되었습니다."
+                            let alert = UIAlertController(title: "\(attendance.name)님 반갑습니다! 😍",
+                                                          message: message,
+                                                          preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                            self?.present(alert, animated: true, completion: nil)
                         case .failure(let error):
                             let alert = UIAlertController(title: "출석체크 실패",
                                                           message: error.userMessage,
