@@ -15,7 +15,7 @@ struct WNConference: Decodable {
     let location: String
     let startDate: TimeInterval
     let endDate: TimeInterval
-    let attendances: [WNAttendance]
+    let attendances: [WNAttendance]?
 
     private(set) var photoURLStr: String?
     private(set) var notice: String?
