@@ -42,12 +42,15 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
                                         HomeHistoryAttendanceCollectionViewCell.self])
         collectionView.register(headers: [HomeHistoryCollectionReusableView.self])
 
-        appearView()
-        searchAttendances()
-
         viewModel.didUpdateUserGroups = { [weak self] in
             self?.searchAttendances()
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        appearView()
+        searchAttendances()
     }
 
     private func searchAttendances() {
