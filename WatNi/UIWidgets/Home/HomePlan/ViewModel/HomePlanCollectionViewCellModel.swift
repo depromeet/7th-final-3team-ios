@@ -77,8 +77,13 @@ struct HomePlanCollectionViewCellModel: CollectionViewCellModel, HasConferenceDa
         guard conferenceIsToday else {
             return .before
         }
-        // TODO: user 출석 완료 여부 체크
-        return .available(isEventTime: isEventTime)
+
+        let userAttendedConference = conference?.attendances ?? []
+
+        if userAttendedConference.isEmpty {
+            return .available(isEventTime: isEventTime)
+        }
+        return .finish
     }
 
     var isEventTime: Bool {

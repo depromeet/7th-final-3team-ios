@@ -165,7 +165,8 @@ extension HomePlanViewController {
                             let date = Date(timeIntervalSince1970: Double(attendTimeInt)).toString(format: "M월 dd일 EEEE")
 
                             let message = "\(date)\n 출석 완료되었습니다."
-                            let alert = UIAlertController(title: "\(attendance.name)님 반갑습니다! 😍",
+                            let name = attendance.name ?? ""
+                            let alert = UIAlertController(title: "\(name)님 반갑습니다! 😍",
                                                           message: message,
                                                           preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))

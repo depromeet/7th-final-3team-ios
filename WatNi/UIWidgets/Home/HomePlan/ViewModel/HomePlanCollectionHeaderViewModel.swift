@@ -17,8 +17,10 @@ struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel, HasCo
 
     let userName = MemberAccess.default.memberMeta?.member.name ?? ""
     let conferenceStartTimeInterval: TimeInterval
+    let conference: WNConference?
 
     init(conference: WNConference? = nil) {
+        self.conference = conference
         self.conferenceStartTimeInterval = conference?.startDate ?? Date().timeIntervalSince1970
     }
 
@@ -27,7 +29,11 @@ struct HomePlanCollectionHeaderViewModel: CollectionViewReusableViewModel, HasCo
             return "\(dDay)일 뒤에 만나요! 😉"
         }
 
-        // TODO: user 출석 여부 반영
-        return "\(userName)님 왔나요? 👀"
+        let userAttendedConference = conference?.attendances ?? []
+
+        if userAttendedConference.isEmpty {
+            return "\(userName)님 왔나요? 👀"
+        }
+        return "\(userName)님 보고 싶었어요! ☺️"
     }
 }
