@@ -57,6 +57,7 @@ class HomeHistoryViewController: UIViewController, ViewModelInjectable, HomeTabV
         viewModel.attendances { [weak self] (result) in
             switch result {
             case .success:
+                self?.appearView()
                 self?.collectionView.reloadData()
             case .failure(let error):
                 print(error)

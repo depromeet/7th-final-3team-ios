@@ -15,6 +15,7 @@ struct WNConference: Decodable {
     let location: String
     let startDate: TimeInterval
     let endDate: TimeInterval
+    let attendances: [WNAttendance]
 
     private(set) var photoURLStr: String?
     private(set) var notice: String?
@@ -28,6 +29,7 @@ struct WNConference: Decodable {
         case endDate = "endAt"
         case photoURLStr = "photoUrl"
         case notice
+        case attendances
     }
 
     mutating func updatePhoto(urlStr: String?) {
@@ -40,6 +42,10 @@ struct WNConference: Decodable {
 }
 
 extension WNConference: Comparable {
+    static func == (lhs: WNConference, rhs: WNConference) -> Bool {
+        return lhs.conferenceID == rhs.conferenceID
+    }
+
     static func < (lhs: WNConference, rhs: WNConference) -> Bool {
         guard lhs.startDate == rhs.startDate else {
             return lhs.startDate < rhs.startDate
